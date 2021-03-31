@@ -1,0 +1,6 @@
+framework module Pods_FIT5120_MyAllerGone {
+  umbrella header "Pods-FIT5120_MyAllerGone-umbrella.h"
+
+  export *
+  module * { export * }
+}

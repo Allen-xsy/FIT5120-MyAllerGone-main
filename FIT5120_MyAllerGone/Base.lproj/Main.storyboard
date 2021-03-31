@@ -19,8 +19,8 @@
                         <color key="selectedImageTintColor" systemColor="labelColor"/>
                     </tabBar>
                     <connections>
+                        <segue destination="ccO-at-ulf" kind="relationship" relationship="viewControllers" id="fj0-uv-3Nk"/>
                         <segue destination="jrG-Pa-4bz" kind="relationship" relationship="viewControllers" id="deC-W2-ASJ"/>
-                        <segue destination="6WZ-lX-YrS" kind="relationship" relationship="viewControllers" id="aCa-Vk-mBV"/>
                         <segue destination="FYb-10-VCb" kind="relationship" relationship="viewControllers" id="BEj-Hs-Nbr"/>
                     </connections>
                 </tabBarController>
@@ -43,7 +43,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBB-5i-ysn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="449" y="943"/>
+            <point key="canvasLocation" x="-2544" y="943"/>
         </scene>
         <!--Hospital-->
         <scene sceneID="yaJ-kw-oQX">
@@ -60,13 +60,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bY4-yN-09O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1437" y="943"/>
+            <point key="canvasLocation" x="1046" y="980"/>
         </scene>
-        <!--Home-->
+        <!--Weather-->
         <scene sceneID="g6D-MP-T1k">
             <objects>
                 <navigationController id="jrG-Pa-4bz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="home" id="ztP-gv-hgT"/>
+                    <tabBarItem key="tabBarItem" title="Weather" image="home" id="ztP-gv-hgT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Oa-Hu-Jby">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -77,7 +77,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rtu-6J-lSY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-467" y="943"/>
+            <point key="canvasLocation" x="-15" y="980"/>
         </scene>
         <!--MyAllerGone-->
         <scene sceneID="wBN-z9-909">
@@ -318,8 +318,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pollen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h10-pz-Qhk">
-                                                    <rect key="frame" x="13" y="8" width="47" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pollen Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h10-pz-Qhk">
+                                                    <rect key="frame" x="13" y="8" width="88" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -380,8 +380,8 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tree " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhU-aZ-cKH">
-                                                            <rect key="frame" x="64" y="15" width="33" height="17"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <rect key="frame" x="64" y="15" width="34.333333333333343" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -457,8 +457,8 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xiw-DY-EnE">
-                                                            <rect key="frame" x="62" y="16" width="37" height="17"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <rect key="frame" x="62" y="16" width="39.333333333333343" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -517,8 +517,8 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AQI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3w-2I-0m2">
-                                                            <rect key="frame" x="3" y="3" width="34.666666666666664" height="22.666666666666668"/>
-                                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                                            <rect key="frame" x="2.9999999999999982" y="3" width="31.333333333333329" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -623,7 +623,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qf8-MG-I00" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-457.00934579439252" y="1651.6198704103672"/>
+            <point key="canvasLocation" x="-6" y="1689"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hy3-RW-Gsw">
@@ -642,13 +642,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZX4-4I-F6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="489" y="1665"/>
+            <point key="canvasLocation" x="-2505" y="1665"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Home-->
         <scene sceneID="fed-jv-uiD">
             <objects>
                 <navigationController id="ccO-at-ulf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="2NF-ww-Ufy"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="ambulance" id="2NF-ww-Ufy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JWM-Gv-MPb">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -659,7 +659,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cep-yb-8M1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1393" y="943"/>
+            <point key="canvasLocation" x="-1116" y="980"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="Cva-vq-TDL">
@@ -678,7 +678,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hgc-sh-nFh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1395" y="1665"/>
+            <point key="canvasLocation" x="-1119" y="1702"/>
         </scene>
         <!--Hospital-->
         <scene sceneID="D71-ei-Dla">
@@ -765,7 +765,7 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="1409" y="1768"/>
+            <point key="canvasLocation" x="1018" y="1805"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="ui4-Va-s6Y">
@@ -801,10 +801,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="olJ-vU-pBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2254" y="1652"/>
+            <point key="canvasLocation" x="1862" y="1689"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ambulance" width="32" height="32"/>
         <image name="grass" width="50" height="50"/>
         <image name="home" width="32" height="32"/>
         <image name="location" width="32" height="32"/>

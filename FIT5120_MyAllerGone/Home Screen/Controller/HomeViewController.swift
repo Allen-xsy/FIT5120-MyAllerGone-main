@@ -48,6 +48,7 @@ class HomeViewController: UIViewController {
     var weatherManager = WeatherManager()
     var forecastManager = ForecastManager()
     var aqiManager = AQIManager()
+    var pollenManager = PollenManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,20 +66,9 @@ class HomeViewController: UIViewController {
         weatherManager.delegate = self
         forecastManager.delegate = self
         aqiManager.delegate = self
+        pollenManager.delegate = self
 
         // Do any additional setup after loading the view.
-        guard let tabBar = tabBarController?.tabBar else {
-            return
-        }
-        //tabBar.barTintColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1.0)
-        tabBar.layer.cornerRadius = 20
-        tabBar.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
-        tabBar.layer.masksToBounds = true
-        tabBar.layer.borderWidth = 0.3
-        tabBar.layer.borderColor = UIColor.gray.cgColor
-        
-        //view.backgroundColor = UIColor.white
-        //navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.tabBarItem.selectedImage = UIImage(named: "cloudy_click")
         
     }
@@ -152,29 +142,32 @@ class HomeViewController: UIViewController {
           return dateformatter.date(from: dateStr)!
       }
     func getWeedayFromeDate(date: Date, forecastIndex: Int) -> String {
-           let calendar = Calendar.current
-           let dateComponets = calendar.dateComponents([Calendar.Component.year,Calendar.Component.month,Calendar.Component.weekday,Calendar.Component.day], from: date)
-           // get what day is today
-           let weekDay = dateComponets.weekday! + forecastIndex
-           switch weekDay {
-           case 1:
-               return "Sun"
-           case 2:
-              return  "Mon"
-           case 3:
-               return "Tue"
-           case 4:
-               return "Wed"
-           case 5:
-               return "Thu"
-           case 6:
-               return "Fri"
-           case 7:
-               return "Sat"
-           default:
-               return ""
-           }
-       }
+        let calendar = Calendar.current
+        let dateComponets = calendar.dateComponents([Calendar.Component.year,Calendar.Component.month,Calendar.Component.weekday,Calendar.Component.day], from: date)
+        // get what day is today
+        var weekDay = dateComponets.weekday! + forecastIndex
+        if weekDay > 7 {
+            weekDay = weekDay - 7
+        }
+        switch weekDay {
+        case 1:
+            return "Sun"
+        case 2:
+            return  "Mon"
+        case 3:
+            return "Tue"
+        case 4:
+            return "Wed"
+        case 5:
+            return "Thu"
+        case 6:
+            return "Fri"
+        case 7:
+            return "Sat"
+        default:
+            return ""
+        }
+    }
     
     func updateWeekAndDate() {
         let date = self.getCurrentDate()
@@ -305,6 +298,24 @@ extension HomeViewController: AQIManagerDelegate {
     }
 }
 
+//MARK: - Receive the Pollen data and send it to the UI
+
+extension HomeViewController: pollenManagerDelegate {
+
+    func updatePollenIndex(_ pollenManager: PollenManager, pollen: PollenModel){
+        
+        DispatchQueue.main.async {
+            
+            
+//            self.aqiString = aqi.AQIndex
+//            self.aqiDesc = aqi.AQICategory
+//            self.aqiRecommendation = aqi.AQIRecommendation
+
+            self.HomeCollectionView.reloadData()
+        }
+    }
+}
+
 // MARK: - Collection view data source
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -338,7 +349,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             return cell
         }
         
-        if indexPath.row == 2 {
+        if indexPath.row == 3 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AQICollectionViewCell", for: indexPath) as! AQICollectionViewCell
             
             cell.layer.cornerRadius = 5.0
@@ -355,7 +366,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             return cell
         }
         
-        if indexPath.row == 3 {
+        if indexPath.row == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PollenCollectionViewCell", for: indexPath) as! PollenCollectionViewCell
             
             cell.layer.cornerRadius = 5.0

@@ -13,8 +13,21 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        navigationController?.tabBarItem.selectedImage = UIImage(named: "question_click")
         
+        // Do any additional setup after loading the view.
+        guard let tabBar = tabBarController?.tabBar else {
+            return
+        }
+        //tabBar.barTintColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1.0)
+        tabBar.layer.cornerRadius = 20
+        tabBar.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        tabBar.layer.masksToBounds = true
+        tabBar.layer.borderWidth = 0.3
+        tabBar.layer.borderColor = UIColor.gray.cgColor
+        
+        //view.backgroundColor = UIColor.white
+        //navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.tabBarItem.selectedImage = UIImage(named: "ambulance_click")
     }
     
 

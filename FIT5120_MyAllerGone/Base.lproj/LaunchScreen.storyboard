@@ -16,14 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="181-Xw-4g9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="181-Xw-4g9">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyAllerGone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChD-qN-anV">
+                                <rect key="frame" x="99" y="129" width="216" height="37.5"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="32"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="181-Xw-4g9" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="2rP-o6-DNm"/>
+                            <constraint firstItem="ChD-qN-anV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="VeE-9O-z06"/>
+                            <constraint firstItem="ChD-qN-anV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Zv0-dj-nf7"/>
                             <constraint firstItem="181-Xw-4g9" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="eD4-2l-ylM"/>
                             <constraint firstItem="181-Xw-4g9" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="nRU-Y3-g9m"/>
                             <constraint firstAttribute="bottom" secondItem="181-Xw-4g9" secondAttribute="bottom" id="z9L-ui-VAC"/>
@@ -36,7 +44,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launch.jpg" width="1242" height="2208"/>
+        <image name="launch_2.jpg" width="1920" height="2880"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

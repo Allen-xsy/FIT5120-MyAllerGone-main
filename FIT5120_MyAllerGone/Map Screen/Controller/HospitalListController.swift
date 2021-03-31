@@ -75,6 +75,7 @@ class HospitalListController: UIViewController, UITableViewDelegate, UITableView
         tableView.tableFooterView = UIView()
         view.setNeedsLayout()
         checkLocationAuth()
+        navigationController?.tabBarItem.selectedImage = UIImage(named: "location_click")
     }
     
     override func viewDidAppear(_ animated: Bool) {

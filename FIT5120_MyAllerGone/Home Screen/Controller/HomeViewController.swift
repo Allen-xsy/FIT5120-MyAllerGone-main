@@ -44,6 +44,11 @@ class HomeViewController: UIViewController {
     var aqiDesc: String?
     var aqiRecommendation: String?
     
+    var treePollenIndex: String?
+    var treePollenDesc: String?
+    var weedPollenIndex: String?
+    var weedPollenDesc: String?
+    
     var locationManager: CLLocationManager = CLLocationManager()
     var weatherManager = WeatherManager()
     var forecastManager = ForecastManager()
@@ -306,11 +311,20 @@ extension HomeViewController: pollenManagerDelegate {
         
         DispatchQueue.main.async {
             
-            
-//            self.aqiString = aqi.AQIndex
-//            self.aqiDesc = aqi.AQICategory
-//            self.aqiRecommendation = aqi.AQIRecommendation
+            if let index = pollen.pollenTreeValue {
+                self.treePollenIndex = String(index)
+            } else {
+                self.treePollenIndex = "0"
+            }
+            self.treePollenDesc = pollen.pollenTreeCategory ?? "NA"
 
+            if let index = pollen.pollenWeedValue {
+                self.weedPollenIndex = String(index)
+            } else {
+                self.weedPollenIndex = "0"
+            }
+            self.weedPollenDesc = pollen.pollenWeedCategory ?? "NA"
+            
             self.HomeCollectionView.reloadData()
         }
     }
@@ -374,11 +388,10 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             cell.layer.shadowRadius = 5
             cell.layer.masksToBounds = false
             
-//            cell.AQIndexLabel.text = self.aqiString
-//            cell.AQIDescLabel.text = self.aqiDesc
-//            cell.AQIRecommendationLabel.text = self.aqiRecommendation
-//            let AQIInt = Double(self.aqiString ?? "0")
-//            self.updateAQIProgress(cell: cell, AQI: AQIInt!)
+            cell.treePollenIndexLabel.text = self.treePollenIndex
+            cell.treeDescLabel.text = self.treePollenDesc
+            cell.WeedPollenIndexLabel.text = self.weedPollenIndex
+            cell.weedDescLabel.text = self.weedPollenDesc
             
             return cell
         }
@@ -429,7 +442,7 @@ extension HomeViewController: CLLocationManagerDelegate{
             weatherManager.fecthWeatherLocation( latitude: lat, longitude: lon)
             forecastManager.fecthForecastLocation(latitude: lat, longitude: lon)
             aqiManager.fecthAQILocation(latitude: lat, longitude: lon)
-            
+            pollenManager.fecthPollenLocation(latitude: lat, longitude: lon)
         }
     }
     

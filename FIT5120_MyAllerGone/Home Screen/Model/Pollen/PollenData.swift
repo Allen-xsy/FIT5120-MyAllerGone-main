@@ -10,7 +10,7 @@ import Foundation
 //MARK: - Struct's of the JSON file.
 
 struct PollenData: Codable {
-    let data: [PoData]
+    let data: [PoData]?
 }
 
 struct PoData: Codable {
@@ -18,8 +18,8 @@ struct PoData: Codable {
 }
 
 struct Type: Codable {
-    let tree: Tree
-    let weed: Weed
+    let tree: Tree?
+    let weed: Weed?
 }
 
 struct Tree: Codable {
@@ -31,14 +31,14 @@ struct Weed: Codable {
 }
 
 struct TreeIndex: Codable {
-    let value: Int
-    let color: String
-    let category: String
+    let value: Int?
+    let color: String?
+    let category: String?
 }
 
 struct WeedIndex: Codable {
-    let value: Int
-    let color: String
-    let category: String
+    let value: Int?
+    let color: String?
+    let category: String?
 }
 

@@ -56,17 +56,17 @@ struct PollenManager {
         
         do {
             let decodedData = try decoder.decode(PollenData.self, from: pollenData)
-            let treeValue = decodedData.data[0].types.tree.index.value
-            let treeCategory = decodedData.data[0].types.tree.index.category
-            let treeColor = decodedData.data[0].types.tree.index.color
-            let weedValue = decodedData.data[1].types.weed.index.value
-            let weedCategory = decodedData.data[1].types.weed.index.category
-            let weedColor = decodedData.data[1].types.weed.index.color
+            let treeValue = decodedData.data?[0].types.tree?.index.value
+            let treeCategory = decodedData.data?[0].types.tree?.index.category
+            let treeColor = decodedData.data?[0].types.tree?.index.color
+            let weedValue = decodedData.data?[1].types.weed?.index.value
+            let weedCategory = decodedData.data?[1].types.weed?.index.category
+            let weedColor = decodedData.data?[1].types.weed?.index.color
             let pollen = PollenModel(pollenTreeValue: treeValue, pollenTreeCategory: treeCategory, pollenTreeColor: treeColor, pollenWeedValue: weedValue, pollenWeedCategory: weedCategory, pollenWeedColor: weedColor)
             
             return pollen
         } catch {
-            print("JSON error")
+            print(error)
             return nil
         }
     }

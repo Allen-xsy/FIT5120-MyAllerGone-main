@@ -62,11 +62,11 @@
             </objects>
             <point key="canvasLocation" x="1046" y="980"/>
         </scene>
-        <!--Weather-->
+        <!--Forecast-->
         <scene sceneID="g6D-MP-T1k">
             <objects>
                 <navigationController id="jrG-Pa-4bz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Weather" image="home" id="ztP-gv-hgT"/>
+                    <tabBarItem key="tabBarItem" title="Forecast" image="home" id="ztP-gv-hgT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Oa-Hu-Jby">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -79,7 +79,7 @@
             </objects>
             <point key="canvasLocation" x="-15" y="980"/>
         </scene>
-        <!--Weather-->
+        <!--Weather Forecast-->
         <scene sceneID="wBN-z9-909">
             <objects>
                 <viewController id="G1S-qJ-VHC" customClass="HomeViewController" customModule="FIT5120_MyAllerGone" customModuleProvider="target" sceneMemberID="viewController">
@@ -478,6 +478,37 @@
                                                         <constraint firstItem="aSE-6s-ibj" firstAttribute="leading" secondItem="SgR-SG-rlK" secondAttribute="leading" constant="14" id="wAW-nh-iml"/>
                                                     </constraints>
                                                 </view>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wa5-Ie-GdZ">
+                                                    <rect key="frame" x="235" y="1" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Fri">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aB0-jh-a8z">
+                                                    <rect key="frame" x="264" y="1" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Sat">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sg4-Qy-ucp">
+                                                    <rect key="frame" x="295" y="1" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Sun">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BZ0-oD-Wjr">
+                                                    <rect key="frame" x="264" y="8" width="0.66666666666666663" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.83135707489999999" green="0.83135707489999999" blue="0.83135707489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q3D-NR-JLr">
+                                                    <rect key="frame" x="293" y="8" width="0.66666666666666663" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.83135707489999999" green="0.83135707489999999" blue="0.83135707489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="SgR-SG-rlK" secondAttribute="bottom" constant="6" id="3Fe-d9-gp4"/>
@@ -614,7 +645,7 @@
                             <constraint firstItem="9cg-YI-Tdf" firstAttribute="leading" secondItem="aSh-KC-etU" secondAttribute="leading" id="zbB-n9-BJ3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Weather" largeTitleDisplayMode="never" id="kzO-Dt-vgQ"/>
+                    <navigationItem key="navigationItem" title="Weather Forecast" largeTitleDisplayMode="never" id="kzO-Dt-vgQ"/>
                     <connections>
                         <outlet property="CityLabel" destination="DCi-UN-yKp" id="oIp-hj-Bhr"/>
                         <outlet property="HomeCollectionView" destination="9cg-YI-Tdf" id="QcM-cb-QcM"/>
@@ -622,7 +653,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qf8-MG-I00" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6" y="1689"/>
+            <point key="canvasLocation" x="-7.009345794392523" y="1688.5529157667388"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hy3-RW-Gsw">
@@ -647,7 +678,7 @@
         <scene sceneID="fed-jv-uiD">
             <objects>
                 <navigationController id="ccO-at-ulf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="ambulance" id="2NF-ww-Ufy"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" id="2NF-ww-Ufy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JWM-Gv-MPb">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -682,7 +713,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your one stop destination for Allergy Needs!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDH-wC-m5U">
-                                <rect key="frame" x="60" y="202.66666666666666" width="308" height="52.666666666666657"/>
+                                <rect key="frame" x="60" y="177.66666666666666" width="308" height="52.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -691,7 +722,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="uIZ-N7-l2r" firstAttribute="top" secondItem="TzT-JS-R6J" secondAttribute="bottom" constant="40" id="4iz-RW-lEQ"/>
-                            <constraint firstItem="dDH-wC-m5U" firstAttribute="top" secondItem="uIZ-N7-l2r" secondAttribute="bottom" constant="40" id="BV7-fG-YXC"/>
+                            <constraint firstItem="dDH-wC-m5U" firstAttribute="top" secondItem="uIZ-N7-l2r" secondAttribute="bottom" constant="15" id="BV7-fG-YXC"/>
                             <constraint firstItem="dDH-wC-m5U" firstAttribute="leading" secondItem="9ep-lh-mmO" secondAttribute="leadingMargin" constant="40" id="KbQ-aC-9VR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uIZ-N7-l2r" secondAttribute="trailing" id="XfK-Rj-fYG"/>
                             <constraint firstItem="uIZ-N7-l2r" firstAttribute="leading" secondItem="9ep-lh-mmO" secondAttribute="leadingMargin" id="aqP-cj-48I"/>
@@ -711,7 +742,7 @@
             </objects>
             <point key="canvasLocation" x="-1120.0934579439252" y="1701.5118790496761"/>
         </scene>
-        <!--Hospital-->
+        <!--Hospital locator-->
         <scene sceneID="D71-ei-Dla">
             <objects>
                 <viewController id="jud-Qp-Yqf" customClass="HospitalListController" customModule="FIT5120_MyAllerGone" customModuleProvider="target" sceneMemberID="viewController">
@@ -740,7 +771,7 @@
                             <constraint firstItem="b9E-Mg-fjR" firstAttribute="top" secondItem="HSH-q7-2Rs" secondAttribute="bottom" id="oFp-ma-tFX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Hospital" id="H7r-tB-aEQ"/>
+                    <navigationItem key="navigationItem" title="Hospital locator" id="H7r-tB-aEQ"/>
                     <connections>
                         <outlet property="headerView" destination="mEZ-6C-tAf" id="Rvj-U8-UrV"/>
                         <outlet property="locationLabel" destination="aKj-0T-N2B" id="Eio-lR-nK7"/>
@@ -836,9 +867,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ambulance" width="32" height="32"/>
         <image name="grass" width="50" height="50"/>
         <image name="home" width="32" height="32"/>
+        <image name="house" width="32" height="32"/>
         <image name="location" width="32" height="32"/>
         <image name="location_pin" width="12" height="12"/>
         <image name="search" width="32" height="32"/>

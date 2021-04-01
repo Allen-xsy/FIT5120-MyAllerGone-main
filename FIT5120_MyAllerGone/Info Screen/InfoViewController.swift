@@ -29,7 +29,7 @@ class InfoViewController: UIViewController {
         
         //view.backgroundColor = UIColor.white
         //navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.tabBarItem.selectedImage = UIImage(named: "ambulance_click")
+        navigationController?.tabBarItem.selectedImage = UIImage(named: "house_click")
         backGroundImageView.image = UIImage(named: "launch_2")
     }
     

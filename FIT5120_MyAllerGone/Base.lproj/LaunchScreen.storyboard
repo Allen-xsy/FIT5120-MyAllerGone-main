@@ -19,11 +19,11 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="181-Xw-4g9">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="allerIcon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8wr-XZ-7Jy">
-                                <rect key="frame" x="0.0" y="89" width="414" height="161"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allerIcon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8wr-XZ-7Jy">
+                                <rect key="frame" x="81" y="189" width="252" height="172"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="NnS-eD-gkQ"/>
-                                    <constraint firstAttribute="width" constant="156" id="YQl-0a-OWJ"/>
+                                    <constraint firstAttribute="width" constant="252" id="UPc-wg-RZ8"/>
+                                    <constraint firstAttribute="height" constant="172" id="fTn-1p-qfd"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -32,6 +32,7 @@
                         <constraints>
                             <constraint firstItem="181-Xw-4g9" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="2rP-o6-DNm"/>
                             <constraint firstItem="8wr-XZ-7Jy" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HNO-Zk-cfz"/>
+                            <constraint firstItem="8wr-XZ-7Jy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="145" id="dvL-tn-iGt"/>
                             <constraint firstItem="181-Xw-4g9" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="eD4-2l-ylM"/>
                             <constraint firstItem="181-Xw-4g9" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="nRU-Y3-g9m"/>
                             <constraint firstAttribute="bottom" secondItem="181-Xw-4g9" secondAttribute="bottom" id="z9L-ui-VAC"/>

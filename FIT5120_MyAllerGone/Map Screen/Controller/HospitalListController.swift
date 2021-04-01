@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 class HospitalListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -188,7 +189,11 @@ class HospitalListController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showMapController", sender: dataSource[indexPath.row])
+        let lati = (dataSource[indexPath.row].geometry?.location?.lat)!
+        let long = (dataSource[indexPath.row].geometry?.location?.lng)!
+        let name = dataSource[indexPath.row].name!
+        jumpToAppleMapNavigation(lat:lati,lng: long,hospitalName: name)
+        //performSegue(withIdentifier: "showMapController", sender: dataSource[indexPath.row])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -238,5 +243,19 @@ extension HospitalListController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuth()
+    }
+}
+
+extension HospitalListController: MKMapViewDelegate{
+    func jumpToAppleMapNavigation(lat:Double,lng:Double,hospitalName:String){
+        //refer to https://youtu.be/INfCmCxLC0o
+        let coordinates = CLLocationCoordinate2DMake(lat,lng)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)]
+        let placemark = MKPlacemark(coordinate: coordinates)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = hospitalName
+        mapItem.openInMaps(launchOptions: options)
+        
     }
 }

@@ -40,7 +40,7 @@ class HospitalTableViewCell: UITableViewCell {
                 }
             }
         } else {
-            hospitalImageView.image = nil
+            hospitalImageView.image = UIImage(named: "hospitalImage")
         }
         
         if let lat = searchResult.geometry?.location?.lat, let lon = searchResult.geometry?.location?.lng {

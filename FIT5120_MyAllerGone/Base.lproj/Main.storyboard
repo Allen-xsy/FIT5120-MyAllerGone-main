@@ -79,7 +79,7 @@
             </objects>
             <point key="canvasLocation" x="-15" y="980"/>
         </scene>
-        <!--MyAllerGone-->
+        <!--Weather-->
         <scene sceneID="wBN-z9-909">
             <objects>
                 <viewController id="G1S-qJ-VHC" customClass="HomeViewController" customModule="FIT5120_MyAllerGone" customModuleProvider="target" sceneMemberID="viewController">
@@ -614,7 +614,7 @@
                             <constraint firstItem="9cg-YI-Tdf" firstAttribute="leading" secondItem="aSh-KC-etU" secondAttribute="leading" id="zbB-n9-BJ3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="MyAllerGone" largeTitleDisplayMode="never" id="kzO-Dt-vgQ"/>
+                    <navigationItem key="navigationItem" title="Weather" largeTitleDisplayMode="never" id="kzO-Dt-vgQ"/>
                     <connections>
                         <outlet property="CityLabel" destination="DCi-UN-yKp" id="oIp-hj-Bhr"/>
                         <outlet property="HomeCollectionView" destination="9cg-YI-Tdf" id="QcM-cb-QcM"/>
@@ -660,7 +660,7 @@
             </objects>
             <point key="canvasLocation" x="-1116" y="980"/>
         </scene>
-        <!--Info View Controller-->
+        <!--MyAllerGone-->
         <scene sceneID="Cva-vq-TDL">
             <objects>
                 <viewController id="7VP-m6-oQB" customClass="InfoViewController" customModule="FIT5120_MyAllerGone" customModuleProvider="target" sceneMemberID="viewController">
@@ -673,7 +673,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uqa-VF-QHJ">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="843"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to MyAllerGone!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIZ-N7-l2r">
                                 <rect key="frame" x="20" y="128" width="388" height="28.666666666666657"/>
@@ -699,10 +699,10 @@
                             <constraint firstAttribute="trailing" secondItem="Uqa-VF-QHJ" secondAttribute="trailing" id="ckp-y6-gEz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dDH-wC-m5U" secondAttribute="trailing" constant="40" id="hyM-TD-skh"/>
                             <constraint firstItem="Uqa-VF-QHJ" firstAttribute="leading" secondItem="9ep-lh-mmO" secondAttribute="leading" id="ksh-7p-kkA"/>
-                            <constraint firstItem="duC-tg-bTw" firstAttribute="top" secondItem="Uqa-VF-QHJ" secondAttribute="bottom" id="wQy-wf-ugP"/>
+                            <constraint firstAttribute="bottom" secondItem="Uqa-VF-QHJ" secondAttribute="bottom" id="wQy-wf-ugP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="zgq-CE-EmU"/>
+                    <navigationItem key="navigationItem" title="MyAllerGone" id="zgq-CE-EmU"/>
                     <connections>
                         <outlet property="backGroundImageView" destination="Uqa-VF-QHJ" id="LM6-0a-jBG"/>
                     </connections>

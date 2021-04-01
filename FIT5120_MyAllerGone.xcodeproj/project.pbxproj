@@ -37,7 +37,7 @@
 		ACE9BAA32614E8A7004FCAF2 /* launch_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACE9BAA22614E8A7004FCAF2 /* launch_2.jpg */; };
 		ACE9BAA92614FA54004FCAF2 /* PollenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9BAA82614FA54004FCAF2 /* PollenModel.swift */; };
 		ACE9BAAC2614FB23004FCAF2 /* PollenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9BAAB2614FB23004FCAF2 /* PollenManager.swift */; };
-		ACF87A1B26130C0E00B5662A /* launch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACF87A1A26130C0E00B5662A /* launch.jpg */; };
+		ACF87A1B26130C0E00B5662A /* allerIcon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACF87A1A26130C0E00B5662A /* allerIcon.jpg */; };
 		ACF87A22261312B300B5662A /* AQIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF87A21261312B300B5662A /* AQIManager.swift */; };
 		ACF87A26261312C300B5662A /* AQIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF87A25261312C300B5662A /* AQIData.swift */; };
 		ACF87A292613145A00B5662A /* AQIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF87A282613145A00B5662A /* AQIModel.swift */; };
@@ -78,7 +78,7 @@
 		ACE9BAA22614E8A7004FCAF2 /* launch_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launch_2.jpg; sourceTree = "<group>"; };
 		ACE9BAA82614FA54004FCAF2 /* PollenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollenModel.swift; sourceTree = "<group>"; };
 		ACE9BAAB2614FB23004FCAF2 /* PollenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollenManager.swift; sourceTree = "<group>"; };
-		ACF87A1A26130C0E00B5662A /* launch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launch.jpg; sourceTree = "<group>"; };
+		ACF87A1A26130C0E00B5662A /* allerIcon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = allerIcon.jpg; sourceTree = "<group>"; };
 		ACF87A21261312B300B5662A /* AQIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIManager.swift; sourceTree = "<group>"; };
 		ACF87A25261312C300B5662A /* AQIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIData.swift; sourceTree = "<group>"; };
 		ACF87A282613145A00B5662A /* AQIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIModel.swift; sourceTree = "<group>"; };
@@ -219,7 +219,7 @@
 				ACAE558326061C0B00BFB05C /* Assets.xcassets */,
 				ACAE558526061C0B00BFB05C /* LaunchScreen.storyboard */,
 				ACE9BAA22614E8A7004FCAF2 /* launch_2.jpg */,
-				ACF87A1A26130C0E00B5662A /* launch.jpg */,
+				ACF87A1A26130C0E00B5662A /* allerIcon.jpg */,
 				ACAE558826061C0B00BFB05C /* Info.plist */,
 			);
 			path = FIT5120_MyAllerGone;
@@ -336,7 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACAE558726061C0B00BFB05C /* LaunchScreen.storyboard in Resources */,
-				ACF87A1B26130C0E00B5662A /* launch.jpg in Resources */,
+				ACF87A1B26130C0E00B5662A /* allerIcon.jpg in Resources */,
 				ACAE558426061C0B00BFB05C /* Assets.xcassets in Resources */,
 				31B20C602614B35F00F24470 /* HospitalTableViewCell.xib in Resources */,
 				ACAE558226061C0700BFB05C /* Main.storyboard in Resources */,

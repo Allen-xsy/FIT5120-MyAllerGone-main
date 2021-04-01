@@ -23,6 +23,7 @@ class InfoViewController: UIViewController {
         tabBar.layer.cornerRadius = 20
         tabBar.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
         tabBar.layer.masksToBounds = true
+        tabBar.layer.opacity = 0.9
         tabBar.layer.borderWidth = 0.3
         tabBar.layer.borderColor = UIColor.gray.cgColor
         

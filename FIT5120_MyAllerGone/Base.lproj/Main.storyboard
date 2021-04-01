@@ -523,15 +523,15 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good air quality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbo-3g-Jn3">
-                                                            <rect key="frame" x="16.000000000000007" y="107.33333333333333" width="104.66666666666669" height="32.999999999999986"/>
-                                                            <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="15"/>
-                                                            <nil key="textColor"/>
+                                                            <rect key="frame" x="15" y="113.33333333333333" width="107" height="17.333333333333329"/>
+                                                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="Wbo-3g-Jn3" firstAttribute="top" secondItem="3Du-07-iKW" secondAttribute="bottom" constant="32" id="1lo-3n-QM8"/>
+                                                        <constraint firstItem="Wbo-3g-Jn3" firstAttribute="top" secondItem="3Du-07-iKW" secondAttribute="bottom" constant="38" id="1lo-3n-QM8"/>
                                                         <constraint firstItem="O3w-2I-0m2" firstAttribute="leading" secondItem="5JI-9p-rKw" secondAttribute="leading" constant="3" id="Nzf-VP-8Ul"/>
                                                         <constraint firstAttribute="height" constant="140" id="RBe-rd-MEr"/>
                                                         <constraint firstItem="3Du-07-iKW" firstAttribute="leading" secondItem="5JI-9p-rKw" secondAttribute="leading" constant="53" id="SwZ-xY-wUL"/>
@@ -561,7 +561,6 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With this level of air quality, you have no limitations. Enjoy the outdoors!&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfG-Rr-WK5">
                                                     <rect key="frame" x="166" y="36" width="175" height="114"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="115" id="Apz-2M-uGy"/>
                                                         <constraint firstAttribute="width" constant="175" id="KBO-wp-ULa"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>

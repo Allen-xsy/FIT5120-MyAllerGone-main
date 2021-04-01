@@ -676,14 +676,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to MyAllerGone!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIZ-N7-l2r">
-                                <rect key="frame" x="20" y="128" width="388" height="28.666666666666657"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <rect key="frame" x="20" y="128" width="388" height="34.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="we are focus on provide pollen forcast and hospital location for parent with kids between 0 to 5 years old " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDH-wC-m5U">
-                                <rect key="frame" x="60" y="211.66666666666666" width="308" height="60.999999999999972"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your one stop destination for Allergy Needs!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDH-wC-m5U">
+                                <rect key="frame" x="60" y="202.66666666666666" width="308" height="52.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -691,7 +691,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="uIZ-N7-l2r" firstAttribute="top" secondItem="TzT-JS-R6J" secondAttribute="bottom" constant="40" id="4iz-RW-lEQ"/>
-                            <constraint firstItem="dDH-wC-m5U" firstAttribute="top" secondItem="uIZ-N7-l2r" secondAttribute="bottom" constant="55" id="BV7-fG-YXC"/>
+                            <constraint firstItem="dDH-wC-m5U" firstAttribute="top" secondItem="uIZ-N7-l2r" secondAttribute="bottom" constant="40" id="BV7-fG-YXC"/>
                             <constraint firstItem="dDH-wC-m5U" firstAttribute="leading" secondItem="9ep-lh-mmO" secondAttribute="leadingMargin" constant="40" id="KbQ-aC-9VR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uIZ-N7-l2r" secondAttribute="trailing" id="XfK-Rj-fYG"/>
                             <constraint firstItem="uIZ-N7-l2r" firstAttribute="leading" secondItem="9ep-lh-mmO" secondAttribute="leadingMargin" id="aqP-cj-48I"/>

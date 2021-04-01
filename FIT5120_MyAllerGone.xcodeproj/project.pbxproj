@@ -217,8 +217,8 @@
 				ACAE55A12606395C00BFB05C /* Info Screen */,
 				ACAE558026061C0700BFB05C /* Main.storyboard */,
 				ACAE558326061C0B00BFB05C /* Assets.xcassets */,
-				ACAE558526061C0B00BFB05C /* LaunchScreen.storyboard */,
 				ACE9BAA22614E8A7004FCAF2 /* launch_2.jpg */,
+				ACAE558526061C0B00BFB05C /* LaunchScreen.storyboard */,
 				ACF87A1A26130C0E00B5662A /* allerIcon.jpg */,
 				ACAE558826061C0B00BFB05C /* Info.plist */,
 			);

@@ -671,13 +671,45 @@
                     <view key="view" contentMode="scaleToFill" id="9ep-lh-mmO">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uqa-VF-QHJ">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="843"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to MyAllerGone!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIZ-N7-l2r">
+                                <rect key="frame" x="20" y="128" width="388" height="28.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="we are focus on provide pollen forcast and hospital location for parent with kids between 0 to 5 years old " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDH-wC-m5U">
+                                <rect key="frame" x="60" y="211.66666666666666" width="308" height="60.999999999999972"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uIZ-N7-l2r" firstAttribute="top" secondItem="TzT-JS-R6J" secondAttribute="bottom" constant="40" id="4iz-RW-lEQ"/>
+                            <constraint firstItem="dDH-wC-m5U" firstAttribute="top" secondItem="uIZ-N7-l2r" secondAttribute="bottom" constant="55" id="BV7-fG-YXC"/>
+                            <constraint firstItem="dDH-wC-m5U" firstAttribute="leading" secondItem="9ep-lh-mmO" secondAttribute="leadingMargin" constant="40" id="KbQ-aC-9VR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uIZ-N7-l2r" secondAttribute="trailing" id="XfK-Rj-fYG"/>
+                            <constraint firstItem="uIZ-N7-l2r" firstAttribute="leading" secondItem="9ep-lh-mmO" secondAttribute="leadingMargin" id="aqP-cj-48I"/>
+                            <constraint firstItem="Uqa-VF-QHJ" firstAttribute="top" secondItem="9ep-lh-mmO" secondAttribute="top" id="bsO-3l-irX"/>
+                            <constraint firstAttribute="trailing" secondItem="Uqa-VF-QHJ" secondAttribute="trailing" id="ckp-y6-gEz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dDH-wC-m5U" secondAttribute="trailing" constant="40" id="hyM-TD-skh"/>
+                            <constraint firstItem="Uqa-VF-QHJ" firstAttribute="leading" secondItem="9ep-lh-mmO" secondAttribute="leading" id="ksh-7p-kkA"/>
+                            <constraint firstItem="duC-tg-bTw" firstAttribute="top" secondItem="Uqa-VF-QHJ" secondAttribute="bottom" id="wQy-wf-ugP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zgq-CE-EmU"/>
+                    <connections>
+                        <outlet property="backGroundImageView" destination="Uqa-VF-QHJ" id="LM6-0a-jBG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hgc-sh-nFh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1119" y="1702"/>
+            <point key="canvasLocation" x="-1120.0934579439252" y="1701.5118790496761"/>
         </scene>
         <!--Hospital-->
         <scene sceneID="D71-ei-Dla">

@@ -9,6 +9,7 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
+    @IBOutlet weak var backGroundImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +29,7 @@ class InfoViewController: UIViewController {
         //view.backgroundColor = UIColor.white
         //navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.tabBarItem.selectedImage = UIImage(named: "ambulance_click")
+        backGroundImageView.image = UIImage(named: "homeBackGround")
     }
     
 

@@ -15,7 +15,7 @@ let kGoogleApiKey = "AIzaSyA58AGEbiSrppXfA9kmSvu0907KhEddBeY"
 let kDefaultLongitude = 145.136215
 
 // Default Latitude
-let kDefaultLatitude = 37.910522
+let kDefaultLatitude = -37.910522
 
 
 // Create Search Place String URL

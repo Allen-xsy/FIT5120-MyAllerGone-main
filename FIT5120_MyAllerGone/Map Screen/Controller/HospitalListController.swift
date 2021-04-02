@@ -131,6 +131,12 @@ class HospitalListController: UIViewController, UITableViewDelegate, UITableView
             lon = value.coordinate.longitude
             lat = value.coordinate.latitude
         }
+        if lon == 0{
+            lon = 145.136215
+        }
+        if lat == 0{
+            lat = -37.910522
+        }
         view.isUserInteractionEnabled = false;
         NetworkManager.loadData(urlString: searchPlaceUrl(for: lon, latitude: lat), type: PlaceSearchVo.self) {[weak self] (success, searchResult) in
             self?.headerRefresh.endRefreshing()

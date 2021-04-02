@@ -75,11 +75,17 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         navigationController?.tabBarItem.selectedImage = UIImage(named: "cloudy_click")
-        // Default user location for Appetize
-        weatherManager.fecthWeatherLocation(latitude: 51.50998, longitude: -0.1337)
-        forecastManager.fecthForecastLocation(latitude: 51.50998, longitude: -0.1337)
-        aqiManager.fecthAQILocation(latitude: 51.50998, longitude: -0.1337)
-        pollenManager.fecthPollenLocation(latitude: 51.50998, longitude: -0.1337)
+        
+        //To set the default user location for Appetize
+        if let isAppetize = UserDefaults.standard.object(forKey: "isAppetize") as? Bool {
+            if isAppetize == true {
+                weatherManager.fecthWeatherLocation(latitude: 145.132430 , longitude: -37.911706)
+                weatherManager.fecthWeatherLocation(latitude: 145.132430, longitude: -37.911706)
+                forecastManager.fecthForecastLocation(latitude: 145.132430, longitude: -37.911706)
+                aqiManager.fecthAQILocation(latitude: 145.132430, longitude: -37.911706)
+                pollenManager.fecthPollenLocation(latitude: 145.132430, longitude: -37.911706)
+            }
+        }
         
     }
     
@@ -102,7 +108,7 @@ class HomeViewController: UIViewController {
 
             switch manager.authorizationStatus {
                 case .authorizedAlways , .authorizedWhenInUse:
-                    getUserCurrentLocation()
+                    locationManager.startUpdatingLocation()
                     break
                 case .notDetermined:
                     locationManager.requestWhenInUseAuthorization()
@@ -125,17 +131,7 @@ class HomeViewController: UIViewController {
                     break
             }
     }
-    
-    func  getUserCurrentLocation(){
-//        if let currentLocation = locationManager.location?.coordinate {
-//            //print cuttentLocation lat && lng
-//            userCurrentLocationLat = currentLocation.latitude
-//            userCueentLocationLng = currentLocation.longitude
-//            print("current location lat \(currentLocation.latitude)")
-//            print("current location lng \(currentLocation.longitude)")
-//        }
-        locationManager.startUpdatingLocation()
-    }
+
     //MARK: - Get current date and week
     
     func getCurrentDateString() -> String {
@@ -444,10 +440,10 @@ extension HomeViewController: CLLocationManagerDelegate{
             let lon = location.coordinate.longitude
             print("current location lat \(lat)")
             print("current location lng \(lon)")
-//            weatherManager.fecthWeatherLocation( latitude: lat, longitude: lon)
-//            forecastManager.fecthForecastLocation(latitude: lat, longitude: lon)
-//            aqiManager.fecthAQILocation(latitude: lat, longitude: lon)
-//            pollenManager.fecthPollenLocation(latitude: lat, longitude: lon)
+            weatherManager.fecthWeatherLocation( latitude: lat, longitude: lon)
+            forecastManager.fecthForecastLocation(latitude: lat, longitude: lon)
+            aqiManager.fecthAQILocation(latitude: lat, longitude: lon)
+            pollenManager.fecthPollenLocation(latitude: lat, longitude: lon)
         }
     }
     

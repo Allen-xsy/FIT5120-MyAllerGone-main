@@ -75,6 +75,11 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         navigationController?.tabBarItem.selectedImage = UIImage(named: "cloudy_click")
+        // Default user location for Appetize
+        weatherManager.fecthWeatherLocation(latitude: 51.50998, longitude: -0.1337)
+        forecastManager.fecthForecastLocation(latitude: 51.50998, longitude: -0.1337)
+        aqiManager.fecthAQILocation(latitude: 51.50998, longitude: -0.1337)
+        pollenManager.fecthPollenLocation(latitude: 51.50998, longitude: -0.1337)
         
     }
     
@@ -439,10 +444,10 @@ extension HomeViewController: CLLocationManagerDelegate{
             let lon = location.coordinate.longitude
             print("current location lat \(lat)")
             print("current location lng \(lon)")
-            weatherManager.fecthWeatherLocation( latitude: lat, longitude: lon)
-            forecastManager.fecthForecastLocation(latitude: lat, longitude: lon)
-            aqiManager.fecthAQILocation(latitude: lat, longitude: lon)
-            pollenManager.fecthPollenLocation(latitude: lat, longitude: lon)
+//            weatherManager.fecthWeatherLocation( latitude: lat, longitude: lon)
+//            forecastManager.fecthForecastLocation(latitude: lat, longitude: lon)
+//            aqiManager.fecthAQILocation(latitude: lat, longitude: lon)
+//            pollenManager.fecthPollenLocation(latitude: lat, longitude: lon)
         }
     }
     

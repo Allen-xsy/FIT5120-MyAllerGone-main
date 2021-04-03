@@ -75,18 +75,18 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         navigationController?.tabBarItem.selectedImage = UIImage(named: "cloudy_click")
-        
-        //To set the default user location for Appetize
-        if let isAppetize = UserDefaults.standard.object(forKey: "isAppetize") as? Bool {
-            if isAppetize == true {
-                weatherManager.fecthWeatherLocation(latitude: 145.132430 , longitude: -37.911706)
-                weatherManager.fecthWeatherLocation(latitude: 145.132430, longitude: -37.911706)
-                forecastManager.fecthForecastLocation(latitude: 145.132430, longitude: -37.911706)
-                aqiManager.fecthAQILocation(latitude: 145.132430, longitude: -37.911706)
-                pollenManager.fecthPollenLocation(latitude: 145.132430, longitude: -37.911706)
-            }
+
+        // Add &params={"lat":纬度,"lon":经度} in Appetize link to costom user location
+        let paramsLat = UserDefaults.standard.object(forKey: "lat") as? Double
+        let paramsLon = UserDefaults.standard.object(forKey: "lon") as? Double
+        if let isAppetize = UserDefaults.standard.object(forKey: "isAppetize") as? Bool, isAppetize == true {
+            let lat = paramsLat ?? -37.911706
+            let lon = paramsLon ?? 145.132430
+            weatherManager.fecthWeatherLocation(latitude: lat , longitude: lon)
+            forecastManager.fecthForecastLocation(latitude: lat , longitude: lon)
+            aqiManager.fecthAQILocation(latitude: lat , longitude: lon)
+            pollenManager.fecthPollenLocation(latitude: lat , longitude: lon)
         }
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

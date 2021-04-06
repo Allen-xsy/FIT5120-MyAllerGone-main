@@ -13,6 +13,10 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var CityLabel: UILabel!
     @IBOutlet weak var HomeCollectionView: UICollectionView!
+    
+    var lat: Double?
+    var lon: Double?
+    var loadingStatus = 0
 
     var temp: String = "--"
     var weatherImageName: String?
@@ -55,6 +59,14 @@ class HomeViewController: UIViewController {
     var aqiManager = AQIManager()
     var pollenManager = PollenManager()
     
+    // Pull Refresh
+    fileprivate lazy var headerRefresh: UIRefreshControl = {
+        let object = UIRefreshControl()
+        object.attributedTitle = NSAttributedString(string: "Refreshing...")
+        object.addTarget(self, action: #selector(headerRefreshAction), for: UIControl.Event.valueChanged)
+        return object
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -73,7 +85,8 @@ class HomeViewController: UIViewController {
         aqiManager.delegate = self
         pollenManager.delegate = self
 
-        // Do any additional setup after loading the view.
+        HomeCollectionView.addSubview(headerRefresh)
+        // Change tap icon color when click
         navigationController?.tabBarItem.selectedImage = UIImage(named: "cloudy_click")
 
         // Add &params={"lat":纬度,"lon":经度} in Appetize link to costom user location
@@ -90,18 +103,20 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        checkLocation()        
-    }
-    
-    func checkLocation(){
         if CLLocationManager.locationServicesEnabled() {
             let locationManager = CLLocationManager()
             locationManagerDidChangeAuthorization(locationManager)
-            
         }else {
             print("CLLocationManager failed !!!")
         }
-        
+    }
+    
+    // Refresh Action
+    @objc private func headerRefreshAction() {
+        weatherManager.fecthWeatherLocation(latitude: self.lat!, longitude: self.lon!)
+        forecastManager.fecthForecastLocation(latitude: self.lat!, longitude: self.lon!)
+        aqiManager.fecthAQILocation(latitude: self.lat!, longitude: self.lon!)
+        pollenManager.fecthPollenLocation(latitude: self.lat!, longitude: self.lon!)
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
@@ -217,6 +232,15 @@ class HomeViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    // Check the loading status of each forecasting module
+    func checkLoadingStatus() {
+        loadingStatus = loadingStatus + 1
+        if loadingStatus == 4 {
+            loadingStatus = 0
+            self.headerRefresh.endRefreshing()
+            print("Done loading")
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -246,6 +270,7 @@ extension HomeViewController: WeatherManagerDelegate {
             self.MaxTemp = weather.maxTempString
             self.updateWeekAndDate()
             self.HomeCollectionView.reloadData()
+            self.checkLoadingStatus()
         }
     }
     
@@ -283,6 +308,7 @@ extension HomeViewController: ForecastManagerDelegate {
             self.updateForecastWeek()
             
             self.HomeCollectionView.reloadData()
+            self.checkLoadingStatus()
         }
     }
 }
@@ -300,6 +326,7 @@ extension HomeViewController: AQIManagerDelegate {
             self.aqiRecommendation = aqi.AQIRecommendation
 
             self.HomeCollectionView.reloadData()
+            self.checkLoadingStatus()
         }
     }
 }
@@ -327,6 +354,7 @@ extension HomeViewController: pollenManagerDelegate {
             self.weedPollenDesc = pollen.pollenWeedCategory ?? "NA"
             
             self.HomeCollectionView.reloadData()
+            self.checkLoadingStatus()
         }
     }
 }
@@ -438,9 +466,11 @@ extension HomeViewController: CLLocationManagerDelegate{
             
             let lat = location.coordinate.latitude
             let lon = location.coordinate.longitude
+            self.lat = lat
+            self.lon = lon
             print("current location lat \(lat)")
             print("current location lng \(lon)")
-            weatherManager.fecthWeatherLocation( latitude: lat, longitude: lon)
+            weatherManager.fecthWeatherLocation(latitude: lat, longitude: lon)
             forecastManager.fecthForecastLocation(latitude: lat, longitude: lon)
             aqiManager.fecthAQILocation(latitude: lat, longitude: lon)
             pollenManager.fecthPollenLocation(latitude: lat, longitude: lon)

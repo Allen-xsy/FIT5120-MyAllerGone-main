@@ -19,8 +19,8 @@ protocol AQIManagerDelegate {
 struct AQIManager {
     
     var delegate: AQIManagerDelegate?
-    
-    let AQIAPIURL = "https://api.breezometer.com/air-quality/v2/current-conditions?key=72addadaeb9b4fff9fa60d6320f97c43&features=breezometer_aqi,health_recommendations"
+    //  72addadaeb9b4fff9fa60d6320f97c43
+    let AQIAPIURL = "https://api.breezometer.com/air-quality/v2/current-conditions?key=907cced4507a4b3cbad3be0043786cd2&features=breezometer_aqi,health_recommendations"
     
     func fecthAQILocation(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
         let urlString = "\(AQIAPIURL)&lat=\(latitude)&lon=\(longitude)"
@@ -31,6 +31,7 @@ struct AQIManager {
     
     func fetchAQIData(with urlString: String ) {
         if let url = URL(string: urlString) {
+            //print(url)
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in
                 
@@ -63,7 +64,7 @@ struct AQIManager {
             return aqi
             
         } catch {
-            print("JSON error")
+            print(error)
             return nil
         }
     }

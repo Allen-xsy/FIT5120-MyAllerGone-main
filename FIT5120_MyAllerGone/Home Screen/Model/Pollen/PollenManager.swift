@@ -19,8 +19,8 @@ protocol pollenManagerDelegate {
 struct PollenManager {
     
     var delegate: pollenManagerDelegate?
-    
-    let APIURL = "https://api.breezometer.com/pollen/v2/forecast/daily?days=3&key=72addadaeb9b4fff9fa60d6320f97c43&features=types_information"
+    //  907cced4507a4b3cbad3be0043786cd2
+    let APIURL = "https://api.breezometer.com/pollen/v2/forecast/daily?days=3&key=907cced4507a4b3cbad3be0043786cd2&features=types_information"
     
     func fecthPollenLocation(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
         let urlString = "\(APIURL)&lat=\(latitude)&lon=\(longitude)"

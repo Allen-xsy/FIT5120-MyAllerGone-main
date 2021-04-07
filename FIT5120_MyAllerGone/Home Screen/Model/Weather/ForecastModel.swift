@@ -32,16 +32,16 @@ struct ForecastModel {
         return String(format: "%.0f", max)
     }
     var minTempString2: String {
-        return String(format: "%.0f", min)
+        return String(format: "%.0f", min2)
     }
     var maxTempString2: String {
-        return String(format: "%.0f", max)
+        return String(format: "%.0f", max2)
     }
     var minTempString3: String {
-        return String(format: "%.0f", min)
+        return String(format: "%.0f", min3)
     }
     var maxTempString3: String {
-        return String(format: "%.0f", max)
+        return String(format: "%.0f", max3)
     }
 
     //MARK: - Set icon weather

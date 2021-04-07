@@ -14,8 +14,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var CityLabel: UILabel!
     @IBOutlet weak var HomeCollectionView: UICollectionView!
     
-    var lat: Double?
-    var lon: Double?
+    var lat: Double = -37.911706
+    var lon: Double = 145.132430
     var loadingStatus = 0
 
     var temp: String = "--"
@@ -50,8 +50,10 @@ class HomeViewController: UIViewController {
     
     var treePollenIndex: String?
     var treePollenDesc: String?
+    var treeColor: [String] = ["#00CB47", "#5C948F"]
     var weedPollenIndex: String?
     var weedPollenDesc: String?
+    var weedColor: [String] = ["#00CB47", "#5C948F"]
     
     var locationManager: CLLocationManager = CLLocationManager()
     var weatherManager = WeatherManager()
@@ -113,10 +115,10 @@ class HomeViewController: UIViewController {
     
     // Refresh Action
     @objc private func headerRefreshAction() {
-        weatherManager.fecthWeatherLocation(latitude: self.lat!, longitude: self.lon!)
-        forecastManager.fecthForecastLocation(latitude: self.lat!, longitude: self.lon!)
-        aqiManager.fecthAQILocation(latitude: self.lat!, longitude: self.lon!)
-        pollenManager.fecthPollenLocation(latitude: self.lat!, longitude: self.lon!)
+        weatherManager.fecthWeatherLocation(latitude: self.lat, longitude: self.lon)
+        forecastManager.fecthForecastLocation(latitude: self.lat, longitude: self.lon)
+        aqiManager.fecthAQILocation(latitude: self.lat, longitude: self.lon)
+        pollenManager.fecthPollenLocation(latitude: self.lat, longitude: self.lon)
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
@@ -338,18 +340,28 @@ extension HomeViewController: pollenManagerDelegate {
     func updatePollenIndex(_ pollenManager: PollenManager, pollen: PollenModel){
         
         DispatchQueue.main.async {
-            
-            if let index = pollen.pollenTreeValue {
-                self.treePollenIndex = String(index)
+            // Set tree value
+            if let index1 = pollen.pollenTreeValue {
+                self.treePollenIndex = String(index1)
+                if index1 > 2 {
+                    self.treeColor = ["#FF9F00", "#F48A4F"]
+                } else {
+                    self.treeColor = ["#84CF33", "#3AA512"]
+                }
             } else {
-                self.treePollenIndex = "0"
+                self.treePollenIndex = "--"
             }
             self.treePollenDesc = pollen.pollenTreeCategory ?? "NA"
-
-            if let index = pollen.pollenWeedValue {
-                self.weedPollenIndex = String(index)
+            // Set weed value
+            if let index2 = pollen.pollenWeedValue {
+                self.weedPollenIndex = String(index2)
+                if index2 > 2 {
+                    self.weedColor = ["#FF9F00", "#F48A4F"]
+                } else {
+                    self.weedColor = ["#84CF33", "#3AA512"]
+                }
             } else {
-                self.weedPollenIndex = "0"
+                self.weedPollenIndex = "--"
             }
             self.weedPollenDesc = pollen.pollenWeedCategory ?? "NA"
             
@@ -421,7 +433,13 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             cell.treeDescLabel.text = self.treePollenDesc
             cell.WeedPollenIndexLabel.text = self.weedPollenIndex
             cell.weedDescLabel.text = self.weedPollenDesc
+            // UIColor(cgColor: #colorLiteral(red: 0.09918874376, green: 0.1465378853, blue: 0.5132053927, alpha: 0.7738655822))
             
+            cell.treeSquareView.backgroundColor = UIColor(hex:"\(self.treeColor[1])")
+            cell.treeBarView.backgroundColor = UIColor(hex:"\(self.treeColor[0])")
+            cell.weedSquareView.backgroundColor = UIColor(hex:"\(self.weedColor[1])")
+            cell.weedBarView.backgroundColor = UIColor(hex:"\(self.weedColor[0])")
+
             return cell
         }
         
@@ -483,4 +501,31 @@ extension HomeViewController: CLLocationManagerDelegate{
         
     }
     
+}
+
+extension UIColor {
+    public convenience init?(hex: String) {
+        let r, g, b, a: CGFloat
+
+        if hex.hasPrefix("#") {
+            let start = hex.index(hex.startIndex, offsetBy: 1)
+            let hexColor = String(hex[start...])
+
+            if hexColor.count == 6 {
+                let scanner = Scanner(string: hexColor)
+                var hexNumber: UInt64 = 0
+
+                if scanner.scanHexInt64(&hexNumber) {
+                    r = CGFloat((hexNumber & 0xff0000) >> 16) / 255
+                    g = CGFloat((hexNumber & 0x00ff00) >> 8) / 255
+                    b = CGFloat((hexNumber & 0x0000ff) >> 0) / 255
+                    a = 1.0
+                    self.init(red: r, green: g, blue: b, alpha: a)
+                    return
+                }
+            }
+        }
+
+        return nil
+    }
 }

@@ -15,6 +15,10 @@ class PollenCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var WeedPollenIndexLabel: UILabel!
     @IBOutlet weak var treeDescLabel: UILabel!
     @IBOutlet weak var weedDescLabel: UILabel!
+    @IBOutlet weak var treeBarView: UIView!
+    @IBOutlet weak var treeSquareView: UIView!
+    @IBOutlet weak var weedBarView: UIView!
+    @IBOutlet weak var weedSquareView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

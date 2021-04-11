@@ -16,5 +16,21 @@ struct PollenModel {
     let pollenWeedValue: Int?
     let pollenWeedCategory: String?
     let pollenWeedColor: String?
+}
 
+struct PollenPlantsModel {
+    
+    let plantsData: [PoData]?
+    let graminaleValue: Int?
+    let graminaleCategory: String?
+    let hazelValue: Int?
+    let hazelCategory: String?
+    let oakValue: Int?
+    let oakCategory: String?
+    let pineValue: Int?
+    let pineCategory: String?
+    let birchValue: Int?
+    let birchCategory: String?
+    let ashValue: Int?
+    let ashCategory: String?
 }

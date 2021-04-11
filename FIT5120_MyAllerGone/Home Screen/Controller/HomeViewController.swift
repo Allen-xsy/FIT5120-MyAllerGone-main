@@ -492,6 +492,7 @@ extension HomeViewController: CLLocationManagerDelegate{
             forecastManager.fecthForecastLocation(latitude: lat, longitude: lon)
             aqiManager.fecthAQILocation(latitude: lat, longitude: lon)
             pollenManager.fecthPollenLocation(latitude: lat, longitude: lon)
+            //pollenManager.fetchPlantPollenLocation(latitude: lat, longitude: lon)
         }
     }
     

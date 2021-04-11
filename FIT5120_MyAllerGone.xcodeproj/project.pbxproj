@@ -22,6 +22,7 @@
 		AC4F4A68260F71DC00A2E416 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F4A67260F71DC00A2E416 /* WeatherModel.swift */; };
 		AC4F4A6C260F762E00A2E416 /* PollenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F4A6B260F762E00A2E416 /* PollenData.swift */; };
 		AC4F4A70260F7EA400A2E416 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F4A6F260F7EA400A2E416 /* WeatherData.swift */; };
+		AC67D41A261DAB7700F7DCCD /* pollenForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC67D419261DAB7700F7DCCD /* pollenForecastViewController.swift */; };
 		AC76586E26122DE300F07A38 /* AQICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC76586D26122DE300F07A38 /* AQICollectionViewCell.swift */; };
 		AC8812A02610DC0300103566 /* ForecastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88129F2610DC0300103566 /* ForecastData.swift */; };
 		AC8812A32610DF9400103566 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8812A22610DF9400103566 /* ForecastModel.swift */; };
@@ -34,6 +35,7 @@
 		ACAE558726061C0B00BFB05C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAE558526061C0B00BFB05C /* LaunchScreen.storyboard */; };
 		ACAE559D26062AC100BFB05C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE559C26062AC100BFB05C /* HomeViewController.swift */; };
 		ACAE55A32606399400BFB05C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE55A22606399300BFB05C /* InfoViewController.swift */; };
+		ACD840BB26228F0A00379912 /* PlantsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD840BA26228F0A00379912 /* PlantsCollectionViewCell.swift */; };
 		ACE9BAA32614E8A7004FCAF2 /* launch_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACE9BAA22614E8A7004FCAF2 /* launch_2.jpg */; };
 		ACE9BAA92614FA54004FCAF2 /* PollenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9BAA82614FA54004FCAF2 /* PollenModel.swift */; };
 		ACE9BAAC2614FB23004FCAF2 /* PollenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9BAAB2614FB23004FCAF2 /* PollenManager.swift */; };
@@ -61,6 +63,7 @@
 		AC4F4A67260F71DC00A2E416 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		AC4F4A6B260F762E00A2E416 /* PollenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollenData.swift; sourceTree = "<group>"; };
 		AC4F4A6F260F7EA400A2E416 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		AC67D419261DAB7700F7DCCD /* pollenForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pollenForecastViewController.swift; sourceTree = "<group>"; };
 		AC76586D26122DE300F07A38 /* AQICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQICollectionViewCell.swift; sourceTree = "<group>"; };
 		AC88129F2610DC0300103566 /* ForecastData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastData.swift; sourceTree = "<group>"; };
 		AC8812A22610DF9400103566 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		ACAE558826061C0B00BFB05C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACAE559C26062AC100BFB05C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		ACAE55A22606399300BFB05C /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		ACD840BA26228F0A00379912 /* PlantsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsCollectionViewCell.swift; sourceTree = "<group>"; };
 		ACE9BAA22614E8A7004FCAF2 /* launch_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launch_2.jpg; sourceTree = "<group>"; };
 		ACE9BAA82614FA54004FCAF2 /* PollenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollenModel.swift; sourceTree = "<group>"; };
 		ACE9BAAB2614FB23004FCAF2 /* PollenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollenManager.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 				AC1EF082260F349700C56B93 /* ForecastCollectionViewCell.swift */,
 				AC76586D26122DE300F07A38 /* AQICollectionViewCell.swift */,
 				AC372A2926136AB6008ED2F0 /* PollenCollectionViewCell.swift */,
+				ACD840BA26228F0A00379912 /* PlantsCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				ACAE559C26062AC100BFB05C /* HomeViewController.swift */,
+				AC67D419261DAB7700F7DCCD /* pollenForecastViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -418,7 +424,9 @@
 				AC8812A02610DC0300103566 /* ForecastData.swift in Sources */,
 				AC8812A32610DF9400103566 /* ForecastModel.swift in Sources */,
 				AC1EF07F260F260300C56B93 /* WeatherCollectionViewCell.swift in Sources */,
+				AC67D41A261DAB7700F7DCCD /* pollenForecastViewController.swift in Sources */,
 				ACF87A26261312C300B5662A /* AQIData.swift in Sources */,
+				ACD840BB26228F0A00379912 /* PlantsCollectionViewCell.swift in Sources */,
 				31B20C5D2614B35F00F24470 /* HospitalListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

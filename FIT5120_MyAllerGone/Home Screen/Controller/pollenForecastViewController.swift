@@ -37,7 +37,7 @@ class pollenForecastViewController: UIViewController {
 
 //MARK: - Receive the Pollen data and send it to the UI
 
-extension PollenForecastViewController: pollenPlantsManagerDelegate {
+extension pollenForecastViewController: pollenPlantsManagerDelegate {
     func updatePollenPlants(_ pollenManager: PollenManager, pollen: PollenPlantsModel) {
         //print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         DispatchQueue.main.async {
@@ -87,7 +87,7 @@ extension PollenForecastViewController: pollenPlantsManagerDelegate {
 
 // MARK: - Collection view data source
 
-extension PollenForecastViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension pollenForecastViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1

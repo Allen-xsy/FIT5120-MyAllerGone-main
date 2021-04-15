@@ -243,16 +243,19 @@ class HomeViewController: UIViewController {
             print("Done loading")
         }
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let theSegue = segue.destination as! pollenForecastViewController
+        theSegue.lat = self.lat
+        theSegue.lon = self.lon
+        theSegue.dayOneDate = self.currentWeekday
+        theSegue.dayTwoDate = self.forecastDate1
+        theSegue.dayThreeDate = self.forecastDate2
     }
-    */
-
+    
 }
 
 //MARK: - Receive the current weather data and send it to the UI
@@ -341,6 +344,9 @@ extension HomeViewController: pollenManagerDelegate {
         
         DispatchQueue.main.async {
             // Set tree value
+            self.treeColor = ["#00CB47", "#5C948F"]
+            self.weedColor = ["#00CB47", "#5C948F"]
+            
             if let index1 = pollen.pollenTreeValue {
                 self.treePollenIndex = String(index1)
                 if index1 > 2 {

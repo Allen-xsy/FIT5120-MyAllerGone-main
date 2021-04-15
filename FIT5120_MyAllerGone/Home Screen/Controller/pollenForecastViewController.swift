@@ -12,13 +12,36 @@ class pollenForecastViewController: UIViewController {
     @IBOutlet weak var plantsCollectionView: UICollectionView!
     var pollenManager = PollenManager()
     var plantsList = [PoData]()
-    var cell1Desc: String?
+    
+    var lat: Double = -37.911706
+    var lon: Double = 145.132430
+    var dayOneDate: String?
+    var dayTwoDate: String?
+    var dayThreeDate: String?
+    var dayIndex: Int = 0
+    
+    @IBOutlet weak var dayOneButton: UIButton!
+    @IBOutlet weak var dayTwoButton: UIButton!
+    @IBOutlet weak var dayThreeButton: UIButton!
+    
+    @IBAction func backToWeatherPage(_ sender: Any) {
+        self.dismiss(animated: true, completion:nil)
+//        let controller = self.storyboard?.instantiateViewController(identifier: "weatherPage") as! HomeViewController
+//        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @IBAction func showDayOneData(_ sender: Any) {
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        dayOneButton.setTitle("\(dayOneDate ?? "NA")", for: .normal)
+        dayTwoButton.setTitle("\(dayTwoDate ?? "NA")", for: .normal)
+        dayThreeButton.setTitle("\(dayThreeDate ?? "NA")", for: .normal)
         pollenManager.plantsDelegate = self
-        pollenManager.fetchPlantPollenLocation(latitude: 51.50998, longitude: -0.1337)
+        pollenManager.fetchPlantPollenLocation(latitude: lat, longitude: lon)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -45,7 +68,7 @@ extension pollenForecastViewController: pollenPlantsManagerDelegate {
             if let plantsData = pollen.plantsData {
                 self.plantsList.append(contentsOf: plantsData)
             }
-            self.cell1Desc = pollen.graminaleCategory
+            //self.cell1Desc = pollen.graminaleCategory
             self.plantsCollectionView.reloadData()
         }
     }
@@ -113,23 +136,74 @@ extension pollenForecastViewController: UICollectionViewDataSource, UICollection
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlantsCollectionViewCell", for: indexPath) as! PlantsCollectionViewCell
         //print(plantsList.count)
-        switch indexPath.row {
-        case 0:
-            cell.cell1Name.text = "Graminale"
-        case 1:
-            cell.cell1Name.text = "Hazel"
-        default:
-            cell.cell1Name.text = "--"
-        }
+        
         if plantsList.count > 0 {
-            
-            cell.cell1Desc.text = plantsList[0].plants?.graminales?.index.category
+            switch indexPath.row {
+            case 0:
+                cell.cell1Name.text = "Graminale"
+                if let index = plantsList[0].plants?.graminales?.index.value {
+                    cell.cell1Value.text = String(index)
+                } else {
+                    cell.cell1Value.text = "--"
+                }
+                cell.cell1Desc.text = plantsList[0].plants?.graminales?.index.category ?? "NA"
+                cell.cellIcon.image = UIImage(named: "graminale")
+            case 1:
+                cell.cell1Name.text = "Hazel"
+                if let index = plantsList[0].plants?.hazel?.index.value {
+                    cell.cell1Value.text = String(index)
+                } else {
+                    cell.cell1Value.text = "--"
+                }
+                cell.cell1Desc.text = plantsList[0].plants?.hazel?.index.category ?? "NA"
+                cell.cellIcon.image = UIImage(named: "hazel")
+            case 2:
+                cell.cell1Name.text = "Oak"
+                if let index = plantsList[0].plants?.oak?.index.value {
+                    cell.cell1Value.text = String(index)
+                } else {
+                    cell.cell1Value.text = "--"
+                }
+                cell.cell1Desc.text = plantsList[0].plants?.oak?.index.category ?? "NA"
+                cell.cellIcon.image = UIImage(named: "oak")
+            case 3:
+                cell.cell1Name.text = "Pine"
+                if let index = plantsList[0].plants?.pine?.index.value {
+                    cell.cell1Value.text = String(index)
+                } else {
+                    cell.cell1Value.text = "--"
+                }
+                cell.cell1Desc.text = plantsList[0].plants?.pine?.index.category ?? "NA"
+                cell.cellIcon.image = UIImage(named: "pine")
+            case 4:
+                cell.cell1Name.text = "Birch"
+                if let index = plantsList[0].plants?.birch?.index.value {
+                    cell.cell1Value.text = String(index)
+                } else {
+                    cell.cell1Value.text = "--"
+                }
+                cell.cell1Desc.text = plantsList[0].plants?.birch?.index.category ?? "NA"
+                cell.cellIcon.image = UIImage(named: "birch")
+            case 5:
+                cell.cell1Name.text = "Ash"
+                if let index = plantsList[0].plants?.ash?.index.value {
+                    cell.cell1Value.text = String(index)
+                } else {
+                    cell.cell1Value.text = "--"
+                }
+                cell.cell1Desc.text = plantsList[0].plants?.ash?.index.category ?? "NA"
+                cell.cellIcon.image = UIImage(named: "ash")
+            default:
+                cell.cell1Name.text = "--"
+            }
+            //cell.cell1Desc.text = plantsList[0].plants?.graminales?.index.category
         }
         
         
-        cell.layer.cornerRadius = 5.0
-        cell.layer.shadowOpacity = 0.3
-        cell.layer.shadowRadius = 5
+        cell.layer.cornerRadius = 8.0
+        cell.layer.shadowOpacity = 0.2
+        cell.layer.shadowRadius = 6
+        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
         cell.layer.masksToBounds = false
         
         return cell

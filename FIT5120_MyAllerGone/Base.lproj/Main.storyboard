@@ -634,7 +634,13 @@
                             <constraint firstItem="9cg-YI-Tdf" firstAttribute="leading" secondItem="aSh-KC-etU" secondAttribute="leading" id="zbB-n9-BJ3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Weather Forecast" largeTitleDisplayMode="never" id="kzO-Dt-vgQ"/>
+                    <navigationItem key="navigationItem" title="Weather Forecast" largeTitleDisplayMode="never" id="kzO-Dt-vgQ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="OrS-3k-NbF">
+                            <connections>
+                                <segue destination="KBr-Vt-d47" kind="show" id="0eR-4d-40e"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="CityLabel" destination="DCi-UN-yKp" id="oIp-hj-Bhr"/>
                         <outlet property="HomeCollectionView" destination="9cg-YI-Tdf" id="QcM-cb-QcM"/>
@@ -880,6 +886,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgp-zU-aRd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-759" y="2472"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="ICU-58-WgA">
+            <objects>
+                <tableViewController id="KBr-Vt-d47" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HhM-b2-ECN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Rz1-5W-2Jc">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rz1-5W-2Jc" id="sCf-kF-wiS">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KBr-Vt-d47" id="xa0-iC-nTj"/>
+                            <outlet property="delegate" destination="KBr-Vt-d47" id="qLq-Dr-c2Q"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="scg-dk-JNg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EBk-aZ-goc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="2472"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hy3-RW-Gsw">

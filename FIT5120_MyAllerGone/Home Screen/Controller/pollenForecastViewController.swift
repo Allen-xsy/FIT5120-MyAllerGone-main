@@ -31,8 +31,28 @@ class pollenForecastViewController: UIViewController {
     }
     
     @IBAction func showDayOneData(_ sender: Any) {
+        dayIndex = 0
+        dayOneButton.setTitleColor(UIColor.black, for: .normal)
+        dayTwoButton.setTitleColor(UIColor.darkGray, for: .normal)
+        dayThreeButton.setTitleColor(UIColor.darkGray, for: .normal)
+        self.plantsCollectionView.reloadData()
     }
     
+    @IBAction func showDayTwoData(_ sender: Any) {
+        dayIndex = 1
+        dayOneButton.setTitleColor(UIColor.darkGray, for: .normal)
+        dayTwoButton.setTitleColor(UIColor.black, for: .normal)
+        dayThreeButton.setTitleColor(UIColor.darkGray, for: .normal)
+        self.plantsCollectionView.reloadData()
+    }
+    
+    @IBAction func showDayThreeData(_ sender: Any) {
+        dayIndex = 2
+        dayOneButton.setTitleColor(UIColor.darkGray, for: .normal)
+        dayTwoButton.setTitleColor(UIColor.darkGray, for: .normal)
+        dayThreeButton.setTitleColor(UIColor.black, for: .normal)
+        self.plantsCollectionView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,83 +142,69 @@ extension pollenForecastViewController: UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-//        if indexPath.row == 1 {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherCollectionViewCell", for: indexPath) as! WeatherCollectionViewCell
-//
-//            cell.layer.cornerRadius = 5.0
-//            cell.layer.shadowOpacity = 0.3
-//            cell.layer.shadowRadius = 5
-//            cell.layer.masksToBounds = false
-//
-//
-//            return cell
-//        }
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlantsCollectionViewCell", for: indexPath) as! PlantsCollectionViewCell
-        //print(plantsList.count)
         
         if plantsList.count > 0 {
             switch indexPath.row {
             case 0:
                 cell.cell1Name.text = "Graminale"
-                if let index = plantsList[0].plants?.graminales?.index.value {
+                if let index = plantsList[dayIndex].plants?.graminales?.index.value {
                     cell.cell1Value.text = String(index)
                 } else {
                     cell.cell1Value.text = "--"
                 }
-                cell.cell1Desc.text = plantsList[0].plants?.graminales?.index.category ?? "NA"
+                cell.cell1Desc.text = plantsList[dayIndex].plants?.graminales?.index.category ?? "NA"
                 cell.cellIcon.image = UIImage(named: "graminale")
             case 1:
                 cell.cell1Name.text = "Hazel"
-                if let index = plantsList[0].plants?.hazel?.index.value {
+                if let index = plantsList[dayIndex].plants?.hazel?.index.value {
                     cell.cell1Value.text = String(index)
                 } else {
                     cell.cell1Value.text = "--"
                 }
-                cell.cell1Desc.text = plantsList[0].plants?.hazel?.index.category ?? "NA"
+                cell.cell1Desc.text = plantsList[dayIndex].plants?.hazel?.index.category ?? "NA"
                 cell.cellIcon.image = UIImage(named: "hazel")
             case 2:
                 cell.cell1Name.text = "Oak"
-                if let index = plantsList[0].plants?.oak?.index.value {
+                if let index = plantsList[dayIndex].plants?.oak?.index.value {
                     cell.cell1Value.text = String(index)
                 } else {
                     cell.cell1Value.text = "--"
                 }
-                cell.cell1Desc.text = plantsList[0].plants?.oak?.index.category ?? "NA"
+                cell.cell1Desc.text = plantsList[dayIndex].plants?.oak?.index.category ?? "NA"
                 cell.cellIcon.image = UIImage(named: "oak")
             case 3:
                 cell.cell1Name.text = "Pine"
-                if let index = plantsList[0].plants?.pine?.index.value {
+                if let index = plantsList[dayIndex].plants?.pine?.index.value {
                     cell.cell1Value.text = String(index)
                 } else {
                     cell.cell1Value.text = "--"
                 }
-                cell.cell1Desc.text = plantsList[0].plants?.pine?.index.category ?? "NA"
+                cell.cell1Desc.text = plantsList[dayIndex].plants?.pine?.index.category ?? "NA"
                 cell.cellIcon.image = UIImage(named: "pine")
             case 4:
                 cell.cell1Name.text = "Birch"
-                if let index = plantsList[0].plants?.birch?.index.value {
+                if let index = plantsList[dayIndex].plants?.birch?.index.value {
                     cell.cell1Value.text = String(index)
                 } else {
                     cell.cell1Value.text = "--"
                 }
-                cell.cell1Desc.text = plantsList[0].plants?.birch?.index.category ?? "NA"
+                cell.cell1Desc.text = plantsList[dayIndex].plants?.birch?.index.category ?? "NA"
                 cell.cellIcon.image = UIImage(named: "birch")
             case 5:
                 cell.cell1Name.text = "Ash"
-                if let index = plantsList[0].plants?.ash?.index.value {
+                if let index = plantsList[dayIndex].plants?.ash?.index.value {
                     cell.cell1Value.text = String(index)
                 } else {
                     cell.cell1Value.text = "--"
                 }
-                cell.cell1Desc.text = plantsList[0].plants?.ash?.index.category ?? "NA"
+                cell.cell1Desc.text = plantsList[dayIndex].plants?.ash?.index.category ?? "NA"
                 cell.cellIcon.image = UIImage(named: "ash")
             default:
                 cell.cell1Name.text = "--"
             }
             //cell.cell1Desc.text = plantsList[0].plants?.graminales?.index.category
         }
-        
         
         cell.layer.cornerRadius = 8.0
         cell.layer.shadowOpacity = 0.2

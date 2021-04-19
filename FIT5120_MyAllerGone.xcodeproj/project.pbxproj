@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3180CB53262ADCB000A6856B /* VolumeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180CB52262ADCB000A6856B /* VolumeData.swift */; };
+		3180CB56262ADD4600A6856B /* FoodRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180CB55262ADD4600A6856B /* FoodRecipe.swift */; };
+		3180CB59262AEA9A00A6856B /* FoodSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180CB58262AEA9A00A6856B /* FoodSearchTableViewController.swift */; };
+		3180CB5C262B234900A6856B /* AllergenChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180CB5B262B234900A6856B /* AllergenChooseViewController.swift */; };
+		3180CB60262B47D400A6856B /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180CB5F262B47D400A6856B /* RecipeViewController.swift */; };
 		31B20C5D2614B35F00F24470 /* HospitalListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20C562614B35F00F24470 /* HospitalListController.swift */; };
 		31B20C5E2614B35F00F24470 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20C572614B35F00F24470 /* MapViewController.swift */; };
 		31B20C5F2614B35F00F24470 /* SearchResultVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20C592614B35F00F24470 /* SearchResultVo.swift */; };
@@ -48,6 +53,11 @@
 /* Begin PBXFileReference section */
 		09C0BEB5D5D34F87F5B0FB8F /* Pods_FIT5120_MyAllerGone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIT5120_MyAllerGone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A5AB9E5A0E0BC53773D537 /* Pods-FIT5120_MyAllerGone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIT5120_MyAllerGone.debug.xcconfig"; path = "Target Support Files/Pods-FIT5120_MyAllerGone/Pods-FIT5120_MyAllerGone.debug.xcconfig"; sourceTree = "<group>"; };
+		3180CB52262ADCB000A6856B /* VolumeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeData.swift; sourceTree = "<group>"; };
+		3180CB55262ADD4600A6856B /* FoodRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecipe.swift; sourceTree = "<group>"; };
+		3180CB58262AEA9A00A6856B /* FoodSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchTableViewController.swift; sourceTree = "<group>"; };
+		3180CB5B262B234900A6856B /* AllergenChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergenChooseViewController.swift; sourceTree = "<group>"; };
+		3180CB5F262B47D400A6856B /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		31B20C562614B35F00F24470 /* HospitalListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalListController.swift; sourceTree = "<group>"; };
 		31B20C572614B35F00F24470 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		31B20C592614B35F00F24470 /* SearchResultVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultVo.swift; sourceTree = "<group>"; };
@@ -100,6 +110,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3180CB48262AD90400A6856B /* Food Search Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3180CB4D262AD97E00A6856B /* Controller */,
+				3180CB4C262AD97900A6856B /* Model */,
+				3180CB4B262AD97200A6856B /* View */,
+			);
+			path = "Food Search Screen";
+			sourceTree = "<group>";
+		};
+		3180CB4B262AD97200A6856B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3180CB4C262AD97900A6856B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3180CB52262ADCB000A6856B /* VolumeData.swift */,
+				3180CB55262ADD4600A6856B /* FoodRecipe.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3180CB4D262AD97E00A6856B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3180CB58262AEA9A00A6856B /* FoodSearchTableViewController.swift */,
+				3180CB5B262B234900A6856B /* AllergenChooseViewController.swift */,
+				3180CB5F262B47D400A6856B /* RecipeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		31B20C542614B13800F24470 /* Map Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +260,7 @@
 		ACAE557926061C0700BFB05C /* FIT5120_MyAllerGone */ = {
 			isa = PBXGroup;
 			children = (
+				3180CB48262AD90400A6856B /* Food Search Screen */,
 				ACAE557A26061C0700BFB05C /* AppDelegate.swift */,
 				ACAE557C26061C0700BFB05C /* SceneDelegate.swift */,
 				ACAE557E26061C0700BFB05C /* ViewController.swift */,
@@ -408,14 +455,18 @@
 				31B20C5F2614B35F00F24470 /* SearchResultVo.swift in Sources */,
 				31B20C612614B35F00F24470 /* HospitalTableViewCell.swift in Sources */,
 				AC4F4A6C260F762E00A2E416 /* PollenData.swift in Sources */,
+				3180CB53262ADCB000A6856B /* VolumeData.swift in Sources */,
+				3180CB56262ADD4600A6856B /* FoodRecipe.swift in Sources */,
 				AC4F4A62260F704F00A2E416 /* WeatherManager.swift in Sources */,
 				ACAE557B26061C0700BFB05C /* AppDelegate.swift in Sources */,
 				AC76586E26122DE300F07A38 /* AQICollectionViewCell.swift in Sources */,
 				AC372A2A26136AB6008ED2F0 /* PollenCollectionViewCell.swift in Sources */,
+				3180CB59262AEA9A00A6856B /* FoodSearchTableViewController.swift in Sources */,
 				31B20C662614B40500F24470 /* NetworkManager.swift in Sources */,
 				31B20C672614B40500F24470 /* Common.swift in Sources */,
 				ACAE55A32606399400BFB05C /* InfoViewController.swift in Sources */,
 				ACE9BAAC2614FB23004FCAF2 /* PollenManager.swift in Sources */,
+				3180CB60262B47D400A6856B /* RecipeViewController.swift in Sources */,
 				AC8812A62610E1ED00103566 /* ForecastManager.swift in Sources */,
 				ACF87A22261312B300B5662A /* AQIManager.swift in Sources */,
 				31B20C5E2614B35F00F24470 /* MapViewController.swift in Sources */,
@@ -426,6 +477,7 @@
 				AC1EF07F260F260300C56B93 /* WeatherCollectionViewCell.swift in Sources */,
 				AC67D41A261DAB7700F7DCCD /* pollenForecastViewController.swift in Sources */,
 				ACF87A26261312C300B5662A /* AQIData.swift in Sources */,
+				3180CB5C262B234900A6856B /* AllergenChooseViewController.swift in Sources */,
 				ACD840BB26228F0A00379912 /* PlantsCollectionViewCell.swift in Sources */,
 				31B20C5D2614B35F00F24470 /* HospitalListController.swift in Sources */,
 			);

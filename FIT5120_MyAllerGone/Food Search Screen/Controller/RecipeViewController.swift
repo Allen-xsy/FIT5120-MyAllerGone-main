@@ -10,14 +10,21 @@ import UIKit
 class RecipeViewController: UIViewController {
 
     var ingredientLine:[String]?
+    var name:String?
+    var text:String=""
+    var index:Int=1
     
     @IBOutlet weak var ingredientLines: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-        ingredientLines.text = ingredientLine![0]
+        for element in ingredientLine!{
+            text += "\(index). " + element + "\n"
+            index += 1
+        }
+        
+        ingredientLines.text = text
         // Do any additional setup after loading the view.
     }
     

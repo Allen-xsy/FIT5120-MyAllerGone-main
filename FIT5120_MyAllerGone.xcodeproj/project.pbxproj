@@ -12,6 +12,8 @@
 		3180CB59262AEA9A00A6856B /* FoodSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180CB58262AEA9A00A6856B /* FoodSearchTableViewController.swift */; };
 		3180CB5C262B234900A6856B /* AllergenChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180CB5B262B234900A6856B /* AllergenChooseViewController.swift */; };
 		3180CB60262B47D400A6856B /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180CB5F262B47D400A6856B /* RecipeViewController.swift */; };
+		3180CB67262DB01900A6856B /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180CB65262DB01900A6856B /* RecipeTableViewCell.swift */; };
+		3180CB68262DB01900A6856B /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3180CB66262DB01900A6856B /* RecipeTableViewCell.xib */; };
 		31B20C5D2614B35F00F24470 /* HospitalListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20C562614B35F00F24470 /* HospitalListController.swift */; };
 		31B20C5E2614B35F00F24470 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20C572614B35F00F24470 /* MapViewController.swift */; };
 		31B20C5F2614B35F00F24470 /* SearchResultVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20C592614B35F00F24470 /* SearchResultVo.swift */; };
@@ -58,6 +60,8 @@
 		3180CB58262AEA9A00A6856B /* FoodSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchTableViewController.swift; sourceTree = "<group>"; };
 		3180CB5B262B234900A6856B /* AllergenChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergenChooseViewController.swift; sourceTree = "<group>"; };
 		3180CB5F262B47D400A6856B /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		3180CB65262DB01900A6856B /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		3180CB66262DB01900A6856B /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
 		31B20C562614B35F00F24470 /* HospitalListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalListController.swift; sourceTree = "<group>"; };
 		31B20C572614B35F00F24470 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		31B20C592614B35F00F24470 /* SearchResultVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultVo.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 		3180CB4B262AD97200A6856B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3180CB65262DB01900A6856B /* RecipeTableViewCell.swift */,
+				3180CB66262DB01900A6856B /* RecipeTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3180CB68262DB01900A6856B /* RecipeTableViewCell.xib in Resources */,
 				ACAE558726061C0B00BFB05C /* LaunchScreen.storyboard in Resources */,
 				ACF87A1B26130C0E00B5662A /* allerIcon.jpg in Resources */,
 				ACAE558426061C0B00BFB05C /* Assets.xcassets in Resources */,
@@ -477,6 +484,7 @@
 				AC1EF07F260F260300C56B93 /* WeatherCollectionViewCell.swift in Sources */,
 				AC67D41A261DAB7700F7DCCD /* pollenForecastViewController.swift in Sources */,
 				ACF87A26261312C300B5662A /* AQIData.swift in Sources */,
+				3180CB67262DB01900A6856B /* RecipeTableViewCell.swift in Sources */,
 				3180CB5C262B234900A6856B /* AllergenChooseViewController.swift in Sources */,
 				ACD840BB26228F0A00379912 /* PlantsCollectionViewCell.swift in Sources */,
 				31B20C5D2614B35F00F24470 /* HospitalListController.swift in Sources */,

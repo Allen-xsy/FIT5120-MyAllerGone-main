@@ -16,6 +16,7 @@ class RecipeViewController: UIViewController {
     
     @IBOutlet weak var ingredientLines: UILabel!
     
+    @IBOutlet weak var recipeName: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,7 +24,7 @@ class RecipeViewController: UIViewController {
             text += "\(index). " + element + "\n"
             index += 1
         }
-        
+        recipeName.text = name
         ingredientLines.text = text
         // Do any additional setup after loading the view.
     }

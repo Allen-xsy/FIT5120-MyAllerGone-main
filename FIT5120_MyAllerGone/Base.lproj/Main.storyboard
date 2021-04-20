@@ -158,6 +158,7 @@
                     <navigationItem key="navigationItem" title="Recipe Detail" id="9BA-fk-vkd"/>
                     <connections>
                         <outlet property="ingredientLines" destination="6cX-5L-TeO" id="VLv-Wx-YKd"/>
+                        <outlet property="recipeName" destination="y1B-he-4mT" id="Law-HQ-yWO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g14-XD-Ze3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -176,34 +177,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yN3-6T-cHN">
-                                <rect key="frame" x="236" y="349" width="81" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Yes"/>
-                                    <segment title="No"/>
-                                </segments>
-                                <connections>
-                                    <action selector="fishIndex:" destination="oPt-eS-vAQ" eventType="valueChanged" id="4RF-Cr-q8N"/>
-                                </connections>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaT-30-5gn">
-                                <rect key="frame" x="48" y="354" width="32" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Fish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaT-30-5gn">
+                                <rect key="frame" x="44" y="388" width="32" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bean" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wv5-jC-bER">
-                                <rect key="frame" x="41" y="435" width="39" height="21"/>
+                                <rect key="frame" x="41" y="468" width="39" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rzJ-WU-WLP">
-                                <rect key="frame" x="236" y="430" width="81" height="32"/>
+                                <rect key="frame" x="236" y="458" width="81" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99319572040000004" green="1" blue="0.52508563409999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 <segments>
                                     <segment title="Yes"/>
                                     <segment title="No"/>
@@ -213,15 +203,16 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pK-3c-zKT">
-                                <rect key="frame" x="50" y="510" width="28" height="21"/>
+                                <rect key="frame" x="46" y="535" width="28" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aEo-qc-CbG">
-                                <rect key="frame" x="236" y="505" width="81" height="32"/>
+                                <rect key="frame" x="236" y="530" width="81" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96905586715739567" green="1" blue="0.51739309452014304" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
                                 <segments>
                                     <segment title="Yes"/>
                                     <segment title="No"/>
@@ -230,19 +221,12 @@
                                     <action selector="nutIndex:" destination="oPt-eS-vAQ" eventType="valueChanged" id="EX5-mM-w9c"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the Allergen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qs6-hh-Vi5">
-                                <rect key="frame" x="16" y="64" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RfK-8r-nea">
-                                <rect key="frame" x="66" y="114" width="243" height="128"/>
+                                <rect key="frame" x="16" y="114" width="343" height="180"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMe-xC-y3d">
-                                <rect key="frame" x="104" y="567" width="167" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMe-xC-y3d">
+                                <rect key="frame" x="104" y="597" width="167" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.99213859606983201" blue="0.5030153328397029" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Start to search recipe">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -250,15 +234,44 @@
                                     <segue destination="KfD-F6-ioi" kind="show" identifier="startSearchSegue" id="Zr3-bF-2mQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Choose the Yes button if your kids are allergic to the food type to find the best suitable recipes!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uw-qO-UNr">
+                                <rect key="frame" x="36" y="311" width="303" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yN3-6T-cHN">
+                                <rect key="frame" x="236" y="378" width="81" height="32"/>
+                                <color key="backgroundColor" red="0.99319572044370519" green="1" blue="0.52508563410503506" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                <segments>
+                                    <segment title="Yes"/>
+                                    <segment title="No"/>
+                                </segments>
+                                <connections>
+                                    <action selector="fishIndex:" destination="oPt-eS-vAQ" eventType="valueChanged" id="4RF-Cr-q8N"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the allergen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIW-md-Ua3">
+                                <rect key="frame" x="16" y="64" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qs6-hh-Vi5" firstAttribute="top" secondItem="aqF-dw-3ZN" secondAttribute="bottom" constant="20" id="0l7-Cg-2CI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RfK-8r-nea" secondAttribute="trailing" constant="50" id="7Q4-IJ-VV6"/>
-                            <constraint firstItem="RfK-8r-nea" firstAttribute="top" secondItem="qs6-hh-Vi5" secondAttribute="bottom" constant="30" id="9KG-G1-H4e"/>
-                            <constraint firstItem="qs6-hh-Vi5" firstAttribute="leading" secondItem="vsm-gM-6yz" secondAttribute="leadingMargin" id="EI0-PO-XwP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qs6-hh-Vi5" secondAttribute="trailing" id="KfG-PJ-rbN"/>
-                            <constraint firstItem="RfK-8r-nea" firstAttribute="leading" secondItem="vsm-gM-6yz" secondAttribute="leadingMargin" constant="50" id="bUk-R9-uDj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jIW-md-Ua3" secondAttribute="trailing" id="5ZY-rI-yQD"/>
+                            <constraint firstItem="jIW-md-Ua3" firstAttribute="leading" secondItem="vsm-gM-6yz" secondAttribute="leadingMargin" id="5fm-dL-Tgi"/>
+                            <constraint firstItem="9uw-qO-UNr" firstAttribute="leading" secondItem="vsm-gM-6yz" secondAttribute="leadingMargin" constant="20" id="F6s-uT-B2y"/>
+                            <constraint firstItem="9uw-qO-UNr" firstAttribute="top" secondItem="RfK-8r-nea" secondAttribute="bottom" constant="20" id="N0e-V4-x3p"/>
+                            <constraint firstItem="CaT-30-5gn" firstAttribute="leading" secondItem="vsm-gM-6yz" secondAttribute="leadingMargin" constant="35" id="Prj-XI-Xqr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9uw-qO-UNr" secondAttribute="trailing" constant="20" id="U8D-cq-WOI"/>
+                            <constraint firstItem="tR5-yY-gyz" firstAttribute="top" secondItem="RMe-xC-y3d" secondAttribute="bottom" constant="40" id="V1z-BX-Atf"/>
+                            <constraint firstItem="RfK-8r-nea" firstAttribute="top" secondItem="jIW-md-Ua3" secondAttribute="bottom" constant="30" id="Xoj-gr-Nfc"/>
+                            <constraint firstItem="jIW-md-Ua3" firstAttribute="top" secondItem="aqF-dw-3ZN" secondAttribute="bottom" constant="20" id="iHa-5M-5L2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yN3-6T-cHN" secondAttribute="trailing" constant="35" id="kWq-vv-ahk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RfK-8r-nea" secondAttribute="trailing" id="sTu-Dr-NnM"/>
+                            <constraint firstItem="RfK-8r-nea" firstAttribute="leading" secondItem="vsm-gM-6yz" secondAttribute="leadingMargin" id="yhe-sg-XgR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Food Search" id="BlY-pB-37o"/>
@@ -1423,9 +1436,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

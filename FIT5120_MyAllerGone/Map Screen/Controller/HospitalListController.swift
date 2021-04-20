@@ -40,8 +40,6 @@ class HospitalListController: UIViewController, UITableViewDelegate, UITableView
                 }
                 
                 strong_self.locationLabel.text = "\(place.name ?? "") \(place.thoroughfare ?? "") \(place.subLocality ?? "") \(place.locality ?? "") \(place.administrativeArea ?? "")"
-                
-                
             }
         }
     }

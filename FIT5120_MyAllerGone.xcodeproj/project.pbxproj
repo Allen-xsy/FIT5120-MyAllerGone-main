@@ -48,6 +48,9 @@
 		ACF87A22261312B300B5662A /* AQIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF87A21261312B300B5662A /* AQIManager.swift */; };
 		ACF87A26261312C300B5662A /* AQIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF87A25261312C300B5662A /* AQIData.swift */; };
 		ACF87A292613145A00B5662A /* AQIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF87A282613145A00B5662A /* AQIModel.swift */; };
+		D3AB35DA262E944E002AE457 /* PlaceSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB35D9262E944E002AE457 /* PlaceSearchViewController.swift */; };
+		D3AB35DE262E9660002AE457 /* AddressSearchVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB35DD262E9660002AE457 /* AddressSearchVo.swift */; };
+		D3AB35E2262E97BD002AE457 /* SearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB35E1262E97BD002AE457 /* SearchResultTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +99,9 @@
 		ACF87A21261312B300B5662A /* AQIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIManager.swift; sourceTree = "<group>"; };
 		ACF87A25261312C300B5662A /* AQIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIData.swift; sourceTree = "<group>"; };
 		ACF87A282613145A00B5662A /* AQIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIModel.swift; sourceTree = "<group>"; };
+		D3AB35D9262E944E002AE457 /* PlaceSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSearchViewController.swift; sourceTree = "<group>"; };
+		D3AB35DD262E9660002AE457 /* AddressSearchVo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSearchVo.swift; sourceTree = "<group>"; };
+		D3AB35E1262E97BD002AE457 /* SearchResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				31B20C562614B35F00F24470 /* HospitalListController.swift */,
+				D3AB35D9262E944E002AE457 /* PlaceSearchViewController.swift */,
+				D3AB35E1262E97BD002AE457 /* SearchResultTableViewController.swift */,
 				31B20C572614B35F00F24470 /* MapViewController.swift */,
 			);
 			path = Controller;
@@ -169,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				31B20C592614B35F00F24470 /* SearchResultVo.swift */,
+				D3AB35DD262E9660002AE457 /* AddressSearchVo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -452,6 +461,7 @@
 				ACE9BAA92614FA54004FCAF2 /* PollenModel.swift in Sources */,
 				ACAE557F26061C0700BFB05C /* ViewController.swift in Sources */,
 				AC4F4A68260F71DC00A2E416 /* WeatherModel.swift in Sources */,
+				D3AB35E2262E97BD002AE457 /* SearchResultTableViewController.swift in Sources */,
 				31B20C5F2614B35F00F24470 /* SearchResultVo.swift in Sources */,
 				31B20C612614B35F00F24470 /* HospitalTableViewCell.swift in Sources */,
 				AC4F4A6C260F762E00A2E416 /* PollenData.swift in Sources */,
@@ -473,12 +483,14 @@
 				ACAE557D26061C0700BFB05C /* SceneDelegate.swift in Sources */,
 				AC4F4A70260F7EA400A2E416 /* WeatherData.swift in Sources */,
 				AC8812A02610DC0300103566 /* ForecastData.swift in Sources */,
+				D3AB35DA262E944E002AE457 /* PlaceSearchViewController.swift in Sources */,
 				AC8812A32610DF9400103566 /* ForecastModel.swift in Sources */,
 				AC1EF07F260F260300C56B93 /* WeatherCollectionViewCell.swift in Sources */,
 				AC67D41A261DAB7700F7DCCD /* pollenForecastViewController.swift in Sources */,
 				ACF87A26261312C300B5662A /* AQIData.swift in Sources */,
 				3180CB5C262B234900A6856B /* AllergenChooseViewController.swift in Sources */,
 				ACD840BB26228F0A00379912 /* PlantsCollectionViewCell.swift in Sources */,
+				D3AB35DE262E9660002AE457 /* AddressSearchVo.swift in Sources */,
 				31B20C5D2614B35F00F24470 /* HospitalListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

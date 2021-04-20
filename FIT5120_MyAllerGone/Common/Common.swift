@@ -28,6 +28,16 @@ func searchPlaceUrl(for longitude: Double, latitude: Double, radius: Int = 3000)
     return "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(latitude),\(longitude)&radius=\(radius)&type=hospital&keyword=emergency&key=\(kGoogleApiKey)"
 }
 
+/// Google Maps Geocoding
+/// - Parameter address: address
+/// - Returns: URL
+func googleMapsGeocoding(for address: String) -> String {
+    return "https://maps.googleapis.com/maps/api/geocode/json?address=\(address)&key=\(kGoogleApiKey)".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? "'"
+}
+
+
+
+
 // Create image String URL
 // - Parameter reference: reference
 // - Returns: String URL

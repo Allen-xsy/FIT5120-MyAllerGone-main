@@ -14,10 +14,10 @@ class NetworkManager: NSObject {
         
     }
     
-    /// Load Data From String URL
-    /// - Parameters:
-    ///   - urlString: String URL
-    ///   - completeHander: completeHander
+    // Load Data From String URL
+    // - Parameters:
+    //   - urlString: String URL
+    //   - completeHander: completeHander
     public static func loadData(
         urlString: String,
         completeHander: ((Bool, Data?) -> Void)?) {
@@ -47,11 +47,11 @@ class NetworkManager: NSObject {
         }.resume()
     }
     
-    /// Load Codable Object From String URL
-    /// - Parameters:
-    ///   - urlString: String URL
-    ///   - type: Codable Type
-    ///   - completeHander: completeHander
+    // Load Codable Object From String URL
+    // - Parameters:
+    //   - urlString: String URL
+    //   - type: Codable Type
+    //   - completeHander: completeHander
     public static func loadData<Element: Codable>(
         urlString: String,
         type: Element.Type,
@@ -95,25 +95,25 @@ class NetworkManager: NSObject {
 
 extension UIImageView {
     
-    /// Load image From local or Network
-    /// - Parameters:
-    ///   - urlString: String URL
-    ///   - placeholderImage: placeholder image
-    ///   - completeHandler: completeHandler
+    // Load image From local or Network
+    // - Parameters:
+    //   - urlString: String URL
+    //   - placeholderImage: placeholder image
+    //   - completeHandler: completeHandler
     public func networkImage(urlString :String, placeholderImage: UIImage?, completeHandler: ((Bool, UIImage?) -> Void)?) {
-        /// first show placeholderImage
+        // first show placeholderImage
         self.image = placeholderImage
-        /// load local image from UserDefaults
+        // load local image from UserDefaults
         if let data = UserDefaults.standard.data(forKey: urlString), let localImage = UIImage(data: data) {
             completeHandler?(true, localImage)
             return
         }
         
-        /// if local image is empty, load image from network
+        // if local image is empty, load image from network
         NetworkManager.loadData(urlString: urlString) {(success, data) in
             if success {
                 if let value = data, let networkImage = UIImage(data: value) {
-                    /// save image to UserDefaults
+                    // save image to UserDefaults
                     UserDefaults.standard.setValue(value, forKey: urlString)
                     UserDefaults.standard.synchronize()
                     completeHandler?(true, networkImage)

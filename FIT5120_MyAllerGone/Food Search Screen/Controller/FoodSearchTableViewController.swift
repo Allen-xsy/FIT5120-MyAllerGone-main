@@ -182,12 +182,10 @@ class FoodSearchTableViewController: UITableViewController, UISearchBarDelegate 
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            //判断segue.identifier
             if segue.identifier == "showRecipe"{
-            //实例化第二个页面
                 let destination = segue.destination as! RecipeViewController
-                //传值
                 destination.ingredientLine = allRecipe[tableView.indexPathForSelectedRow!.row].ingredientLines
+                destination.name = allRecipe[tableView.indexPathForSelectedRow!.row].label
 
             }
         }

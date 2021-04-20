@@ -28,6 +28,8 @@ class FoodSearchTableViewController: UITableViewController, UISearchBarDelegate 
          indicator.style = UIActivityIndicatorView.Style.medium
          indicator.center = self.tableView.center
          self.view.addSubview(indicator)
+        
+         navigationController?.tabBarItem.selectedImage = UIImage(named: "search_click")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

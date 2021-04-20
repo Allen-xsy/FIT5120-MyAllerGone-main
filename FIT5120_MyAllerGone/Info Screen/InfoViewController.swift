@@ -10,6 +10,7 @@ import UIKit
 class InfoViewController: UIViewController {
 
     @IBOutlet weak var backGroundImageView: UIImageView!
+    @IBOutlet weak var infoCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,4 +45,34 @@ class InfoViewController: UIViewController {
     }
     */
 
+}
+// MARK: - Collection view data source
+
+extension InfoViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "infoCollectionViewCell", for: indexPath) as! infoCollectionViewCell
+        
+        
+        
+        cell.layer.cornerRadius = 8.0
+        cell.layer.shadowOpacity = 0.2
+        cell.layer.shadowRadius = 6
+        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.layer.masksToBounds = false
+        
+        return cell
+    }
+    
+    
+    
 }

@@ -31,6 +31,7 @@
 		AC4F4A70260F7EA400A2E416 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F4A6F260F7EA400A2E416 /* WeatherData.swift */; };
 		AC67D41A261DAB7700F7DCCD /* pollenForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC67D419261DAB7700F7DCCD /* pollenForecastViewController.swift */; };
 		AC76586E26122DE300F07A38 /* AQICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC76586D26122DE300F07A38 /* AQICollectionViewCell.swift */; };
+		AC7883E1262F26CC00978190 /* infoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7883E0262F26CC00978190 /* infoCollectionViewCell.swift */; };
 		AC8812A02610DC0300103566 /* ForecastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88129F2610DC0300103566 /* ForecastData.swift */; };
 		AC8812A32610DF9400103566 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8812A22610DF9400103566 /* ForecastModel.swift */; };
 		AC8812A62610E1ED00103566 /* ForecastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8812A52610E1ED00103566 /* ForecastManager.swift */; };
@@ -82,6 +83,7 @@
 		AC4F4A6F260F7EA400A2E416 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		AC67D419261DAB7700F7DCCD /* pollenForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pollenForecastViewController.swift; sourceTree = "<group>"; };
 		AC76586D26122DE300F07A38 /* AQICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQICollectionViewCell.swift; sourceTree = "<group>"; };
+		AC7883E0262F26CC00978190 /* infoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC88129F2610DC0300103566 /* ForecastData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastData.swift; sourceTree = "<group>"; };
 		AC8812A22610DF9400103566 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		AC8812A52610E1ED00103566 /* ForecastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastManager.swift; sourceTree = "<group>"; };
@@ -254,6 +256,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		AC7883DF262F26AF00978190 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC7883E0262F26CC00978190 /* infoCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		ACAE556E26061C0700BFB05C = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +316,7 @@
 		ACAE55A12606395C00BFB05C /* Info Screen */ = {
 			isa = PBXGroup;
 			children = (
+				AC7883DF262F26AF00978190 /* View */,
 				ACAE55A22606399300BFB05C /* InfoViewController.swift */,
 			);
 			path = "Info Screen";
@@ -483,6 +494,7 @@
 				31B20C672614B40500F24470 /* Common.swift in Sources */,
 				ACAE55A32606399400BFB05C /* InfoViewController.swift in Sources */,
 				ACE9BAAC2614FB23004FCAF2 /* PollenManager.swift in Sources */,
+				AC7883E1262F26CC00978190 /* infoCollectionViewCell.swift in Sources */,
 				3180CB60262B47D400A6856B /* RecipeViewController.swift in Sources */,
 				AC8812A62610E1ED00103566 /* ForecastManager.swift in Sources */,
 				ACF87A22261312B300B5662A /* AQIManager.swift in Sources */,

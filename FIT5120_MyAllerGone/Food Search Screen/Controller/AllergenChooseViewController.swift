@@ -15,7 +15,7 @@ class AllergenChooseViewController: UIViewController {
     @IBOutlet weak var nutSegmented: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.tabBarItem.selectedImage = UIImage(named: "search_click")
         // Do any additional setup after loading the view.
     }
     

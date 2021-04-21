@@ -1214,42 +1214,66 @@
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="324"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JLL-87-iEX">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JLL-87-iEX">
                                                     <rect key="frame" x="0.0" y="0.0" width="335" height="200"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="dRV-kT-Mvc"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hays Fever" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBe-RC-OcY">
-                                                    <rect key="frame" x="125" y="212" width="85" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hays Fever" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBe-RC-OcY">
+                                                    <rect key="frame" x="92.5" y="212" width="150" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="saB-9T-G5L"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mva-xP-WUA">
-                                                    <rect key="frame" x="128" y="286" width="78" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Learn more"/>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esM-rs-bVJ">
-                                                    <rect key="frame" x="8" y="241" width="319" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <string key="text">Hay fever is the common name for allergic rhinitis, which means an allergy that affects the nose.
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esM-rs-bVJ">
+                                                    <rect key="frame" x="8" y="240.5" width="319" height="57"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment>
+                                                            <string key="content">Hay fever is the common name for allergic rhinitis, which means an allergy that affects the nose.
 </string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="ArialMT"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mva-xP-WUA">
+                                                    <rect key="frame" x="128.5" y="289" width="78" height="30"/>
+                                                    <state key="normal" title="Learn more"/>
+                                                    <connections>
+                                                        <action selector="learnMoreButton:" destination="GyA-7f-LIY" eventType="touchUpInside" id="ldH-7k-ue9"/>
+                                                        <segue destination="wXY-r1-jG8" kind="show" id="pJc-6W-fjN"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstItem="YBe-RC-OcY" firstAttribute="centerX" secondItem="omd-vP-5LX" secondAttribute="centerX" id="3s2-HJ-w3K"/>
                                                 <constraint firstItem="JLL-87-iEX" firstAttribute="top" secondItem="omd-vP-5LX" secondAttribute="top" id="4wV-Mh-V5b"/>
+                                                <constraint firstItem="YBe-RC-OcY" firstAttribute="top" secondItem="JLL-87-iEX" secondAttribute="bottom" constant="12" id="Bgw-Tp-LMK"/>
+                                                <constraint firstItem="esM-rs-bVJ" firstAttribute="leading" secondItem="omd-vP-5LX" secondAttribute="leading" constant="8" id="Dlf-RQ-qeZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="mva-xP-WUA" secondAttribute="bottom" constant="5" id="L1D-NL-xnF"/>
                                                 <constraint firstAttribute="trailing" secondItem="JLL-87-iEX" secondAttribute="trailing" id="dIt-Cn-XnJ"/>
                                                 <constraint firstItem="JLL-87-iEX" firstAttribute="leading" secondItem="omd-vP-5LX" secondAttribute="leading" id="ean-Ir-UK3"/>
+                                                <constraint firstItem="esM-rs-bVJ" firstAttribute="centerX" secondItem="omd-vP-5LX" secondAttribute="centerX" id="oQz-no-9XA"/>
+                                                <constraint firstItem="esM-rs-bVJ" firstAttribute="top" secondItem="YBe-RC-OcY" secondAttribute="bottom" constant="8" id="q8n-fs-7Ci"/>
+                                                <constraint firstItem="mva-xP-WUA" firstAttribute="centerX" secondItem="omd-vP-5LX" secondAttribute="centerX" id="qtc-Np-SS6"/>
+                                                <constraint firstAttribute="trailing" secondItem="esM-rs-bVJ" secondAttribute="trailing" constant="8" id="xAd-oa-wcz"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <size key="customSize" width="335" height="324"/>
+                                        <connections>
+                                            <outlet property="infoDescLabel" destination="esM-rs-bVJ" id="287-bB-yeY"/>
+                                            <outlet property="infoImage" destination="JLL-87-iEX" id="I1A-Ym-l2q"/>
+                                            <outlet property="infoTitleLabel" destination="YBe-RC-OcY" id="Akv-7v-GWy"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -1674,7 +1698,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bym-cD-nwj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1719" y="2472"/>
+            <point key="canvasLocation" x="-2762" y="2472"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UCd-iH-R3f">
+            <objects>
+                <viewController id="wXY-r1-jG8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j68-mc-dhB"/>
+                        <viewControllerLayoutGuide type="bottom" id="TxD-Kk-mJA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vUU-aJ-1Gd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMO-BS-2C7">
+                                <rect key="frame" x="16" y="66" width="343" height="446.5"/>
+                                <string key="text">Causes
+Hay fever is caused by the nose and/or eyes coming into contact with environmental allergens, such as pollens, dust mite, moulds and animal hair. 
+Most common causes of Hays fever:
+Airborne grass pollens
+Dust mites
+Moulds
+Animal fur/hair                                         Symptoms of hay fever
+Some of the symptoms include:
+sneezing
+a runny or stuffy nose
+itchy ears, nose and throat
+red, itchy or watery eyes
+headaches
+Sleeplessness
+No Concentration
+Feeling tired
+
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BMO-BS-2C7" firstAttribute="leading" secondItem="vUU-aJ-1Gd" secondAttribute="leadingMargin" id="2mf-vS-KdC"/>
+                            <constraint firstItem="BMO-BS-2C7" firstAttribute="trailing" secondItem="vUU-aJ-1Gd" secondAttribute="trailingMargin" id="POo-vZ-qkH"/>
+                            <constraint firstItem="BMO-BS-2C7" firstAttribute="top" secondItem="j68-mc-dhB" secondAttribute="bottom" constant="22" id="bUI-5W-NAO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DbD-R5-Qni"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uq9-hy-dxO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1980" y="2471.5142428785607"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

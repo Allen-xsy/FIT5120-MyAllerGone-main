@@ -55,20 +55,30 @@ extension InfoViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "infoCollectionViewCell", for: indexPath) as! infoCollectionViewCell
         
-        
+        if indexPath.row == 0 {
+            cell.infoTitleLabel.text = "Hay Fever"
+            cell.infoDescLabel.text = "Hay fever is the common name for allergic rhinitis, which means an allergy that affects the nose."
+            cell.infoImage.image = UIImage(named: "hayFever")
+        }
+        if indexPath.row == 1 {
+            cell.infoTitleLabel.text = "Food Allergy"
+            cell.infoDescLabel.text = "Food allergy is an immune system reaction that occurs soon after eating a certain food."
+            cell.infoImage.image = UIImage(named: "foodAllergy")
+        }
         
         cell.layer.cornerRadius = 8.0
         cell.layer.shadowOpacity = 0.2
         cell.layer.shadowRadius = 6
         cell.layer.shadowOffset = CGSize(width: 0, height: 0)
         cell.layer.masksToBounds = false
+        cell.layer.backgroundColor = CGColor(red: 242, green: 242, blue: 242, alpha: 0.85)
         
         return cell
     }

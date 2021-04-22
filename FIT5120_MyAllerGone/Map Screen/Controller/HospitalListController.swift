@@ -14,6 +14,9 @@ class HospitalListController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var headerView: UIView!
     @IBOutlet weak var locationLabel: UILabel!
     
+    var longtitude:Double?
+    var latitude:Double?
+    
     var dataSource: [PlaceSearchItemVo] = []
     
     ///  coder
@@ -25,7 +28,7 @@ class HospitalListController: UIViewController, UITableViewDelegate, UITableView
     var userLocation: CLLocation? {
         didSet {
             guard let value = userLocation else {
-                locationLabel.text = "-"
+                locationLabel.text = "21 Chancellor Walk, Clayton, Melbourne, Victoria, 3168"
                 return
             }
             geocoder.reverseGeocodeLocation(value) {[weak self] (places, error) in
@@ -75,6 +78,15 @@ class HospitalListController: UIViewController, UITableViewDelegate, UITableView
         view.setNeedsLayout()
         checkLocationAuth()
         navigationController?.tabBarItem.selectedImage = UIImage(named: "location_click")
+        // Add &params={"lat":纬度,"lon":经度} in Appetize link to costom user location
+        let paramsLat = UserDefaults.standard.object(forKey: "lat") as? Double
+        let paramsLon = UserDefaults.standard.object(forKey: "lon") as? Double
+        if let isAppetize = UserDefaults.standard.object(forKey: "isAppetize") as? Bool, isAppetize == true {
+            let lat = paramsLat ?? -37.911706
+            let lon = paramsLon ?? 145.132430
+            longtitude = lon
+            latitude = lat
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -130,10 +142,10 @@ class HospitalListController: UIViewController, UITableViewDelegate, UITableView
             lat = value.coordinate.latitude
         }
         if lon == 0{
-            lon = 145.136215
+            lon = longtitude ?? 145.132430
         }
         if lat == 0{
-            lat = -37.910522
+            lat = latitude ?? -37.911706
         }
         view.isUserInteractionEnabled = false;
         NetworkManager.loadData(urlString: searchPlaceUrl(for: lon, latitude: lat), type: PlaceSearchVo.self) {[weak self] (success, searchResult) in

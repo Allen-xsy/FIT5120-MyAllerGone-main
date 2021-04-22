@@ -13,9 +13,17 @@ class AllergenChooseViewController: UIViewController {
     @IBOutlet weak var fishSegmented: UISegmentedControl!
     @IBOutlet weak var beanSegmented: UISegmentedControl!
     @IBOutlet weak var nutSegmented: UISegmentedControl!
+    @IBOutlet weak var foodImage: UIImageView!
+    @IBOutlet weak var fishImage: UIImageView!
+    @IBOutlet weak var beanImage: UIImageView!
+    @IBOutlet weak var nutImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.tabBarItem.selectedImage = UIImage(named: "search_click")
+        foodImage.image = UIImage(named: "foodSearch")
+        fishImage.image = UIImage(named: "fishIcon")
+        beanImage.image = UIImage(named: "beanIcon")
+        nutImage.image = UIImage(named: "nutIcon")
         // Do any additional setup after loading the view.
     }
     

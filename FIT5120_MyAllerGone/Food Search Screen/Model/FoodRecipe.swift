@@ -11,6 +11,7 @@ class FoodRecipe: NSObject, Decodable {
     var recipe:String?
     var label:String?
     var image:String?
+    var url:String?
     var ingredientLines:[String]?
     
     private enum RootKeys: String, CodingKey {
@@ -21,6 +22,7 @@ class FoodRecipe: NSObject, Decodable {
         var label:String?
         var image:String?
         var ingredientLines:[String]?
+        var url:String?
     }
     
     required init(from decoder: Decoder) throws {
@@ -30,5 +32,6 @@ class FoodRecipe: NSObject, Decodable {
         label = recipes?.label
         image = recipes?.image
         ingredientLines = recipes?.ingredientLines
+        url = recipes?.url
     }
 }

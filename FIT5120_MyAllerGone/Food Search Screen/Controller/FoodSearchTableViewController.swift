@@ -145,7 +145,7 @@ class FoodSearchTableViewController: UITableViewController, UISearchBarDelegate 
                 searchString += "&excluded=" + allergen
             }
         }
-        searchString += "&app_id=254ef07c&app_key=2ea1489ef247ecc233cadd8e250f8356"
+        searchString += "&to=25&app_id=254ef07c&app_key=2ea1489ef247ecc233cadd8e250f8356"
     
      let jsonURL =
      URL(string: searchString.addingPercentEncoding(withAllowedCharacters:
@@ -188,6 +188,8 @@ class FoodSearchTableViewController: UITableViewController, UISearchBarDelegate 
                 let destination = segue.destination as! RecipeViewController
                 destination.ingredientLine = allRecipe[tableView.indexPathForSelectedRow!.row].ingredientLines
                 destination.name = allRecipe[tableView.indexPathForSelectedRow!.row].label
+                destination.imageURL = allRecipe[tableView.indexPathForSelectedRow!.row].image
+                destination.recipeDetail =  allRecipe[tableView.indexPathForSelectedRow!.row].url
 
             }
         }

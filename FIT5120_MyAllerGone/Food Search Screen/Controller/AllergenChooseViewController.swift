@@ -9,14 +9,18 @@ import UIKit
 
 class AllergenChooseViewController: UIViewController {
 
-    var allergen: [String] = ["","",""]
+    var allergen: [String] = ["fish","bean","nut","egg","sesame"]
     @IBOutlet weak var fishSegmented: UISegmentedControl!
     @IBOutlet weak var beanSegmented: UISegmentedControl!
     @IBOutlet weak var nutSegmented: UISegmentedControl!
+    @IBOutlet weak var eggSegmented: UISegmentedControl!
+    @IBOutlet weak var sesameSegmented: UISegmentedControl!
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var fishImage: UIImageView!
     @IBOutlet weak var beanImage: UIImageView!
     @IBOutlet weak var nutImage: UIImageView!
+    @IBOutlet weak var eggImage: UIImageView!
+    @IBOutlet weak var sesameImge: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.tabBarItem.selectedImage = UIImage(named: "search_click")
@@ -24,6 +28,8 @@ class AllergenChooseViewController: UIViewController {
         fishImage.image = UIImage(named: "fishIcon")
         beanImage.image = UIImage(named: "beanIcon")
         nutImage.image = UIImage(named: "nutIcon")
+        eggImage.image = UIImage(named: "eggIcon")
+        sesameImge.image = UIImage(named: "sesameIcon")
         // Do any additional setup after loading the view.
     }
     
@@ -73,6 +79,28 @@ class AllergenChooseViewController: UIViewController {
         }
     }
     
+    @IBAction func eggIndex(_ sender: Any) {
+        switch nutSegmented.selectedSegmentIndex
+        {
+        case 0:
+            allergen[3] = "egg"
+        case 1:
+            allergen[3] = ""
+        default:
+            break
+        }
+    }
+    @IBAction func sesameIndex(_ sender: Any) {
+        switch nutSegmented.selectedSegmentIndex
+        {
+        case 0:
+            allergen[4] = "sesame"
+        case 1:
+            allergen[4] = ""
+        default:
+            break
+        }
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      if segue.identifier == "startSearchSegue" {
      let destination = segue.destination as! FoodSearchTableViewController

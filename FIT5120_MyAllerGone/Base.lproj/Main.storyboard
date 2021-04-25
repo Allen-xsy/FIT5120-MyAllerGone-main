@@ -1314,7 +1314,7 @@
                 <navigationController id="ccO-at-ulf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="house" id="2NF-ww-Ufy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JWM-Gv-MPb">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

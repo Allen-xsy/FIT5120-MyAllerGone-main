@@ -10,6 +10,7 @@ import UIKit
 class InfoViewController: UIViewController {
 
     @IBOutlet weak var backGroundImageView: UIImageView!
+    @IBOutlet weak var homeCollectionView: UICollectionView!
     @IBOutlet weak var infoCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,12 +65,12 @@ extension InfoViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         if indexPath.row == 0 {
             cell.infoTitleLabel.text = "Hay Fever"
-            cell.infoDescLabel.text = "Hay fever is the common name for allergic rhinitis, which means an allergy that affects the nose."
+            //cell.infoDescLabel.text = "Hay fever is the common name for allergic rhinitis, which means an allergy that affects the nose."
             cell.infoImage.image = UIImage(named: "hayFever")
         }
         if indexPath.row == 1 {
             cell.infoTitleLabel.text = "Food Allergy"
-            cell.infoDescLabel.text = "Food allergy is an immune system reaction that occurs soon after eating a certain food."
+            //cell.infoDescLabel.text = "Food allergy is an immune system reaction that occurs soon after eating a certain food."
             cell.infoImage.image = UIImage(named: "foodAllergy")
         }
         

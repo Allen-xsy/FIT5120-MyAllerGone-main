@@ -11,7 +11,6 @@ class infoCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var infoImage: UIImageView!
     @IBOutlet weak var infoTitleLabel: UILabel!
-    @IBOutlet weak var infoDescLabel: UILabel!
     @IBAction func learnMoreButton(_ sender: Any) {
     }
     

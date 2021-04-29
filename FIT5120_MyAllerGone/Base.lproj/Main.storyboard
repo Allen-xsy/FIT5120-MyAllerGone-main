@@ -1350,94 +1350,128 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="1000"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="M6K-41-Juh">
-                                                <rect key="frame" x="0.0" y="129" width="390" height="300"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mz4-ey-5mw">
+                                                <rect key="frame" x="21.5" y="380" width="347" height="100"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Search：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmu-Ya-ajC">
+                                                        <rect key="frame" x="8" y="8" width="115" height="23"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdH-GK-w24">
+                                                        <rect key="frame" x="8" y="31" width="339" height="79"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="79" id="OyD-3P-Ubc"/>
+                                                            <constraint firstAttribute="width" constant="339" id="ztR-qP-7k2"/>
+                                                        </constraints>
+                                                        <string key="text">This provides thousands of recipes that do not contain allergens based on the foods you are allergic to, with detailed ingredients and steps
+</string>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="300" id="SFq-Og-G7y"/>
+                                                    <constraint firstItem="Nmu-Ya-ajC" firstAttribute="top" secondItem="Mz4-ey-5mw" secondAttribute="top" constant="8" id="194-MX-rit"/>
+                                                    <constraint firstAttribute="height" constant="100" id="2k7-Yz-c7B"/>
+                                                    <constraint firstAttribute="trailing" secondItem="fdH-GK-w24" secondAttribute="trailing" id="ZPT-Ew-H4q"/>
+                                                    <constraint firstItem="fdH-GK-w24" firstAttribute="top" secondItem="Nmu-Ya-ajC" secondAttribute="bottom" id="a1i-Ow-e0w"/>
+                                                    <constraint firstItem="fdH-GK-w24" firstAttribute="leading" secondItem="Mz4-ey-5mw" secondAttribute="leading" constant="8" id="hr0-hp-Jko"/>
+                                                    <constraint firstItem="Nmu-Ya-ajC" firstAttribute="leading" secondItem="Mz4-ey-5mw" secondAttribute="leading" constant="8" id="mx8-TW-cDH"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="glI-Bm-6rZ">
-                                                    <size key="itemSize" width="380" height="115"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="8" minY="5" maxX="8" maxY="0.0"/>
-                                                </collectionViewFlowLayout>
-                                                <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999998" contentMode="center" id="3qy-wr-5io">
-                                                        <rect key="frame" x="8" y="5" width="374" height="115"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="n97-20-yKT">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="115"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrX-9L-sag">
-                                                                    <rect key="frame" x="8" y="8" width="358" height="99"/>
-                                                                    <string key="text">Hospital positioning helps you easily locate nearby hospitals, and has a one-key access function. In case of emergency, please dial 000 directly</string>
-                                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="jrX-9L-sag" secondAttribute="trailing" constant="8" id="6TJ-lh-myv"/>
-                                                                <constraint firstAttribute="bottom" secondItem="jrX-9L-sag" secondAttribute="bottom" constant="8" id="Iqj-P0-8pZ"/>
-                                                                <constraint firstItem="jrX-9L-sag" firstAttribute="leading" secondItem="n97-20-yKT" secondAttribute="leading" constant="8" id="UG0-Gl-on1"/>
-                                                                <constraint firstItem="jrX-9L-sag" firstAttribute="top" secondItem="n97-20-yKT" secondAttribute="top" constant="8" id="s4N-5s-Ycg"/>
-                                                            </constraints>
-                                                        </collectionViewCellContentView>
-                                                        <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <size key="customSize" width="374" height="115"/>
-                                                    </collectionViewCell>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999998" contentMode="center" id="1Uf-VN-brU">
-                                                        <rect key="frame" x="8" y="130" width="374" height="115"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KIE-ga-8ZD">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="115"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                        </collectionViewCellContentView>
-                                                        <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <size key="customSize" width="374" height="115"/>
-                                                    </collectionViewCell>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999998" contentMode="center" id="x8R-Ve-1IP">
-                                                        <rect key="frame" x="8" y="255" width="374" height="153"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bdc-4t-wPm">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="153"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                        </collectionViewCellContentView>
-                                                        <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <size key="customSize" width="374" height="153"/>
-                                                    </collectionViewCell>
-                                                </cells>
-                                            </collectionView>
+                                            </view>
+                                            <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5b-dG-c1L">
+                                                <rect key="frame" x="21.5" y="270" width="347" height="102"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hospital Locator: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jps-v4-QbL">
+                                                        <rect key="frame" x="8" y="8" width="137" height="23"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpx-Sl-5gq">
+                                                        <rect key="frame" x="8" y="33" width="339" height="69"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="339" id="Hhf-9O-PsX"/>
+                                                            <constraint firstAttribute="height" constant="69" id="ncG-FW-mi5"/>
+                                                        </constraints>
+                                                        <string key="text">Hospital positioning helps you easily locate nearby hospitals, and has a one-key access function. In case of emergency, please dial 000 directly</string>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="jps-v4-QbL" firstAttribute="top" secondItem="C5b-dG-c1L" secondAttribute="top" constant="8" id="S0E-Bf-8Qj"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jpx-Sl-5gq" secondAttribute="trailing" id="dBZ-39-x8k"/>
+                                                    <constraint firstItem="jpx-Sl-5gq" firstAttribute="top" secondItem="jps-v4-QbL" secondAttribute="bottom" constant="2" id="eSm-BE-SMc"/>
+                                                    <constraint firstItem="jpx-Sl-5gq" firstAttribute="leading" secondItem="C5b-dG-c1L" secondAttribute="leading" constant="8" id="gag-iv-J5w"/>
+                                                    <constraint firstAttribute="height" constant="102" id="iu5-1F-fFy"/>
+                                                    <constraint firstItem="jps-v4-QbL" firstAttribute="leading" secondItem="C5b-dG-c1L" secondAttribute="leading" constant="8" id="tOr-bB-Pjw"/>
+                                                </constraints>
+                                            </view>
+                                            <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugZ-xW-r8V">
+                                                <rect key="frame" x="21.5" y="112" width="347" height="150"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pollen Forecast: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZW-K8-k19">
+                                                        <rect key="frame" x="8" y="8" width="127" height="23"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmq-0B-g4X">
+                                                        <rect key="frame" x="8" y="33" width="339" height="110"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="339" id="487-gL-mX9"/>
+                                                            <constraint firstAttribute="height" constant="110" id="hpb-bd-LIf"/>
+                                                        </constraints>
+                                                        <string key="text">Our weather forecast allows you to stay one step ahead of the weather in your location. Know exactly what you're breathing by viewing real-time air quality data. Oh, and remember to check out the weather and allergen forecasts to stay one step ahead of your symptoms.  </string>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="X7L-Xh-YHb"/>
+                                                    <constraint firstItem="Zmq-0B-g4X" firstAttribute="leading" secondItem="ugZ-xW-r8V" secondAttribute="leading" constant="8" id="YNI-8N-pyG"/>
+                                                    <constraint firstItem="0ZW-K8-k19" firstAttribute="top" secondItem="ugZ-xW-r8V" secondAttribute="top" constant="8" id="dmJ-7h-mwH"/>
+                                                    <constraint firstItem="Zmq-0B-g4X" firstAttribute="top" secondItem="0ZW-K8-k19" secondAttribute="bottom" constant="2" id="mso-nm-2Eo"/>
+                                                    <constraint firstItem="0ZW-K8-k19" firstAttribute="leading" secondItem="ugZ-xW-r8V" secondAttribute="leadingMargin" id="qTm-xx-bgy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Zmq-0B-g4X" secondAttribute="trailing" id="sqt-yv-etV"/>
+                                                </constraints>
+                                            </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2e8-aa-ota">
-                                                <rect key="frame" x="0.0" y="445" width="390" height="250"/>
+                                                <rect key="frame" x="0.0" y="485" width="390" height="198"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="250" id="PXc-fL-S3s"/>
+                                                    <constraint firstAttribute="height" constant="198" id="PXc-fL-S3s"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="30" minimumInteritemSpacing="8" id="tDo-Tj-PSK">
-                                                    <size key="itemSize" width="200" height="185"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="8" id="tDo-Tj-PSK">
+                                                    <size key="itemSize" width="160" height="165"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="0.0"/>
+                                                    <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="infoCollectionViewCell" id="g0r-Xb-xN2" customClass="infoCollectionViewCell" customModule="FIT5120_MyAllerGone" customModuleProvider="target">
-                                                        <rect key="frame" x="8" y="36.5" width="200" height="185"/>
+                                                        <rect key="frame" x="16" y="16.5" width="160" height="165"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7Rd-wK-3eE">
-                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="185"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="160" height="165"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IA6-uP-BDv">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="128"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="150" id="Pmu-g0-zYJ"/>
+                                                                        <constraint firstAttribute="height" constant="128" id="Pmu-g0-zYJ"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hays Fever" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTa-Lj-p0m">
-                                                                    <rect key="frame" x="25" y="158" width="150" height="22"/>
+                                                                    <rect key="frame" x="5" y="136" width="150" height="24"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="150" id="7QH-Bp-dgd"/>
                                                                     </constraints>
@@ -1457,7 +1491,7 @@
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <size key="customSize" width="200" height="185"/>
+                                                        <size key="customSize" width="160" height="165"/>
                                                         <connections>
                                                             <outlet property="infoImage" destination="IA6-uP-BDv" id="oHg-L1-obW"/>
                                                             <outlet property="infoTitleLabel" destination="lTa-Lj-p0m" id="t2s-3f-nnP"/>
@@ -1470,13 +1504,13 @@
                                                 </connections>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your one stop destination for Allergy Needs!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6o-m6-vIc">
-                                                <rect key="frame" x="50" y="71" width="290" height="42"/>
+                                                <rect key="frame" x="50" y="54" width="290" height="42"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to MyAllerGone!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd1-Z9-It6">
-                                                <rect key="frame" x="16" y="25" width="358" height="30"/>
+                                                <rect key="frame" x="16" y="16" width="358" height="30"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="23"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1486,26 +1520,29 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="T6o-m6-vIc" firstAttribute="leading" secondItem="Ql0-bX-jMZ" secondAttribute="leading" constant="50" id="142-lr-a01"/>
+                                            <constraint firstItem="Mz4-ey-5mw" firstAttribute="top" secondItem="C5b-dG-c1L" secondAttribute="bottom" constant="8" id="1gS-Hj-aTb"/>
                                             <constraint firstAttribute="bottom" secondItem="nsG-JI-PNY" secondAttribute="bottom" id="3Ne-cF-ViG"/>
                                             <constraint firstAttribute="trailing" secondItem="T6o-m6-vIc" secondAttribute="trailing" constant="50" id="7D9-Cg-Oeh"/>
                                             <constraint firstAttribute="trailing" secondItem="nsG-JI-PNY" secondAttribute="trailing" id="8mZ-tF-1EN"/>
-                                            <constraint firstItem="T6o-m6-vIc" firstAttribute="top" secondItem="dd1-Z9-It6" secondAttribute="bottom" constant="16" id="Cea-zC-ZFK"/>
+                                            <constraint firstItem="2e8-aa-ota" firstAttribute="top" secondItem="Mz4-ey-5mw" secondAttribute="bottom" constant="5" id="Bfc-9v-GVj"/>
+                                            <constraint firstItem="T6o-m6-vIc" firstAttribute="top" secondItem="dd1-Z9-It6" secondAttribute="bottom" constant="8" id="Cea-zC-ZFK"/>
                                             <constraint firstAttribute="trailing" secondItem="4Tb-9z-bfE" secondAttribute="trailing" id="EYJ-Uc-QaD"/>
-                                            <constraint firstAttribute="trailing" secondItem="M6K-41-Juh" secondAttribute="trailing" id="GEm-82-FXT"/>
                                             <constraint firstAttribute="trailing" secondItem="dd1-Z9-It6" secondAttribute="trailing" constant="16" id="HOX-ic-j6K"/>
                                             <constraint firstAttribute="bottom" secondItem="4Tb-9z-bfE" secondAttribute="bottom" id="Ik5-sw-3Mw"/>
+                                            <constraint firstItem="Mz4-ey-5mw" firstAttribute="centerX" secondItem="ugZ-xW-r8V" secondAttribute="centerX" id="KGQ-2v-2FL"/>
                                             <constraint firstAttribute="trailing" secondItem="2e8-aa-ota" secondAttribute="trailing" id="O8E-Ju-d9Z"/>
-                                            <constraint firstItem="dd1-Z9-It6" firstAttribute="top" secondItem="Ql0-bX-jMZ" secondAttribute="top" constant="25" id="Uki-ko-9HF"/>
+                                            <constraint firstItem="dd1-Z9-It6" firstAttribute="top" secondItem="Ql0-bX-jMZ" secondAttribute="top" constant="16" id="Uki-ko-9HF"/>
                                             <constraint firstAttribute="height" constant="1000" id="WyS-bQ-k5E"/>
                                             <constraint firstItem="4Tb-9z-bfE" firstAttribute="leading" secondItem="Ql0-bX-jMZ" secondAttribute="leading" id="c7E-uR-tiw"/>
                                             <constraint firstItem="nsG-JI-PNY" firstAttribute="top" secondItem="Ql0-bX-jMZ" secondAttribute="top" id="e1j-vA-Vr0"/>
-                                            <constraint firstItem="M6K-41-Juh" firstAttribute="top" secondItem="T6o-m6-vIc" secondAttribute="bottom" constant="16" id="e7d-KJ-Rlr"/>
+                                            <constraint firstItem="ugZ-xW-r8V" firstAttribute="centerX" secondItem="T6o-m6-vIc" secondAttribute="centerX" id="f7X-Uk-0hF"/>
                                             <constraint firstItem="dd1-Z9-It6" firstAttribute="leading" secondItem="Ql0-bX-jMZ" secondAttribute="leading" constant="16" id="fvG-SK-BAY"/>
+                                            <constraint firstItem="C5b-dG-c1L" firstAttribute="top" secondItem="ugZ-xW-r8V" secondAttribute="bottom" constant="8" id="g8Y-5h-Q6A"/>
+                                            <constraint firstItem="C5b-dG-c1L" firstAttribute="centerX" secondItem="ugZ-xW-r8V" secondAttribute="centerX" id="iQT-Uz-ibZ"/>
                                             <constraint firstItem="4Tb-9z-bfE" firstAttribute="top" secondItem="Ql0-bX-jMZ" secondAttribute="top" id="mwq-hz-E9S"/>
-                                            <constraint firstItem="2e8-aa-ota" firstAttribute="top" secondItem="M6K-41-Juh" secondAttribute="bottom" constant="16" id="pja-Y3-cK5"/>
-                                            <constraint firstItem="M6K-41-Juh" firstAttribute="leading" secondItem="Ql0-bX-jMZ" secondAttribute="leading" id="qtN-WG-5qe"/>
                                             <constraint firstItem="nsG-JI-PNY" firstAttribute="leading" secondItem="Ql0-bX-jMZ" secondAttribute="leading" id="s5O-ee-Th2"/>
                                             <constraint firstItem="2e8-aa-ota" firstAttribute="leading" secondItem="Ql0-bX-jMZ" secondAttribute="leading" id="tks-nQ-bVz"/>
+                                            <constraint firstItem="ugZ-xW-r8V" firstAttribute="top" secondItem="T6o-m6-vIc" secondAttribute="bottom" constant="16" id="y5g-tz-cbQ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1531,7 +1568,6 @@
                     <navigationItem key="navigationItem" title="MyAllerGone" id="zgq-CE-EmU"/>
                     <size key="freeformSize" width="390" height="1000"/>
                     <connections>
-                        <outlet property="homeCollectionView" destination="M6K-41-Juh" id="FnE-pW-63X"/>
                         <outlet property="infoCollectionView" destination="2e8-aa-ota" id="Bqe-0o-Eix"/>
                     </connections>
                 </viewController>
@@ -1850,7 +1886,8 @@
                                             <constraint firstAttribute="height" constant="74" id="AHN-r1-GFg"/>
                                             <constraint firstAttribute="width" constant="339" id="HxY-sK-TId"/>
                                         </constraints>
-                                        <string key="text">Hospital positioning helps you easily locate nearby hospitals, and has a one-key access function. In case of emergency, please dial 000 directly</string>
+                                        <string key="text">This provides thousands of recipes that do not contain allergens based on the foods you are allergic to, with detailed ingredients and steps
+</string>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

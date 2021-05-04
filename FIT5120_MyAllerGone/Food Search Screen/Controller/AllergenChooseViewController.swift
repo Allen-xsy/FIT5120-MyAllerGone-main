@@ -11,7 +11,7 @@ class AllergenChooseViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var allergen: [String] = ["fish","bean","nut","egg","sesame"]
+    var allergen: [String] = ["","","","",""]
     
     override func viewDidLoad() {
         super.viewDidLoad()

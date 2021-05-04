@@ -24,6 +24,12 @@ class HospitalTableViewCell: UITableViewCell {
         hospitalNameL.text = nil
         distanceLabel.text = nil
         addressLabel.text = nil
+        
+        contentView.layer.cornerRadius = 5.0
+        contentView.layer.shadowOpacity = 0.3
+        contentView.layer.shadowRadius = 5
+        contentView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        contentView.layer.masksToBounds = true
     }
 
     public func configCell(searchResult: PlaceSearchItemVo, location: CLLocation) {

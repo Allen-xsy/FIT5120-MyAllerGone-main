@@ -76,7 +76,6 @@ class HospitalListController: UIViewController, UITableViewDelegate, UITableView
         tableView.register(UINib(nibName: "HospitalTableViewCell", bundle: nil), forCellReuseIdentifier: "HospitalTableViewCell")
         tableView.tableFooterView = UIView()
         view.setNeedsLayout()
-        checkLocationAuth()
         navigationController?.tabBarItem.selectedImage = UIImage(named: "location_click")
         // Add &params={"lat":纬度,"lon":经度} in Appetize link to costom user location
         let paramsLat = UserDefaults.standard.object(forKey: "lat") as? Double
@@ -87,6 +86,12 @@ class HospitalListController: UIViewController, UITableViewDelegate, UITableView
             longtitude = lon
             latitude = lat
         }
+
+        let emergencyAlert = UIAlertController(title: "", message: "Please call 000 for emergency", preferredStyle: .alert)
+        emergencyAlert.addAction(UIAlertAction(title: "Understood", style: .default, handler: { (_) in
+            self.checkLocationAuth()
+        }))
+        self.present(emergencyAlert, animated: true, completion: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -51,9 +51,19 @@
 		ACF87A22261312B300B5662A /* AQIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF87A21261312B300B5662A /* AQIManager.swift */; };
 		ACF87A26261312C300B5662A /* AQIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF87A25261312C300B5662A /* AQIData.swift */; };
 		ACF87A292613145A00B5662A /* AQIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF87A282613145A00B5662A /* AQIModel.swift */; };
+		D33476B8263E72890019A142 /* FoodDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33476B6263E72890019A142 /* FoodDetailTableViewCell.swift */; };
+		D33476B9263E72890019A142 /* FoodDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D33476B7263E72890019A142 /* FoodDetailTableViewCell.xib */; };
+		D33476BD263E729E0019A142 /* FoodDetailIntroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33476BB263E729E0019A142 /* FoodDetailIntroCell.swift */; };
+		D33476BE263E729E0019A142 /* FoodDetailIntroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D33476BC263E729E0019A142 /* FoodDetailIntroCell.xib */; };
 		D3AB35DA262E944E002AE457 /* PlaceSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB35D9262E944E002AE457 /* PlaceSearchViewController.swift */; };
 		D3AB35DE262E9660002AE457 /* AddressSearchVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB35DD262E9660002AE457 /* AddressSearchVo.swift */; };
 		D3AB35E2262E97BD002AE457 /* SearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB35E1262E97BD002AE457 /* SearchResultTableViewController.swift */; };
+		D3C542BF263D83310090BF34 /* FoodSearchImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C542BD263D83310090BF34 /* FoodSearchImageCell.swift */; };
+		D3C542C0263D83310090BF34 /* FoodSearchImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3C542BE263D83310090BF34 /* FoodSearchImageCell.xib */; };
+		D3C542C5263D843F0090BF34 /* FoodSearchIntroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C542C3263D843F0090BF34 /* FoodSearchIntroCell.swift */; };
+		D3C542C6263D843F0090BF34 /* FoodSearchIntroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3C542C4263D843F0090BF34 /* FoodSearchIntroCell.xib */; };
+		D3C542CA263D84D50090BF34 /* FoodSearchFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C542C8263D84D50090BF34 /* FoodSearchFilterCell.swift */; };
+		D3C542CB263D84D50090BF34 /* FoodSearchFilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3C542C9263D84D50090BF34 /* FoodSearchFilterCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,9 +115,19 @@
 		ACF87A21261312B300B5662A /* AQIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIManager.swift; sourceTree = "<group>"; };
 		ACF87A25261312C300B5662A /* AQIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIData.swift; sourceTree = "<group>"; };
 		ACF87A282613145A00B5662A /* AQIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIModel.swift; sourceTree = "<group>"; };
+		D33476B6263E72890019A142 /* FoodDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailTableViewCell.swift; sourceTree = "<group>"; };
+		D33476B7263E72890019A142 /* FoodDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodDetailTableViewCell.xib; sourceTree = "<group>"; };
+		D33476BB263E729E0019A142 /* FoodDetailIntroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailIntroCell.swift; sourceTree = "<group>"; };
+		D33476BC263E729E0019A142 /* FoodDetailIntroCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodDetailIntroCell.xib; sourceTree = "<group>"; };
 		D3AB35D9262E944E002AE457 /* PlaceSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSearchViewController.swift; sourceTree = "<group>"; };
 		D3AB35DD262E9660002AE457 /* AddressSearchVo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSearchVo.swift; sourceTree = "<group>"; };
 		D3AB35E1262E97BD002AE457 /* SearchResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewController.swift; sourceTree = "<group>"; };
+		D3C542BD263D83310090BF34 /* FoodSearchImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchImageCell.swift; sourceTree = "<group>"; };
+		D3C542BE263D83310090BF34 /* FoodSearchImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSearchImageCell.xib; sourceTree = "<group>"; };
+		D3C542C3263D843F0090BF34 /* FoodSearchIntroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchIntroCell.swift; sourceTree = "<group>"; };
+		D3C542C4263D843F0090BF34 /* FoodSearchIntroCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSearchIntroCell.xib; sourceTree = "<group>"; };
+		D3C542C8263D84D50090BF34 /* FoodSearchFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchFilterCell.swift; sourceTree = "<group>"; };
+		D3C542C9263D84D50090BF34 /* FoodSearchFilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSearchFilterCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +157,16 @@
 			children = (
 				3180CB65262DB01900A6856B /* RecipeTableViewCell.swift */,
 				3180CB66262DB01900A6856B /* RecipeTableViewCell.xib */,
+				D3C542BD263D83310090BF34 /* FoodSearchImageCell.swift */,
+				D3C542BE263D83310090BF34 /* FoodSearchImageCell.xib */,
+				D3C542C3263D843F0090BF34 /* FoodSearchIntroCell.swift */,
+				D3C542C4263D843F0090BF34 /* FoodSearchIntroCell.xib */,
+				D3C542C8263D84D50090BF34 /* FoodSearchFilterCell.swift */,
+				D3C542C9263D84D50090BF34 /* FoodSearchFilterCell.xib */,
+				D33476B6263E72890019A142 /* FoodDetailTableViewCell.swift */,
+				D33476B7263E72890019A142 /* FoodDetailTableViewCell.xib */,
+				D33476BB263E729E0019A142 /* FoodDetailIntroCell.swift */,
+				D33476BC263E729E0019A142 /* FoodDetailIntroCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,8 +183,8 @@
 		3180CB4D262AD97E00A6856B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3180CB58262AEA9A00A6856B /* FoodSearchTableViewController.swift */,
 				3180CB5B262B234900A6856B /* AllergenChooseViewController.swift */,
+				3180CB58262AEA9A00A6856B /* FoodSearchTableViewController.swift */,
 				3180CB5F262B47D400A6856B /* RecipeViewController.swift */,
 			);
 			path = Controller;
@@ -285,10 +315,10 @@
 		ACAE557926061C0700BFB05C /* FIT5120_MyAllerGone */ = {
 			isa = PBXGroup;
 			children = (
-				3180CB48262AD90400A6856B /* Food Search Screen */,
 				ACAE557A26061C0700BFB05C /* AppDelegate.swift */,
 				ACAE557C26061C0700BFB05C /* SceneDelegate.swift */,
 				ACAE557E26061C0700BFB05C /* ViewController.swift */,
+				3180CB48262AD90400A6856B /* Food Search Screen */,
 				31B20C632614B40500F24470 /* Common */,
 				31B20C542614B13800F24470 /* Map Screen */,
 				ACAE558F2606299300BFB05C /* Home Screen */,
@@ -415,12 +445,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3180CB68262DB01900A6856B /* RecipeTableViewCell.xib in Resources */,
+				D3C542C0263D83310090BF34 /* FoodSearchImageCell.xib in Resources */,
 				ACAE558726061C0B00BFB05C /* LaunchScreen.storyboard in Resources */,
+				D3C542CB263D84D50090BF34 /* FoodSearchFilterCell.xib in Resources */,
+				D3C542C6263D843F0090BF34 /* FoodSearchIntroCell.xib in Resources */,
 				ACF87A1B26130C0E00B5662A /* allerIcon.jpg in Resources */,
 				ACAE558426061C0B00BFB05C /* Assets.xcassets in Resources */,
 				31B20C602614B35F00F24470 /* HospitalTableViewCell.xib in Resources */,
 				ACAE558226061C0700BFB05C /* Main.storyboard in Resources */,
 				ACE9BAA32614E8A7004FCAF2 /* launch_2.jpg in Resources */,
+				D33476B9263E72890019A142 /* FoodDetailTableViewCell.xib in Resources */,
+				D33476BE263E729E0019A142 /* FoodDetailIntroCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +514,7 @@
 				ACE9BAA92614FA54004FCAF2 /* PollenModel.swift in Sources */,
 				ACAE557F26061C0700BFB05C /* ViewController.swift in Sources */,
 				AC4F4A68260F71DC00A2E416 /* WeatherModel.swift in Sources */,
+				D33476B8263E72890019A142 /* FoodDetailTableViewCell.swift in Sources */,
 				D3AB35E2262E97BD002AE457 /* SearchResultTableViewController.swift in Sources */,
 				31B20C5F2614B35F00F24470 /* SearchResultVo.swift in Sources */,
 				31B20C612614B35F00F24470 /* HospitalTableViewCell.swift in Sources */,
@@ -487,6 +523,7 @@
 				3180CB56262ADD4600A6856B /* FoodRecipe.swift in Sources */,
 				AC4F4A62260F704F00A2E416 /* WeatherManager.swift in Sources */,
 				ACAE557B26061C0700BFB05C /* AppDelegate.swift in Sources */,
+				D33476BD263E729E0019A142 /* FoodDetailIntroCell.swift in Sources */,
 				AC76586E26122DE300F07A38 /* AQICollectionViewCell.swift in Sources */,
 				AC372A2A26136AB6008ED2F0 /* PollenCollectionViewCell.swift in Sources */,
 				3180CB59262AEA9A00A6856B /* FoodSearchTableViewController.swift in Sources */,
@@ -502,6 +539,9 @@
 				ACAE557D26061C0700BFB05C /* SceneDelegate.swift in Sources */,
 				AC4F4A70260F7EA400A2E416 /* WeatherData.swift in Sources */,
 				AC8812A02610DC0300103566 /* ForecastData.swift in Sources */,
+				D3C542CA263D84D50090BF34 /* FoodSearchFilterCell.swift in Sources */,
+				D3C542BF263D83310090BF34 /* FoodSearchImageCell.swift in Sources */,
+				D3C542C5263D843F0090BF34 /* FoodSearchIntroCell.swift in Sources */,
 				D3AB35DA262E944E002AE457 /* PlaceSearchViewController.swift in Sources */,
 				AC8812A32610DF9400103566 /* ForecastModel.swift in Sources */,
 				AC1EF07F260F260300C56B93 /* WeatherCollectionViewCell.swift in Sources */,

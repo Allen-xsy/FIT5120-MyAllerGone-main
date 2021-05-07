@@ -24,6 +24,9 @@ class infoCollectionViewCell: UICollectionViewCell {
 //        plantBackground.layer.shadowRadius = 4
 //        plantBackground.layer.shadowOffset = CGSize(width: 0, height: 0)
 //        plantBackground.layer.masksToBounds = false
+        infoTitleLabel.layer.cornerRadius = 10.0
+        infoTitleLabel.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMinXMaxYCorner]
+        infoTitleLabel.layer.masksToBounds = true
         infoImage.layer.cornerRadius = 10.0
         infoImage.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
         infoImage.layer.masksToBounds = true

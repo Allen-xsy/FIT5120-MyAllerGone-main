@@ -25,7 +25,7 @@ struct PollenManager {
     var plantsDelegate: pollenPlantsManagerDelegate?
     //  907cced4507a4b3cbad3be0043786cd2
     // https://api.breezometer.com/pollen/v2/forecast/daily?lat=48.857456&lon=2.354611&days=3&key=YOUR_API_KEY&features=types_information,plants_information
-    let APIURL = "https://api.breezometer.com/pollen/v2/forecast/daily?days=3&key=b8f9d729df8140a1ac2734b1f237d002&features=types_information"
+    let APIURL = "https://api.breezometer.com/pollen/v2/forecast/daily?days=3&key=c5a7728f2a7342d5b4ccaf2cfe438a2f&features=types_information"
     
     func fecthPollenLocation(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
         let urlString = "\(APIURL)&lat=\(latitude)&lon=\(longitude)"

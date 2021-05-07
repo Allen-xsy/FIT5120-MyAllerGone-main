@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var CityLabel: UILabel!
     @IBOutlet weak var HomeCollectionView: UICollectionView!
+    var dataSource: [PlaceSearchItemVo] = []
     
     var lat: Double = -37.911706
     var lon: Double = 145.132430
@@ -88,8 +89,7 @@ class HomeViewController: UIViewController {
         pollenManager.delegate = self
 
         HomeCollectionView.addSubview(headerRefresh)
-        // Change tap icon color when click
-        navigationController?.tabBarItem.selectedImage = UIImage(named: "cloudy_click")
+        
 
         // Add &params={"lat":纬度,"lon":经度} in Appetize link to costom user location
         let paramsLat = UserDefaults.standard.object(forKey: "lat") as? Double
@@ -111,6 +111,8 @@ class HomeViewController: UIViewController {
         }else {
             print("CLLocationManager failed !!!")
         }
+        // Change tap icon color when click
+        navigationController?.tabBarItem.selectedImage = UIImage(named: "cloudy_click")
     }
     
     // Refresh Action
@@ -119,6 +121,10 @@ class HomeViewController: UIViewController {
         forecastManager.fecthForecastLocation(latitude: self.lat, longitude: self.lon)
         aqiManager.fecthAQILocation(latitude: self.lat, longitude: self.lon)
         pollenManager.fecthPollenLocation(latitude: self.lat, longitude: self.lon)
+    }
+    @IBAction func searchPlace(_ sender: Any) {
+        let controller = self.storyboard?.instantiateViewController(identifier: "placeSearch") as! PlaceSearchViewController
+        self.navigationController?.pushViewController(controller, animated: false)
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
@@ -248,12 +254,18 @@ class HomeViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let theSegue = segue.destination as! pollenForecastViewController
-        theSegue.lat = self.lat
-        theSegue.lon = self.lon
-        theSegue.dayOneDate = self.currentWeekday
-        theSegue.dayTwoDate = self.forecastDate1
-        theSegue.dayThreeDate = self.forecastDate2
+        if segue.identifier == "pollenForecast" {
+            let theSegue = segue.destination as! pollenForecastViewController
+            theSegue.lat = self.lat
+            theSegue.lon = self.lon
+            theSegue.dayOneDate = self.currentWeekday
+            theSegue.dayTwoDate = self.forecastDate1
+            theSegue.dayThreeDate = self.forecastDate2
+        }
+        if segue.identifier == "weatherPlaceSearch" {
+            let controller = segue.destination as? PlaceSearchViewController
+            controller?.page = true
+        }
     }
     
 }

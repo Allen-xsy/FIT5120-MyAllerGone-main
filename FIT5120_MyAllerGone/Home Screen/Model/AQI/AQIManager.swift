@@ -20,7 +20,7 @@ struct AQIManager {
     
     var delegate: AQIManagerDelegate?
     //  72addadaeb9b4fff9fa60d6320f97c43
-    let AQIAPIURL = "https://api.breezometer.com/air-quality/v2/current-conditions?key=b8f9d729df8140a1ac2734b1f237d002&features=breezometer_aqi,health_recommendations"
+    let AQIAPIURL = "https://api.breezometer.com/air-quality/v2/current-conditions?key=c5a7728f2a7342d5b4ccaf2cfe438a2f&features=breezometer_aqi,health_recommendations"
     
     func fecthAQILocation(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
         let urlString = "\(AQIAPIURL)&lat=\(latitude)&lon=\(longitude)"

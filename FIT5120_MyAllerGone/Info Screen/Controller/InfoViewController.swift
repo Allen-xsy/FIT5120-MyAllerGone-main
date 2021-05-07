@@ -40,7 +40,10 @@ class InfoViewController: UIViewController {
         layout.itemSize = CGSize(width: cellWidth, height: cellWidth)
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.tabBarItem.selectedImage = UIImage(named: "house_click")
+    }
     /*
     // MARK: - Navigation
 
@@ -69,7 +72,7 @@ extension InfoViewController: UICollectionViewDataSource, UICollectionViewDelega
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "infoCollectionViewCell", for: indexPath) as! infoCollectionViewCell
         
         if indexPath.row == 0 {
-            cell.infoTitleLabel.text = "Weather Forecast"
+            cell.infoTitleLabel.text = "Forecast"
             //cell.infoDescLabel.text = "Hay fever is the common name for allergic rhinitis, which means an allergy that affects the nose."
             cell.infoImage.image = UIImage(named: "forecast")
         }
@@ -94,9 +97,24 @@ extension InfoViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.layer.shadowRadius = 6
         cell.layer.shadowOffset = CGSize(width: 0, height: 0)
         cell.layer.masksToBounds = false
-        cell.layer.backgroundColor = CGColor(red: 242, green: 242, blue: 242, alpha: 0.85)
+        //cell.layer.backgroundColor = CGColor(red: 242, green: 242, blue: 242, alpha: 0.85)
         
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let controller = self.storyboard?.instantiateViewController(identifier: "weatherPage") as! HomeViewController
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+        if indexPath.row == 1 {
+            let controller = self.storyboard?.instantiateViewController(identifier: "food") as! AllergenChooseViewController
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+        if indexPath.row == 2 {
+            let controller = self.storyboard?.instantiateViewController(identifier: "hospital") as! HospitalListController
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+        
     }
     
     

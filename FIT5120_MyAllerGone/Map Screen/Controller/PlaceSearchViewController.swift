@@ -14,6 +14,7 @@ class PlaceSearchViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var tableView: UITableView!
     
     fileprivate var dataSource: [AddressSearchItemVo] = []
+    public var page: Bool = false
     
     /// Search Controller
     lazy var searchController: UISearchController = {
@@ -41,6 +42,8 @@ class PlaceSearchViewController: UIViewController, UITableViewDelegate, UITableV
         view.addSubview(loadingView)
         NSLayoutConstraint.activate([loadingView.centerXAnchor.constraint(equalTo:view.safeAreaLayoutGuide.centerXAnchor), loadingView.centerYAnchor.constraint(equalTo:view.safeAreaLayoutGuide.centerYAnchor)
         ])
+        
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -67,7 +70,11 @@ class PlaceSearchViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "showSearchResultController", sender: dataSource[indexPath.row])
+        if page {
+            performSegue(withIdentifier: "weatherPage", sender: dataSource[indexPath.row])
+        } else {
+            performSegue(withIdentifier: "showSearchResultController", sender: dataSource[indexPath.row])
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -76,7 +76,7 @@ class HospitalListController: UIViewController, UITableViewDelegate, UITableView
         tableView.register(UINib(nibName: "HospitalTableViewCell", bundle: nil), forCellReuseIdentifier: "HospitalTableViewCell")
         tableView.tableFooterView = UIView()
         view.setNeedsLayout()
-        navigationController?.tabBarItem.selectedImage = UIImage(named: "location_click")
+        
         // Add &params={"lat":纬度,"lon":经度} in Appetize link to costom user location
         let paramsLat = UserDefaults.standard.object(forKey: "lat") as? Double
         let paramsLon = UserDefaults.standard.object(forKey: "lon") as? Double
@@ -96,6 +96,7 @@ class HospitalListController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        navigationController?.tabBarItem.selectedImage = UIImage(named: "location_click")
     }
 
     // Refresh Action

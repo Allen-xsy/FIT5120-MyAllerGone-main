@@ -20,6 +20,8 @@ class AllergenChooseViewController: UIViewController {
         collectionView.register(UINib(nibName: "FoodSearchImageCell", bundle: nil), forCellWithReuseIdentifier: "FoodSearchImageCell")
         collectionView.register(UINib(nibName: "FoodSearchIntroCell", bundle: nil), forCellWithReuseIdentifier: "FoodSearchIntroCell")
         collectionView.register(UINib(nibName: "FoodSearchFilterCell", bundle: nil), forCellWithReuseIdentifier: "FoodSearchFilterCell")
+        
+        navigationController?.tabBarItem.selectedImage = UIImage(named: "search_click")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

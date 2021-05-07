@@ -277,6 +277,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AC6C36762643D68500CC961F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ACAE55A22606399300BFB05C /* InfoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		AC76586726122A3900F07A38 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,7 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				AC7883DF262F26AF00978190 /* View */,
-				ACAE55A22606399300BFB05C /* InfoViewController.swift */,
+				AC6C36762643D68500CC961F /* Controller */,
 			);
 			path = "Info Screen";
 			sourceTree = "<group>";

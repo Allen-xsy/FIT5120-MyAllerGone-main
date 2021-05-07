@@ -37,7 +37,7 @@ class FoodSearchTableViewController: UITableViewController, UISearchBarDelegate 
         requestRecipes(recipeName: "Chicken")
         tableView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil), forCellReuseIdentifier: "RecipeTableViewCell")
         
-        navigationController?.tabBarItem.selectedImage = UIImage(named: "search_click")
+        
     }
     
     // MARK: - Table view data source

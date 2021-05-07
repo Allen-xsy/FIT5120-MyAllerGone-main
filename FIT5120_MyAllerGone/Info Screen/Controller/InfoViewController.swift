@@ -10,7 +10,7 @@ import UIKit
 class InfoViewController: UIViewController {
 
     @IBOutlet weak var backGroundImageView: UIImageView!
-    @IBOutlet weak var homeCollectionView: UICollectionView!
+    //@IBOutlet weak var homeCollectionView: UICollectionView!
     @IBOutlet weak var infoCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,11 @@ class InfoViewController: UIViewController {
         //navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.tabBarItem.selectedImage = UIImage(named: "house_click")
         //backGroundImageView.image = UIImage(named: "launch_2")
+        
+        let screenSize = UIScreen.main.bounds.size
+        let cellWidth = floor(screenSize.width * 0.44)
+        let layout = infoCollectionView!.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: cellWidth, height: cellWidth)
     }
     
 
@@ -56,7 +61,7 @@ extension InfoViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -64,18 +69,28 @@ extension InfoViewController: UICollectionViewDataSource, UICollectionViewDelega
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "infoCollectionViewCell", for: indexPath) as! infoCollectionViewCell
         
         if indexPath.row == 0 {
-            cell.infoTitleLabel.text = "Hay Fever"
+            cell.infoTitleLabel.text = "Weather Forecast"
             //cell.infoDescLabel.text = "Hay fever is the common name for allergic rhinitis, which means an allergy that affects the nose."
-            cell.infoImage.image = UIImage(named: "hayFever")
+            cell.infoImage.image = UIImage(named: "forecast")
         }
         if indexPath.row == 1 {
-            cell.infoTitleLabel.text = "Food Allergy"
+            cell.infoTitleLabel.text = "Recipe Search"
             //cell.infoDescLabel.text = "Food allergy is an immune system reaction that occurs soon after eating a certain food."
-            cell.infoImage.image = UIImage(named: "foodAllergy")
+            cell.infoImage.image = UIImage(named: "recipe")
+        }
+        if indexPath.row == 2 {
+            cell.infoTitleLabel.text = "Hospital Location"
+            //cell.infoDescLabel.text = "Food allergy is an immune system reaction that occurs soon after eating a certain food."
+            cell.infoImage.image = UIImage(named: "hospital")
+        }
+        if indexPath.row == 3 {
+            cell.infoTitleLabel.text = "Allergy Information"
+            //cell.infoDescLabel.text = "Food allergy is an immune system reaction that occurs soon after eating a certain food."
+            cell.infoImage.image = UIImage(named: "information")
         }
         
-        cell.layer.cornerRadius = 8.0
-        cell.layer.shadowOpacity = 0.2
+        cell.layer.cornerRadius = 10.0
+        cell.layer.shadowOpacity = 0.3
         cell.layer.shadowRadius = 6
         cell.layer.shadowOffset = CGSize(width: 0, height: 0)
         cell.layer.masksToBounds = false

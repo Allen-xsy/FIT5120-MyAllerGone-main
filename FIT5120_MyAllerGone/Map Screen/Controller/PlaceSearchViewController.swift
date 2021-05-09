@@ -78,10 +78,19 @@ class PlaceSearchViewController: UIViewController, UITableViewDelegate, UITableV
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let controller = segue.destination as? SearchResultTableViewController, let place = sender as? AddressSearchItemVo  else {
-            return
+        
+        if segue.identifier == "weatherPage" {
+            let controller = segue.destination as? HomeViewController
+            let loc = sender as? AddressSearchItemVo
+            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+            //print(loc?.geometry?.location?.lat!)
+            controller?.location = loc
+        } else {
+            guard let controller = segue.destination as? SearchResultTableViewController, let place = sender as? AddressSearchItemVo  else {
+                return
+            }
+            controller.location = place
         }
-        controller.location = place
     }
 }
 

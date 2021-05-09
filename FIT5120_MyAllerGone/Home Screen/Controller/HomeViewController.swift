@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var CityLabel: UILabel!
     @IBOutlet weak var HomeCollectionView: UICollectionView!
     var dataSource: [PlaceSearchItemVo] = []
+    public var location: AddressSearchItemVo?
     
     var lat: Double = -37.911706
     var lon: Double = 145.132430
@@ -102,6 +103,13 @@ class HomeViewController: UIViewController {
             aqiManager.fecthAQILocation(latitude: lat , longitude: lon)
             pollenManager.fecthPollenLocation(latitude: lat , longitude: lon)
         }
+        
+        if let lat = location?.geometry?.location?.lat, let lon = location?.geometry?.location?.lng {
+            locationManager.stopUpdatingLocation()
+            self.lat = lat
+            self.lon = lon
+            print(self.lat)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -125,6 +133,7 @@ class HomeViewController: UIViewController {
     @IBAction func searchPlace(_ sender: Any) {
         let controller = self.storyboard?.instantiateViewController(identifier: "placeSearch") as! PlaceSearchViewController
         self.navigationController?.pushViewController(controller, animated: false)
+        controller.page = true
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
@@ -500,17 +509,26 @@ extension HomeViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
             
-            let lat = location.coordinate.latitude
-            let lon = location.coordinate.longitude
-            self.lat = lat
-            self.lon = lon
-            print("current location lat \(lat)")
-            print("current location lng \(lon)")
-            weatherManager.fecthWeatherLocation(latitude: lat, longitude: lon)
-            forecastManager.fecthForecastLocation(latitude: lat, longitude: lon)
-            aqiManager.fecthAQILocation(latitude: lat, longitude: lon)
-            pollenManager.fecthPollenLocation(latitude: lat, longitude: lon)
-            //pollenManager.fetchPlantPollenLocation(latitude: lat, longitude: lon)
+            if let lat = self.location?.geometry?.location?.lat, let lon = self.location?.geometry?.location?.lng {
+                locationManager.stopUpdatingLocation()
+                self.lat = lat
+                self.lon = lon
+                print(self.lat)
+            } else {
+                let lat = location.coordinate.latitude
+                let lon = location.coordinate.longitude
+                self.lat = lat
+                self.lon = lon
+                print("current location lat \(lat)")
+                print("current location lng \(lon)")
+                weatherManager.fecthWeatherLocation(latitude: lat, longitude: lon)
+                forecastManager.fecthForecastLocation(latitude: lat, longitude: lon)
+                aqiManager.fecthAQILocation(latitude: lat, longitude: lon)
+                pollenManager.fecthPollenLocation(latitude: lat, longitude: lon)
+                //pollenManager.fetchPlantPollenLocation(latitude: lat, longitude: lon)
+            }
+            
+            
         }
     }
     

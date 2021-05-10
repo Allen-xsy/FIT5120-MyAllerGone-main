@@ -33,6 +33,13 @@ class FoodSearchFilterCell: UICollectionViewCell {
         whiteView.layer.shadowOpacity = 0.3
         whiteView.layer.shadowRadius = 5
         whiteView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        
+        searchButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        searchButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        searchButton.layer.shadowOpacity = 1.0
+        searchButton.layer.shadowRadius = 0.0
+        searchButton.layer.masksToBounds = false
+        searchButton.layer.cornerRadius = 4.0
     }
     
     @IBAction func searchAction(_ sender: UIButton) {

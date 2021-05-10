@@ -9,9 +9,10 @@ import UIKit
 
 class FoodSearchTableViewController: UITableViewController, UISearchBarDelegate {
     
-    var allRecipe:[FoodRecipe]=[]
+    var allRecipe:[FoodRecipe] = []
     var indicator = UIActivityIndicatorView()
-    var choosenAllergen:[String]=[]
+    var choosenAllergen:[String] = []
+    var randomRecipe:[String] = ["Chicken","Beef","Fish","Lamb","Salad","meat","vegetable"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,10 @@ class FoodSearchTableViewController: UITableViewController, UISearchBarDelegate 
         
         tableView.tableFooterView = UIView()
         
-        requestRecipes(recipeName: "Chicken")
+        
+        let randomInt = Int.random(in: 0..<5)
+        let defaultRecipe = randomRecipe[randomInt]
+        requestRecipes(recipeName: defaultRecipe)
         tableView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil), forCellReuseIdentifier: "RecipeTableViewCell")
         
         
@@ -120,7 +124,6 @@ class FoodSearchTableViewController: UITableViewController, UISearchBarDelegate 
                 
                 if let recipes = volumeData.hits {
                     self.allRecipe.append(contentsOf: recipes)
-                    
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }

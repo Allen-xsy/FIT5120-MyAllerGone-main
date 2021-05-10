@@ -124,6 +124,16 @@ class FoodSearchTableViewController: UITableViewController, UISearchBarDelegate 
                 
                 if let recipes = volumeData.hits {
                     self.allRecipe.append(contentsOf: recipes)
+                    var index = 0
+                    for elements in self.allRecipe {
+                        for ingredients in elements.ingredientLines! {
+                            if ingredients.contains("pound")&&ingredients.contains("farenheit"){
+                                self.allRecipe.remove(at: index)
+                                index-=1
+                            }
+                        }
+                        index+=1
+                    }
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }

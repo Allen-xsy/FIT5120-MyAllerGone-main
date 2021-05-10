@@ -110,6 +110,11 @@ class HomeViewController: UIViewController {
             self.lon = lon
             print(self.lat)
         }
+        
+        let emergencyAlert = UIAlertController(title: "", message: "The pollen forecast is subject to change. Kindly always check for updates.", preferredStyle: .alert)
+        emergencyAlert.addAction(UIAlertAction(title: "Understood", style: .default, handler: nil))
+
+        self.present(emergencyAlert, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {

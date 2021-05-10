@@ -29,6 +29,7 @@
 		AC4F4A68260F71DC00A2E416 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F4A67260F71DC00A2E416 /* WeatherModel.swift */; };
 		AC4F4A6C260F762E00A2E416 /* PollenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F4A6B260F762E00A2E416 /* PollenData.swift */; };
 		AC4F4A70260F7EA400A2E416 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F4A6F260F7EA400A2E416 /* WeatherData.swift */; };
+		AC50F0DA26499BFC005D96F5 /* InforDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50F0D926499BFC005D96F5 /* InforDetailViewController.swift */; };
 		AC67D41A261DAB7700F7DCCD /* pollenForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC67D419261DAB7700F7DCCD /* pollenForecastViewController.swift */; };
 		AC76586E26122DE300F07A38 /* AQICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC76586D26122DE300F07A38 /* AQICollectionViewCell.swift */; };
 		AC7883E1262F26CC00978190 /* infoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7883E0262F26CC00978190 /* infoCollectionViewCell.swift */; };
@@ -91,6 +92,7 @@
 		AC4F4A67260F71DC00A2E416 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		AC4F4A6B260F762E00A2E416 /* PollenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollenData.swift; sourceTree = "<group>"; };
 		AC4F4A6F260F7EA400A2E416 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		AC50F0D926499BFC005D96F5 /* InforDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InforDetailViewController.swift; sourceTree = "<group>"; };
 		AC67D419261DAB7700F7DCCD /* pollenForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pollenForecastViewController.swift; sourceTree = "<group>"; };
 		AC76586D26122DE300F07A38 /* AQICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQICollectionViewCell.swift; sourceTree = "<group>"; };
 		AC7883E0262F26CC00978190 /* infoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				ACAE55A22606399300BFB05C /* InfoViewController.swift */,
+				AC50F0D926499BFC005D96F5 /* InforDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				AC4F4A68260F71DC00A2E416 /* WeatherModel.swift in Sources */,
 				D33476B8263E72890019A142 /* FoodDetailTableViewCell.swift in Sources */,
 				D3AB35E2262E97BD002AE457 /* SearchResultTableViewController.swift in Sources */,
+				AC50F0DA26499BFC005D96F5 /* InforDetailViewController.swift in Sources */,
 				31B20C5F2614B35F00F24470 /* SearchResultVo.swift in Sources */,
 				31B20C612614B35F00F24470 /* HospitalTableViewCell.swift in Sources */,
 				AC4F4A6C260F762E00A2E416 /* PollenData.swift in Sources */,

@@ -35,7 +35,7 @@ class InfoViewController: UIViewController {
         //backGroundImageView.image = UIImage(named: "launch_2")
         
         let screenSize = UIScreen.main.bounds.size
-        let cellWidth = floor(screenSize.width * 0.44)
+        let cellWidth = floor(screenSize.width * 0.43)
         let layout = infoCollectionView!.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: cellWidth, height: cellWidth)
     }
@@ -114,7 +114,9 @@ extension InfoViewController: UICollectionViewDataSource, UICollectionViewDelega
             let controller = self.storyboard?.instantiateViewController(identifier: "hospital") as! HospitalListController
             self.navigationController?.pushViewController(controller, animated: true)
         }
-        
+        if indexPath.row == 3 {
+            performSegue(withIdentifier: "AllerInformation", sender: nil)
+        }
     }
     
     

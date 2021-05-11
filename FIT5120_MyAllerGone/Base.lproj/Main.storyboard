@@ -2400,8 +2400,8 @@ decongestant nasal sprays
                                             <constraint firstAttribute="height" constant="40" id="5Ey-uT-t09"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OverView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cx1-LR-wd7">
-                                        <rect key="frame" x="118" y="7" width="91.5" height="26"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cx1-LR-wd7">
+                                        <rect key="frame" x="119.5" y="7" width="88.5" height="26"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2585,7 +2585,7 @@ decongestant nasal sprays
                                 <constraints>
                                     <constraint firstAttribute="height" constant="500" id="heM-cI-m3L"/>
                                 </constraints>
-                                <mutableString key="text"> • Medications can help to relieve the symptoms of hay fever. Medicine should be taken only after GP or pharmacist consultation. Some of the most used solutions are:     •  Intranasal corticosteroid sprays 
+                                <string key="text"> • Medications can help to relieve the symptoms of hay fever. Medicine should be taken only after GP or pharmacist consultation. Some of the most used solutions are:     •  Intranasal corticosteroid sprays 
     •  Combined intranasal corticosteroid and antihistamine sprays 
     •  Non-sedating antihistamine medications     •  Eye drops 
     •  Decongestant nasal sprays             •  Allergen immunotherapy 
@@ -2595,7 +2595,7 @@ decongestant nasal sprays
   •  Reduce your exposure to dust and dust mites, animals and animal hair or fur (dander). 
   •  When possible, avoid being outdoors on high pollen days and avoid thunderstorms during the grass pollen season.
   •  Avoid activities known to cause exposure to pollen, such as mowing grass 
- </mutableString>
+ </string>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -2768,13 +2768,13 @@ decongestant nasal sprays
                                 <constraints>
                                     <constraint firstAttribute="height" constant="450" id="QcJ-q5-c84"/>
                                 </constraints>
-                                <mutableString key="text"> • Early introduction of peanut products lowers the risk of peanut allergy.
+                                <string key="text"> • Early introduction of peanut products lowers the risk of peanut allergy.
  • If a food allergy has already developed, know what you're eating and drinking. Always check the packaged food labels and ask about allergen content at restaurants.
  • If you have already had a severe reaction, wear a medical alert bracelet or necklace that lets others know that you have a food allergy if you have a reaction and you're unable to communicate.
  • Plan meals and snacks before leaving home
  • Notify key people like child care providers, school personnel, parents of your child's friends and other adults who regularly interact with your child that your child has a food allergy. Explain the allergy symptoms to them.
  • Create an action plan and provide a copy of it to all the adults under whose supervision you can leave the child.
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

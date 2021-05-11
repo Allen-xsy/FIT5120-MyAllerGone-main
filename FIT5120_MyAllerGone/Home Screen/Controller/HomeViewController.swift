@@ -89,6 +89,7 @@ class HomeViewController: UIViewController {
         aqiManager.delegate = self
         pollenManager.delegate = self
 
+        HomeCollectionView.alwaysBounceVertical = true
         HomeCollectionView.addSubview(headerRefresh)
         
 

@@ -519,6 +519,10 @@ extension HomeViewController: CLLocationManagerDelegate{
                 self.lat = lat
                 self.lon = lon
                 print(self.lat)
+                weatherManager.fecthWeatherLocation(latitude: lat, longitude: lon)
+                forecastManager.fecthForecastLocation(latitude: lat, longitude: lon)
+                aqiManager.fecthAQILocation(latitude: lat, longitude: lon)
+                pollenManager.fecthPollenLocation(latitude: lat, longitude: lon)
             } else {
                 let lat = location.coordinate.latitude
                 let lon = location.coordinate.longitude

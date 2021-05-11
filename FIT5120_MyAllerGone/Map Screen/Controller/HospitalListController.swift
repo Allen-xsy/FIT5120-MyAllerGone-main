@@ -88,7 +88,9 @@ class HospitalListController: UIViewController, UITableViewDelegate, UITableView
         }
 
         let emergencyAlert = UIAlertController(title: "", message: "Please call 000 for emergency", preferredStyle: .alert)
-        emergencyAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+        emergencyAlert.addAction(UIAlertAction(title: "Understood", style: .default, handler: { (_) in
+            self.checkLocationAuth()
+        }))
         self.present(emergencyAlert, animated: true, completion: nil)
     }
     

@@ -25,10 +25,10 @@ class InforDetailViewController: UIViewController {
         foodAllergyView.layer.shadowRadius = 6
         foodAllergyView.layer.shadowOffset = CGSize(width: 0, height: 0)
         //hayfeverView.layer.masksToBounds = false
-        hayFeverLabelView.layer.cornerRadius = 10.0
+        hayFeverLabelView.layer.cornerRadius = 8.0
         hayFeverLabelView.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMinXMaxYCorner]
         //hayFeverLabelView.layer.masksToBounds = false
-        foodAllergyLabelView.layer.cornerRadius = 10.0
+        foodAllergyLabelView.layer.cornerRadius = 8.0
         foodAllergyLabelView.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMinXMaxYCorner]
         
         //foodAllergyLabelView.layer.masksToBounds = true

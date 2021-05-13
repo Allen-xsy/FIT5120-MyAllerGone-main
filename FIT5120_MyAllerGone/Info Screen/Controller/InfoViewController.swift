@@ -92,7 +92,7 @@ extension InfoViewController: UICollectionViewDataSource, UICollectionViewDelega
             cell.infoImage.image = UIImage(named: "information")
         }
         
-        cell.layer.cornerRadius = 10.0
+        cell.layer.cornerRadius = 8.0
         cell.layer.shadowOpacity = 0.3
         cell.layer.shadowRadius = 6
         cell.layer.shadowOffset = CGSize(width: 0, height: 0)

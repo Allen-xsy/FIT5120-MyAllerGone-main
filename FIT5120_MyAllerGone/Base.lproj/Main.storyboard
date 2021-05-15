@@ -781,9 +781,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTI-QE-qN3">
-                                <rect key="frame" x="18" y="62" width="30" height="32"/>
+                                <rect key="frame" x="18" y="94" width="30" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Fri">
+                                <state key="normal" title="Sun">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -791,9 +791,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQe-7L-DEN">
-                                <rect key="frame" x="51" y="62" width="30" height="32"/>
+                                <rect key="frame" x="56" y="94" width="32" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Sat">
+                                <state key="normal" title="Mon">
                                     <color key="titleColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -801,7 +801,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tza-3h-V5z">
-                                <rect key="frame" x="48" y="70" width="0.5" height="16"/>
+                                <rect key="frame" x="52" y="102" width="0.5" height="16"/>
                                 <color key="backgroundColor" red="0.83135707489999999" green="0.83135707489999999" blue="0.83135707489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="0.67000000000000004" id="H9y-dl-EdU"/>
@@ -809,7 +809,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGj-RL-ACV">
-                                <rect key="frame" x="83" y="70" width="0.5" height="16"/>
+                                <rect key="frame" x="92" y="102" width="0.5" height="16"/>
                                 <color key="backgroundColor" red="0.83135707489999999" green="0.83135707489999999" blue="0.83135707489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="0.67000000000000004" id="5st-kg-QrR"/>
@@ -823,7 +823,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AJ1-sO-4qj">
-                                <rect key="frame" x="0.0" y="99" width="375" height="548"/>
+                                <rect key="frame" x="0.0" y="119" width="375" height="528"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="NHo-YF-eRs">
                                     <size key="itemSize" width="150" height="110"/>
@@ -961,35 +961,66 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfX-hL-YEB">
-                                <rect key="frame" x="87.5" y="62" width="30" height="32"/>
+                                <rect key="frame" x="96.5" y="94" width="30" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Sun">
+                                <state key="normal" title="Tue">
                                     <color key="titleColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="showDayThreeData:" destination="sjY-Yf-RJB" eventType="touchUpInside" id="PhR-IO-4A8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrN-eR-hev">
+                                <rect key="frame" x="57" y="58" width="261" height="38.5"/>
+                                <string key="text"> Three day forecast for pollen plants
+               NA means no data</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clayton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cv-Co-qYp">
+                                <rect key="frame" x="290" y="16" width="52" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="jf5-5B-17h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location_pin" translatesAutoresizingMaskIntoConstraints="NO" id="2wY-Nk-PAE">
+                                <rect key="frame" x="344" y="17.5" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="Kl9-xk-4cz"/>
+                                    <constraint firstAttribute="width" constant="15" id="d4x-mS-P5g"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="AJ1-sO-4qj" secondAttribute="trailing" id="0L8-Y1-7R6"/>
-                            <constraint firstItem="LTI-QE-qN3" firstAttribute="top" secondItem="hBP-hI-pSU" secondAttribute="bottom" constant="16" id="1oj-0y-XWl"/>
-                            <constraint firstItem="tza-3h-V5z" firstAttribute="leading" secondItem="LTI-QE-qN3" secondAttribute="trailingMargin" constant="8" id="7zW-Sp-wie"/>
+                            <constraint firstItem="LTI-QE-qN3" firstAttribute="top" secondItem="hBP-hI-pSU" secondAttribute="bottom" constant="48" id="1oj-0y-XWl"/>
+                            <constraint firstItem="QrN-eR-hev" firstAttribute="top" secondItem="0Zm-BL-mcB" secondAttribute="bottom" constant="14" id="35a-ei-SMi"/>
+                            <constraint firstItem="tza-3h-V5z" firstAttribute="leading" secondItem="LTI-QE-qN3" secondAttribute="trailing" constant="4" id="7zW-Sp-wie"/>
                             <constraint firstItem="0Zm-BL-mcB" firstAttribute="centerX" secondItem="97B-L4-Sr8" secondAttribute="centerX" id="AWP-qt-z1k"/>
+                            <constraint firstItem="2wY-Nk-PAE" firstAttribute="trailing" secondItem="97B-L4-Sr8" secondAttribute="trailingMargin" id="C1a-Ln-7GM"/>
                             <constraint firstItem="mhe-OO-RG9" firstAttribute="top" secondItem="AJ1-sO-4qj" secondAttribute="bottom" id="Eny-Vl-l4d"/>
-                            <constraint firstItem="mQe-7L-DEN" firstAttribute="leading" secondItem="tza-3h-V5z" secondAttribute="leadingMargin" constant="-5" id="Ohd-iO-glD"/>
+                            <constraint firstItem="2cv-Co-qYp" firstAttribute="top" secondItem="5Fy-V5-CEV" secondAttribute="bottom" constant="16" id="FNJ-0g-3IL"/>
+                            <constraint firstItem="mQe-7L-DEN" firstAttribute="leading" secondItem="tza-3h-V5z" secondAttribute="leading" constant="4" id="Ohd-iO-glD"/>
                             <constraint firstItem="hBP-hI-pSU" firstAttribute="top" secondItem="5Fy-V5-CEV" secondAttribute="bottom" constant="16" id="PQb-Sc-CXl"/>
-                            <constraint firstItem="AJ1-sO-4qj" firstAttribute="top" secondItem="0Zm-BL-mcB" secondAttribute="bottom" constant="55" id="TT8-gz-bCT"/>
+                            <constraint firstItem="AJ1-sO-4qj" firstAttribute="top" secondItem="0Zm-BL-mcB" secondAttribute="bottom" constant="75" id="TT8-gz-bCT"/>
                             <constraint firstItem="hBP-hI-pSU" firstAttribute="leading" secondItem="97B-L4-Sr8" secondAttribute="leadingMargin" id="Wsh-hO-RQE"/>
                             <constraint firstItem="tza-3h-V5z" firstAttribute="centerY" secondItem="LTI-QE-qN3" secondAttribute="centerY" id="YJt-iP-NKY"/>
-                            <constraint firstItem="UGj-RL-ACV" firstAttribute="leading" secondItem="mQe-7L-DEN" secondAttribute="trailing" constant="2" id="Z34-Gc-hdF"/>
+                            <constraint firstItem="UGj-RL-ACV" firstAttribute="leading" secondItem="mQe-7L-DEN" secondAttribute="trailing" constant="4" id="Z34-Gc-hdF"/>
                             <constraint firstItem="AJ1-sO-4qj" firstAttribute="leading" secondItem="97B-L4-Sr8" secondAttribute="leading" id="iLN-vo-hBu"/>
+                            <constraint firstItem="QrN-eR-hev" firstAttribute="centerX" secondItem="97B-L4-Sr8" secondAttribute="centerX" id="pyy-dH-PEG"/>
+                            <constraint firstItem="2wY-Nk-PAE" firstAttribute="centerY" secondItem="2cv-Co-qYp" secondAttribute="centerY" id="rqL-LO-Sq2"/>
                             <constraint firstItem="dfX-hL-YEB" firstAttribute="centerY" secondItem="LTI-QE-qN3" secondAttribute="centerY" id="ucU-UE-ydY"/>
                             <constraint firstItem="UGj-RL-ACV" firstAttribute="centerY" secondItem="LTI-QE-qN3" secondAttribute="centerY" id="v7L-zJ-lOh"/>
                             <constraint firstItem="dfX-hL-YEB" firstAttribute="leading" secondItem="UGj-RL-ACV" secondAttribute="trailing" constant="4" id="vbv-GT-k6E"/>
                             <constraint firstItem="0Zm-BL-mcB" firstAttribute="top" secondItem="5Fy-V5-CEV" secondAttribute="bottom" constant="20" id="wre-i0-FYq"/>
+                            <constraint firstItem="2wY-Nk-PAE" firstAttribute="trailing" secondItem="97B-L4-Sr8" secondAttribute="trailingMargin" id="xqa-oS-glY"/>
                             <constraint firstItem="LTI-QE-qN3" firstAttribute="leading" secondItem="97B-L4-Sr8" secondAttribute="leadingMargin" constant="2" id="ykD-Za-IPt"/>
+                            <constraint firstItem="2wY-Nk-PAE" firstAttribute="leading" secondItem="2cv-Co-qYp" secondAttribute="trailing" constant="2" id="zB7-rP-igl"/>
                             <constraint firstItem="mQe-7L-DEN" firstAttribute="centerY" secondItem="LTI-QE-qN3" secondAttribute="centerY" id="zGr-0r-wEU"/>
                         </constraints>
                     </view>
@@ -1003,7 +1034,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgp-zU-aRd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-385" y="2472"/>
+            <point key="canvasLocation" x="-386.39999999999998" y="2471.5142428785607"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="ICU-58-WgA">
@@ -1243,8 +1274,8 @@
                                             <constraint firstAttribute="height" constant="50" id="cnC-6E-0ol"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hays Fever" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11l-sY-qmI">
-                                        <rect key="frame" x="107" y="173" width="113" height="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hay Fever" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11l-sY-qmI">
+                                        <rect key="frame" x="113" y="173" width="101" height="32"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2742,7 +2773,7 @@ decongestant nasal sprays
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixP-T7-N1V">
                                 <rect key="frame" x="21" y="120" width="333" height="390"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text"> •  Medications can help to relieve the symptoms of
+                                <string key="text"> •  Medications can help to relieve the symptoms of
     hay fever. Medicine should be taken only after
     GP or pharmacist consultation. Some of the most 
     used solutions are:      •  Intranasal corticosteroid sprays  
@@ -2760,7 +2791,7 @@ decongestant nasal sprays
     grass pollen season.
  •  Avoid activities known to cause exposure to 
     pollen, such as mowing grass 
- </mutableString>
+ </string>
                                 <fontDescription key="fontDescription" name=".SFNS-Regular" family=".SF NS" pointSize="16"/>
                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
@@ -3030,13 +3061,13 @@ decongestant nasal sprays
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <mutableString key="content"> • Early introduction of peanut products lowers the risk of peanut allergy.
+                                        <string key="content"> • Early introduction of peanut products lowers the risk of peanut allergy.
  • If a food allergy has already developed, know what you're eating and drinking. Always check the packaged food labels and ask about allergen content at restaurants.
  • If you have already had a severe reaction, wear a medical alert bracelet or necklace that lets others know that you have a food allergy if you have a reaction and you're unable to communicate.
  • Plan meals and snacks before leaving home
  • Notify key people like child care providers, school personnel, parents of your child's friends and other adults who regularly interact with your child that your child has a food allergy. Explain the allergy symptoms to them.
  • Create an action plan and provide a copy of it to all the adults under whose supervision you can leave the child.
-</mutableString>
+</string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" metaFont="system" size="16"/>

@@ -273,9 +273,9 @@ class HomeViewController: UIViewController {
             let theSegue = segue.destination as! pollenForecastViewController
             theSegue.lat = self.lat
             theSegue.lon = self.lon
-            theSegue.dayOneDate = self.currentWeekday
-            theSegue.dayTwoDate = self.forecastDate1
-            theSegue.dayThreeDate = self.forecastDate2
+            theSegue.dayOneDate = self.forecastDate1
+            theSegue.dayTwoDate = self.forecastDate2
+            theSegue.dayThreeDate = self.forecastDate3
         }
         if segue.identifier == "weatherPlaceSearch" {
             let controller = segue.destination as? PlaceSearchViewController

@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     var lon: Double = 145.132430
     var loadingStatus = 0
 
+    var cityName: String = ""
     var temp: String = "--"
     var weatherImageName: String?
     var currentDate: String?
@@ -276,6 +277,7 @@ class HomeViewController: UIViewController {
             theSegue.dayOneDate = self.forecastDate1
             theSegue.dayTwoDate = self.forecastDate2
             theSegue.dayThreeDate = self.forecastDate3
+            theSegue.locationText = self.cityName
         }
         if segue.identifier == "weatherPlaceSearch" {
             let controller = segue.destination as? PlaceSearchViewController
@@ -296,6 +298,7 @@ extension HomeViewController: WeatherManagerDelegate {
             self.temp = "\(weather.temperatureString)" 
             //print(self.temp ?? "no temp")
             self.CityLabel.text = weather.cityName
+            self.cityName = weather.cityName
             self.weatherImageName = weather.conditionName
             self.weatherDesc = weather.description
             self.MinTemp = weather.minTempString

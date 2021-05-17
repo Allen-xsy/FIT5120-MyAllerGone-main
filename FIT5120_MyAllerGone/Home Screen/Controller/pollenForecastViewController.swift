@@ -13,6 +13,7 @@ class pollenForecastViewController: UIViewController {
     var pollenManager = PollenManager()
     var plantsList = [PoData]()
     
+    var locationText: String?
     var lat: Double = -37.911706
     var lon: Double = 145.132430
     var dayOneDate: String?
@@ -23,6 +24,7 @@ class pollenForecastViewController: UIViewController {
     @IBOutlet weak var dayOneButton: UIButton!
     @IBOutlet weak var dayTwoButton: UIButton!
     @IBOutlet weak var dayThreeButton: UIButton!
+    @IBOutlet weak var locationLabel: UILabel!
     
     @IBAction func backToWeatherPage(_ sender: Any) {
         self.dismiss(animated: true, completion:nil)
@@ -66,6 +68,9 @@ class pollenForecastViewController: UIViewController {
     }
     
 
+    override func viewWillAppear(_ animated: Bool) {
+        locationLabel.text = locationText
+    }
     /*
     // MARK: - Navigation
 

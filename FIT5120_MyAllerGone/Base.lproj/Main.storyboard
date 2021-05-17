@@ -781,7 +781,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTI-QE-qN3">
-                                <rect key="frame" x="18" y="94" width="30" height="32"/>
+                                <rect key="frame" x="18" y="101" width="30" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Sun">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -791,7 +791,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQe-7L-DEN">
-                                <rect key="frame" x="56" y="94" width="32" height="32"/>
+                                <rect key="frame" x="56" y="101" width="32" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Mon">
                                     <color key="titleColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -801,7 +801,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tza-3h-V5z">
-                                <rect key="frame" x="52" y="102" width="0.5" height="16"/>
+                                <rect key="frame" x="52" y="109" width="0.5" height="16"/>
                                 <color key="backgroundColor" red="0.83135707489999999" green="0.83135707489999999" blue="0.83135707489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="0.67000000000000004" id="H9y-dl-EdU"/>
@@ -809,7 +809,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGj-RL-ACV">
-                                <rect key="frame" x="92" y="102" width="0.5" height="16"/>
+                                <rect key="frame" x="92" y="109" width="0.5" height="16"/>
                                 <color key="backgroundColor" red="0.83135707489999999" green="0.83135707489999999" blue="0.83135707489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="0.67000000000000004" id="5st-kg-QrR"/>
@@ -823,7 +823,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AJ1-sO-4qj">
-                                <rect key="frame" x="0.0" y="119" width="375" height="528"/>
+                                <rect key="frame" x="0.0" y="132" width="375" height="515"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="NHo-YF-eRs">
                                     <size key="itemSize" width="150" height="110"/>
@@ -961,7 +961,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfX-hL-YEB">
-                                <rect key="frame" x="96.5" y="94" width="30" height="32"/>
+                                <rect key="frame" x="96.5" y="101" width="30" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Tue">
                                     <color key="titleColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -970,16 +970,38 @@
                                     <action selector="showDayThreeData:" destination="sjY-Yf-RJB" eventType="touchUpInside" id="PhR-IO-4A8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrN-eR-hev">
-                                <rect key="frame" x="57" y="58" width="261" height="38.5"/>
-                                <string key="text"> Three day forecast for pollen plants
-               NA means no data</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrN-eR-hev">
+                                <rect key="frame" x="57" y="60" width="261" height="36"/>
+                                <attributedString key="attributedText">
+                                    <fragment content=" Three day forecast for pollen plants">
+                                        <attributes>
+                                            <color key="NSColor" red="0.25098039220000001" green="0.27450980390000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="(NA means no data)">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="system" size="15"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clayton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cv-Co-qYp">
-                                <rect key="frame" x="290" y="16" width="52" height="18"/>
+                                <rect key="frame" x="290" y="23" width="52" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="jf5-5B-17h"/>
                                 </constraints>
@@ -988,7 +1010,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location_pin" translatesAutoresizingMaskIntoConstraints="NO" id="2wY-Nk-PAE">
-                                <rect key="frame" x="344" y="17.5" width="15" height="15"/>
+                                <rect key="frame" x="344" y="24.5" width="15" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="Kl9-xk-4cz"/>
                                     <constraint firstAttribute="width" constant="15" id="d4x-mS-P5g"/>
@@ -998,16 +1020,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="AJ1-sO-4qj" secondAttribute="trailing" id="0L8-Y1-7R6"/>
-                            <constraint firstItem="LTI-QE-qN3" firstAttribute="top" secondItem="hBP-hI-pSU" secondAttribute="bottom" constant="48" id="1oj-0y-XWl"/>
-                            <constraint firstItem="QrN-eR-hev" firstAttribute="top" secondItem="0Zm-BL-mcB" secondAttribute="bottom" constant="14" id="35a-ei-SMi"/>
+                            <constraint firstItem="LTI-QE-qN3" firstAttribute="top" secondItem="hBP-hI-pSU" secondAttribute="bottom" constant="55" id="1oj-0y-XWl"/>
+                            <constraint firstItem="QrN-eR-hev" firstAttribute="top" secondItem="0Zm-BL-mcB" secondAttribute="bottom" constant="16" id="35a-ei-SMi"/>
                             <constraint firstItem="tza-3h-V5z" firstAttribute="leading" secondItem="LTI-QE-qN3" secondAttribute="trailing" constant="4" id="7zW-Sp-wie"/>
+                            <constraint firstItem="2cv-Co-qYp" firstAttribute="centerY" secondItem="0Zm-BL-mcB" secondAttribute="centerY" id="AU3-4g-1EV"/>
                             <constraint firstItem="0Zm-BL-mcB" firstAttribute="centerX" secondItem="97B-L4-Sr8" secondAttribute="centerX" id="AWP-qt-z1k"/>
                             <constraint firstItem="2wY-Nk-PAE" firstAttribute="trailing" secondItem="97B-L4-Sr8" secondAttribute="trailingMargin" id="C1a-Ln-7GM"/>
                             <constraint firstItem="mhe-OO-RG9" firstAttribute="top" secondItem="AJ1-sO-4qj" secondAttribute="bottom" id="Eny-Vl-l4d"/>
-                            <constraint firstItem="2cv-Co-qYp" firstAttribute="top" secondItem="5Fy-V5-CEV" secondAttribute="bottom" constant="16" id="FNJ-0g-3IL"/>
                             <constraint firstItem="mQe-7L-DEN" firstAttribute="leading" secondItem="tza-3h-V5z" secondAttribute="leading" constant="4" id="Ohd-iO-glD"/>
                             <constraint firstItem="hBP-hI-pSU" firstAttribute="top" secondItem="5Fy-V5-CEV" secondAttribute="bottom" constant="16" id="PQb-Sc-CXl"/>
-                            <constraint firstItem="AJ1-sO-4qj" firstAttribute="top" secondItem="0Zm-BL-mcB" secondAttribute="bottom" constant="75" id="TT8-gz-bCT"/>
+                            <constraint firstItem="AJ1-sO-4qj" firstAttribute="top" secondItem="0Zm-BL-mcB" secondAttribute="bottom" constant="88" id="TT8-gz-bCT"/>
                             <constraint firstItem="hBP-hI-pSU" firstAttribute="leading" secondItem="97B-L4-Sr8" secondAttribute="leadingMargin" id="Wsh-hO-RQE"/>
                             <constraint firstItem="tza-3h-V5z" firstAttribute="centerY" secondItem="LTI-QE-qN3" secondAttribute="centerY" id="YJt-iP-NKY"/>
                             <constraint firstItem="UGj-RL-ACV" firstAttribute="leading" secondItem="mQe-7L-DEN" secondAttribute="trailing" constant="4" id="Z34-Gc-hdF"/>
@@ -1029,6 +1051,7 @@
                         <outlet property="dayOneButton" destination="LTI-QE-qN3" id="7Oh-TS-Flo"/>
                         <outlet property="dayThreeButton" destination="dfX-hL-YEB" id="mga-4h-Jx2"/>
                         <outlet property="dayTwoButton" destination="mQe-7L-DEN" id="rPK-fx-tOW"/>
+                        <outlet property="locationLabel" destination="2cv-Co-qYp" id="dVq-Ci-xxP"/>
                         <outlet property="plantsCollectionView" destination="AJ1-sO-4qj" id="kHq-fp-rYR"/>
                     </connections>
                 </viewController>
@@ -1274,13 +1297,19 @@
                                             <constraint firstAttribute="height" constant="50" id="cnC-6E-0ol"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hay Fever" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11l-sY-qmI">
-                                        <rect key="frame" x="113" y="173" width="101" height="32"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXk-Fa-1Pn">
+                                        <rect key="frame" x="0.0" y="164" width="327" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0or-Np-zy4"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal" title="Hay Fever">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="mOK-gG-jfl" kind="show" id="F11-XA-MnM"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSc-Tx-hbL">
                                         <rect key="frame" x="297" y="174" width="22" height="31"/>
                                         <color key="backgroundColor" red="0.93726116420000005" green="0.93724352119999998" blue="0.93725550170000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1304,17 +1333,17 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="nSc-Tx-hbL" secondAttribute="bottom" constant="9" id="1GM-JW-S4Z"/>
-                                    <constraint firstItem="11l-sY-qmI" firstAttribute="centerX" secondItem="1xy-Ih-9H4" secondAttribute="centerX" id="99h-3d-DV2"/>
                                     <constraint firstAttribute="trailing" secondItem="nSc-Tx-hbL" secondAttribute="trailing" constant="8" id="GZz-SF-0P1"/>
                                     <constraint firstAttribute="trailing" secondItem="Bea-Jd-aLD" secondAttribute="trailing" id="In6-Cl-xUp"/>
-                                    <constraint firstItem="11l-sY-qmI" firstAttribute="centerY" secondItem="Bea-Jd-aLD" secondAttribute="centerY" id="LLY-Sz-poh"/>
                                     <constraint firstItem="r8Y-tZ-sxH" firstAttribute="leading" secondItem="1xy-Ih-9H4" secondAttribute="leading" id="Mdq-Da-WvF"/>
                                     <constraint firstAttribute="bottom" secondItem="r8Y-tZ-sxH" secondAttribute="bottom" id="UHa-EJ-HKv"/>
+                                    <constraint firstItem="GXk-Fa-1Pn" firstAttribute="leading" secondItem="1xy-Ih-9H4" secondAttribute="leading" id="VB3-V5-FGk"/>
                                     <constraint firstAttribute="trailing" secondItem="r8Y-tZ-sxH" secondAttribute="trailing" id="YXc-h8-F6Y"/>
                                     <constraint firstAttribute="bottom" secondItem="Bea-Jd-aLD" secondAttribute="bottom" id="bOV-d6-9XQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="GXk-Fa-1Pn" secondAttribute="bottom" id="cdH-OL-flh"/>
                                     <constraint firstItem="Bea-Jd-aLD" firstAttribute="leading" secondItem="1xy-Ih-9H4" secondAttribute="leading" id="ojx-3u-o3r"/>
                                     <constraint firstItem="r8Y-tZ-sxH" firstAttribute="top" secondItem="1xy-Ih-9H4" secondAttribute="top" id="pad-ac-KIY"/>
-                                    <constraint firstAttribute="bottom" secondItem="11l-sY-qmI" secondAttribute="bottom" constant="9" id="sAm-CJ-uNG"/>
+                                    <constraint firstAttribute="trailing" secondItem="GXk-Fa-1Pn" secondAttribute="trailing" id="wGt-HX-jSa"/>
                                     <constraint firstAttribute="height" constant="214" id="xnD-9E-sGG"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -1366,22 +1395,27 @@
                                             <segue destination="hTu-sv-vgt" kind="show" id="5pb-mx-BhD"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Allergy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRR-1r-I8A">
-                                        <rect key="frame" x="100" y="173" width="127" height="32"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMg-cf-40E">
+                                        <rect key="frame" x="0.0" y="164" width="327" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="lgS-Fs-ZIh"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal" title="Food Allergy">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="hTu-sv-vgt" kind="show" id="b7N-f4-Ip0"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="uRR-1r-I8A" secondAttribute="bottom" constant="9" id="122-sQ-pu1"/>
-                                    <constraint firstItem="uRR-1r-I8A" firstAttribute="centerX" secondItem="HBD-SJ-0qt" secondAttribute="centerX" id="1jM-28-r4O"/>
                                     <constraint firstAttribute="trailing" secondItem="hcI-0v-YnK" secondAttribute="trailing" id="BhH-Wk-U7I"/>
+                                    <constraint firstAttribute="trailing" secondItem="NMg-cf-40E" secondAttribute="trailing" id="Cef-IE-A61"/>
+                                    <constraint firstAttribute="bottom" secondItem="NMg-cf-40E" secondAttribute="bottom" id="Gj0-YC-72i"/>
                                     <constraint firstAttribute="bottom" secondItem="xDn-sP-c0a" secondAttribute="bottom" id="Mlg-Ja-6mA"/>
                                     <constraint firstAttribute="trailing" secondItem="xDn-sP-c0a" secondAttribute="trailing" id="NPp-qJ-3Tk"/>
-                                    <constraint firstItem="uRR-1r-I8A" firstAttribute="centerY" secondItem="xDn-sP-c0a" secondAttribute="centerY" id="X5C-bd-kyb"/>
                                     <constraint firstAttribute="trailing" secondItem="91c-xX-gWE" secondAttribute="trailing" constant="8" id="c1B-UB-M2L"/>
                                     <constraint firstAttribute="bottom" secondItem="91c-xX-gWE" secondAttribute="bottom" constant="9" id="dLA-oY-IpG"/>
                                     <constraint firstItem="hcI-0v-YnK" firstAttribute="top" secondItem="HBD-SJ-0qt" secondAttribute="top" id="hVe-E6-BbS"/>
@@ -1389,6 +1423,7 @@
                                     <constraint firstAttribute="bottom" secondItem="hcI-0v-YnK" secondAttribute="bottom" id="il1-Ue-7Be"/>
                                     <constraint firstItem="hcI-0v-YnK" firstAttribute="leading" secondItem="HBD-SJ-0qt" secondAttribute="leading" id="mGd-rk-ubh"/>
                                     <constraint firstItem="xDn-sP-c0a" firstAttribute="leading" secondItem="HBD-SJ-0qt" secondAttribute="leading" id="r6U-oB-aJQ"/>
+                                    <constraint firstItem="NMg-cf-40E" firstAttribute="leading" secondItem="HBD-SJ-0qt" secondAttribute="leading" id="z49-gW-0dC"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1422,7 +1457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Btx-1l-AcH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2727" y="2781"/>
+            <point key="canvasLocation" x="-2727.1999999999998" y="2780.9595202398805"/>
         </scene>
         <!--Hospital location-->
         <scene sceneID="D71-ei-Dla">
@@ -2434,16 +2469,16 @@ decongestant nasal sprays
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xU0-1K-mKu">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xU0-1K-mKu">
                                 <rect key="frame" x="21" y="76" width="333" height="38"/>
-                                <color key="backgroundColor" red="0.74909901619999997" green="0.792403996" blue="0.76470273730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.40327130859999999" green="0.55635583079999995" blue="0.51638807269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="Zsn-cy-5SF"/>
                                 </constraints>
                                 <string key="text">  Most common causes of Hays fever:
 </string>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -2452,9 +2487,9 @@ decongestant nasal sprays
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbu-cX-BG6">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbu-cX-BG6">
                                 <rect key="frame" x="21" y="247" width="333" height="38"/>
-                                <color key="backgroundColor" red="0.74909901619999997" green="0.792403996" blue="0.76470273730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.40387907649999999" green="0.5821898794" blue="0.51964516370000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="Z2B-PP-iqb"/>
                                 </constraints>
@@ -2462,7 +2497,7 @@ decongestant nasal sprays
 
 </string>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -2802,14 +2837,14 @@ decongestant nasal sprays
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Managing and preventing Allergy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHa-WX-SXx">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Managing and preventing Allergy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHa-WX-SXx">
                                 <rect key="frame" x="21" y="62" width="333" height="38"/>
-                                <color key="backgroundColor" red="0.74909901619999997" green="0.792403996" blue="0.76470273730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.35781821609999998" green="0.56112056970000002" blue="0.51764309409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="dvQ-zE-wSs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -2882,9 +2917,9 @@ decongestant nasal sprays
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8P-dV-aBT">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8P-dV-aBT">
                                 <rect key="frame" x="22" y="499" width="332" height="54"/>
-                                <color key="backgroundColor" red="0.74909901619999997" green="0.792403996" blue="0.76470273730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.35781821609999998" green="0.56112056970000002" blue="0.51764309409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="bNv-6g-XW1"/>
                                 </constraints>
@@ -2893,7 +2928,7 @@ decongestant nasal sprays
                                         <string key="content">  Typical food allergy signs and symptoms
   include:</string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="NSColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name="Futura-Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -2936,16 +2971,16 @@ decongestant nasal sprays
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPh-dk-DPm">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPh-dk-DPm">
                                 <rect key="frame" x="21" y="66" width="333" height="51"/>
-                                <color key="backgroundColor" red="0.74909901619999997" green="0.792403996" blue="0.76470273730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.35781821609999998" green="0.56112056970000002" blue="0.51764309409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="KJq-BN-13Q"/>
                                 </constraints>
                                 <string key="text">  Food allergies are commonly triggered 
   by proteins in:</string>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -2954,9 +2989,9 @@ decongestant nasal sprays
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLe-5Z-s2n">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLe-5Z-s2n">
                                 <rect key="frame" x="21" y="293" width="333" height="55"/>
-                                <color key="backgroundColor" red="0.74909901619999997" green="0.792403996" blue="0.76470273730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.35781821609999998" green="0.56112056970000002" blue="0.51764309409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="AdT-HV-5HW"/>
                                 </constraints>
@@ -2965,6 +3000,7 @@ decongestant nasal sprays
                                         <string key="content">  Typical food allergy signs and symptoms
   include:</string>
                                         <attributes>
+                                            <color key="NSColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name="Futura-Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -3083,14 +3119,14 @@ decongestant nasal sprays
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Managing and preventing Allergy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMl-fH-um6">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Managing and preventing Allergy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMl-fH-um6">
                                 <rect key="frame" x="21" y="76" width="333" height="38"/>
-                                <color key="backgroundColor" red="0.74909901619999997" green="0.792403996" blue="0.76470273730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.35781821609999998" green="0.56112056970000002" blue="0.51764309409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="DCw-wZ-iJt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -3127,6 +3163,8 @@ decongestant nasal sprays
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="b7N-f4-Ip0"/>
+        <segue reference="EI5-4T-58O"/>
         <segue reference="wAM-eS-rPi"/>
         <segue reference="akY-B3-73r"/>
     </inferredMetricsTieBreakers>

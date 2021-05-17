@@ -18,10 +18,10 @@ class FoodDetailIntroCell: UITableViewCell {
     public var recipe: FoodRecipe? = nil {
         didSet {
             var text = ""
-            var index = 1
+
             for element in recipe?.ingredientLines ?? []{
-                text += "\(index). " + element + "\n"
-                index += 1
+                text += "\u{2022} " + element + "\n"
+
             }
             introLabel.text = text
         }

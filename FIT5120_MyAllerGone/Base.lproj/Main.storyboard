@@ -781,7 +781,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTI-QE-qN3">
-                                <rect key="frame" x="18" y="101" width="30" height="32"/>
+                                <rect key="frame" x="18" y="126" width="30" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Sun">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -791,7 +791,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQe-7L-DEN">
-                                <rect key="frame" x="56" y="101" width="32" height="32"/>
+                                <rect key="frame" x="56" y="126" width="32" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Mon">
                                     <color key="titleColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -801,7 +801,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tza-3h-V5z">
-                                <rect key="frame" x="52" y="109" width="0.5" height="16"/>
+                                <rect key="frame" x="52" y="134" width="0.5" height="16"/>
                                 <color key="backgroundColor" red="0.83135707489999999" green="0.83135707489999999" blue="0.83135707489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="0.67000000000000004" id="H9y-dl-EdU"/>
@@ -809,7 +809,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGj-RL-ACV">
-                                <rect key="frame" x="92" y="109" width="0.5" height="16"/>
+                                <rect key="frame" x="92" y="134" width="0.5" height="16"/>
                                 <color key="backgroundColor" red="0.83135707489999999" green="0.83135707489999999" blue="0.83135707489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="0.67000000000000004" id="5st-kg-QrR"/>
@@ -817,13 +817,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pollen Plants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zm-BL-mcB">
-                                <rect key="frame" x="131.5" y="20" width="112" height="24"/>
+                                <rect key="frame" x="131.5" y="40" width="112" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AJ1-sO-4qj">
-                                <rect key="frame" x="0.0" y="132" width="375" height="515"/>
+                                <rect key="frame" x="0.0" y="164" width="375" height="483"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="NHo-YF-eRs">
                                     <size key="itemSize" width="150" height="110"/>
@@ -961,7 +961,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfX-hL-YEB">
-                                <rect key="frame" x="96.5" y="101" width="30" height="32"/>
+                                <rect key="frame" x="96.5" y="126" width="30" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Tue">
                                     <color key="titleColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -971,7 +971,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrN-eR-hev">
-                                <rect key="frame" x="57" y="60" width="261" height="36"/>
+                                <rect key="frame" x="57" y="80" width="261" height="37"/>
                                 <attributedString key="attributedText">
                                     <fragment content=" Three day forecast for pollen plants">
                                         <attributes>
@@ -1001,7 +1001,7 @@ Cg
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clayton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cv-Co-qYp">
-                                <rect key="frame" x="290" y="23" width="52" height="18"/>
+                                <rect key="frame" x="290" y="20" width="52" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="jf5-5B-17h"/>
                                 </constraints>
@@ -1010,7 +1010,7 @@ Cg
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location_pin" translatesAutoresizingMaskIntoConstraints="NO" id="2wY-Nk-PAE">
-                                <rect key="frame" x="344" y="24.5" width="15" height="15"/>
+                                <rect key="frame" x="344" y="21.5" width="15" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="Kl9-xk-4cz"/>
                                     <constraint firstAttribute="width" constant="15" id="d4x-mS-P5g"/>
@@ -1020,16 +1020,16 @@ Cg
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="AJ1-sO-4qj" secondAttribute="trailing" id="0L8-Y1-7R6"/>
-                            <constraint firstItem="LTI-QE-qN3" firstAttribute="top" secondItem="hBP-hI-pSU" secondAttribute="bottom" constant="55" id="1oj-0y-XWl"/>
+                            <constraint firstItem="LTI-QE-qN3" firstAttribute="top" secondItem="hBP-hI-pSU" secondAttribute="bottom" constant="80" id="1oj-0y-XWl"/>
                             <constraint firstItem="QrN-eR-hev" firstAttribute="top" secondItem="0Zm-BL-mcB" secondAttribute="bottom" constant="16" id="35a-ei-SMi"/>
+                            <constraint firstItem="2cv-Co-qYp" firstAttribute="top" secondItem="5Fy-V5-CEV" secondAttribute="bottom" constant="20" id="5mo-65-OSK"/>
                             <constraint firstItem="tza-3h-V5z" firstAttribute="leading" secondItem="LTI-QE-qN3" secondAttribute="trailing" constant="4" id="7zW-Sp-wie"/>
-                            <constraint firstItem="2cv-Co-qYp" firstAttribute="centerY" secondItem="0Zm-BL-mcB" secondAttribute="centerY" id="AU3-4g-1EV"/>
                             <constraint firstItem="0Zm-BL-mcB" firstAttribute="centerX" secondItem="97B-L4-Sr8" secondAttribute="centerX" id="AWP-qt-z1k"/>
                             <constraint firstItem="2wY-Nk-PAE" firstAttribute="trailing" secondItem="97B-L4-Sr8" secondAttribute="trailingMargin" id="C1a-Ln-7GM"/>
                             <constraint firstItem="mhe-OO-RG9" firstAttribute="top" secondItem="AJ1-sO-4qj" secondAttribute="bottom" id="Eny-Vl-l4d"/>
                             <constraint firstItem="mQe-7L-DEN" firstAttribute="leading" secondItem="tza-3h-V5z" secondAttribute="leading" constant="4" id="Ohd-iO-glD"/>
                             <constraint firstItem="hBP-hI-pSU" firstAttribute="top" secondItem="5Fy-V5-CEV" secondAttribute="bottom" constant="16" id="PQb-Sc-CXl"/>
-                            <constraint firstItem="AJ1-sO-4qj" firstAttribute="top" secondItem="0Zm-BL-mcB" secondAttribute="bottom" constant="88" id="TT8-gz-bCT"/>
+                            <constraint firstItem="AJ1-sO-4qj" firstAttribute="top" secondItem="0Zm-BL-mcB" secondAttribute="bottom" constant="100" id="TT8-gz-bCT"/>
                             <constraint firstItem="hBP-hI-pSU" firstAttribute="leading" secondItem="97B-L4-Sr8" secondAttribute="leadingMargin" id="Wsh-hO-RQE"/>
                             <constraint firstItem="tza-3h-V5z" firstAttribute="centerY" secondItem="LTI-QE-qN3" secondAttribute="centerY" id="YJt-iP-NKY"/>
                             <constraint firstItem="UGj-RL-ACV" firstAttribute="leading" secondItem="mQe-7L-DEN" secondAttribute="trailing" constant="4" id="Z34-Gc-hdF"/>
@@ -1039,7 +1039,7 @@ Cg
                             <constraint firstItem="dfX-hL-YEB" firstAttribute="centerY" secondItem="LTI-QE-qN3" secondAttribute="centerY" id="ucU-UE-ydY"/>
                             <constraint firstItem="UGj-RL-ACV" firstAttribute="centerY" secondItem="LTI-QE-qN3" secondAttribute="centerY" id="v7L-zJ-lOh"/>
                             <constraint firstItem="dfX-hL-YEB" firstAttribute="leading" secondItem="UGj-RL-ACV" secondAttribute="trailing" constant="4" id="vbv-GT-k6E"/>
-                            <constraint firstItem="0Zm-BL-mcB" firstAttribute="top" secondItem="5Fy-V5-CEV" secondAttribute="bottom" constant="20" id="wre-i0-FYq"/>
+                            <constraint firstItem="0Zm-BL-mcB" firstAttribute="top" secondItem="5Fy-V5-CEV" secondAttribute="bottom" constant="40" id="wre-i0-FYq"/>
                             <constraint firstItem="2wY-Nk-PAE" firstAttribute="trailing" secondItem="97B-L4-Sr8" secondAttribute="trailingMargin" id="xqa-oS-glY"/>
                             <constraint firstItem="LTI-QE-qN3" firstAttribute="leading" secondItem="97B-L4-Sr8" secondAttribute="leadingMargin" constant="2" id="ykD-Za-IPt"/>
                             <constraint firstItem="2wY-Nk-PAE" firstAttribute="leading" secondItem="2cv-Co-qYp" secondAttribute="trailing" constant="2" id="zB7-rP-igl"/>
@@ -2806,27 +2806,19 @@ decongestant nasal sprays
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixP-T7-N1V">
-                                <rect key="frame" x="21" y="120" width="333" height="390"/>
+                                <rect key="frame" x="21" y="108" width="333" height="248.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text"> •  Medications can help to relieve the symptoms of
+                                <mutableString key="text"> •  Medications can help to relieve the symptoms of
     hay fever. Medicine should be taken only after
     GP or pharmacist consultation. Some of the most 
     used solutions are:      •  Intranasal corticosteroid sprays  
      •  Non-sedating antihistamine medications      •  Eye drops 
      •  Decongestant nasal sprays              •  Allergen immunotherapy 
- •  For garden, choose plants pollinated by birds or
-    insects rather than plants that release their seeds
-    into the air.
  •  Splash your eyes often with cold water to flush
     out any allergen.
- •  Reduce your exposure to dust and dust mites, 
-    animals and animal hair or fur (dander). 
- •  When possible, avoid being outdoors on high 
-    pollen days and avoid thunderstorms during the
-    grass pollen season.
  •  Avoid activities known to cause exposure to 
     pollen, such as mowing grass 
- </string>
+ </mutableString>
                                 <fontDescription key="fontDescription" name=".SFNS-Regular" family=".SF NS" pointSize="16"/>
                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
@@ -2837,7 +2829,7 @@ decongestant nasal sprays
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Managing and preventing Allergy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHa-WX-SXx">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Managing allergy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHa-WX-SXx">
                                 <rect key="frame" x="21" y="62" width="333" height="38"/>
                                 <color key="backgroundColor" red="0.35781821609999998" green="0.56112056970000002" blue="0.51764309409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -2860,16 +2852,59 @@ decongestant nasal sprays
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Preventing allergy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeK-4F-iMG">
+                                <rect key="frame" x="21" y="372.5" width="333" height="38"/>
+                                <color key="backgroundColor" red="0.35781821609999998" green="0.56112056970000002" blue="0.51764309409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="Oyr-jX-2gY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgW-gb-1KE">
+                                <rect key="frame" x="21" y="418.5" width="333" height="142"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text"> •  For garden, choose plants pollinated by birds or
+    insects rather than plants that release their seeds
+    into the air.
+ •  Reduce your exposure to dust and dust mites, 
+    animals and animal hair or fur (dander). 
+ •  When possible, avoid being outdoors on high 
+    pollen days and avoid thunderstorms during the
+    grass pollen season.</mutableString>
+                                <fontDescription key="fontDescription" name=".SFNS-Regular" family=".SF NS" pointSize="16"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.9515807168" green="0.94698370850000002" blue="0.95617772509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="ixP-T7-N1V" firstAttribute="top" secondItem="KHa-WX-SXx" secondAttribute="bottom" constant="20" id="4aL-XY-Exz"/>
+                            <constraint firstItem="fgW-gb-1KE" firstAttribute="leading" secondItem="fso-9u-3sq" secondAttribute="leadingMargin" constant="5" id="3EP-ZT-mtL"/>
+                            <constraint firstItem="ixP-T7-N1V" firstAttribute="top" secondItem="KHa-WX-SXx" secondAttribute="bottom" constant="8" id="4aL-XY-Exz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KHa-WX-SXx" secondAttribute="trailing" constant="5" id="5rc-TW-c4C"/>
                             <constraint firstItem="ixP-T7-N1V" firstAttribute="leading" secondItem="fso-9u-3sq" secondAttribute="leadingMargin" constant="5" id="6Gv-MN-gmX"/>
                             <constraint firstItem="ixP-T7-N1V" firstAttribute="trailing" secondItem="fso-9u-3sq" secondAttribute="trailingMargin" constant="-5" id="6Kg-yg-qG4"/>
                             <constraint firstItem="FbF-CI-X6U" firstAttribute="centerX" secondItem="fso-9u-3sq" secondAttribute="centerX" id="RcX-p5-Xzh"/>
                             <constraint firstItem="KHa-WX-SXx" firstAttribute="top" secondItem="FbF-CI-X6U" secondAttribute="bottom" constant="16" id="RmY-hy-tHM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fgW-gb-1KE" secondAttribute="trailing" constant="5" id="WKs-G2-uF6"/>
+                            <constraint firstItem="eeK-4F-iMG" firstAttribute="leading" secondItem="fso-9u-3sq" secondAttribute="leadingMargin" constant="5" id="aBG-lN-ZrX"/>
+                            <constraint firstItem="fgW-gb-1KE" firstAttribute="top" secondItem="eeK-4F-iMG" secondAttribute="bottom" constant="8" id="fRU-JC-re6"/>
                             <constraint firstItem="FbF-CI-X6U" firstAttribute="top" secondItem="Iz4-TC-lAR" secondAttribute="bottom" constant="20" id="k3O-Gl-Mo0"/>
+                            <constraint firstItem="eeK-4F-iMG" firstAttribute="top" secondItem="ixP-T7-N1V" secondAttribute="bottom" constant="16" id="kz8-N9-iNR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eeK-4F-iMG" secondAttribute="trailing" constant="5" id="pYP-os-qpy"/>
                             <constraint firstItem="KHa-WX-SXx" firstAttribute="leading" secondItem="fso-9u-3sq" secondAttribute="leadingMargin" constant="5" id="pw0-vj-bWd"/>
                         </constraints>
                     </view>
@@ -3093,17 +3128,13 @@ decongestant nasal sprays
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82C-5V-AEU">
-                                <rect key="frame" x="21" y="130" width="333" height="483.5"/>
+                                <rect key="frame" x="21" y="122" width="333" height="218"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content"> • Early introduction of peanut products lowers the risk of peanut allergy.
- • If a food allergy has already developed, know what you're eating and drinking. Always check the packaged food labels and ask about allergen content at restaurants.
+                                        <string key="content"> • If a food allergy has already developed, know what you're eating and drinking. Always check the packaged food labels and ask about allergen content at restaurants.
  • If you have already had a severe reaction, wear a medical alert bracelet or necklace that lets others know that you have a food allergy if you have a reaction and you're unable to communicate.
- • Plan meals and snacks before leaving home
- • Notify key people like child care providers, school personnel, parents of your child's friends and other adults who regularly interact with your child that your child has a food allergy. Explain the allergy symptoms to them.
- • Create an action plan and provide a copy of it to all the adults under whose supervision you can leave the child.
-</string>
+ • Plan meals and snacks before leaving home</string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" metaFont="system" size="16"/>
@@ -3119,7 +3150,7 @@ decongestant nasal sprays
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Managing and preventing Allergy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMl-fH-um6">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Managing allergy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMl-fH-um6">
                                 <rect key="frame" x="21" y="76" width="333" height="38"/>
                                 <color key="backgroundColor" red="0.35781821609999998" green="0.56112056970000002" blue="0.51764309409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -3142,24 +3173,68 @@ decongestant nasal sprays
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Preventing allergy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxa-y2-bwC">
+                                <rect key="frame" x="21" y="356" width="333" height="38"/>
+                                <color key="backgroundColor" red="0.35781821609999998" green="0.56112056970000002" blue="0.51764309409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="iYq-uJ-8ik"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqj-Kl-ikq">
+                                <rect key="frame" x="21" y="402" width="333" height="174"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content"> • Early introduction of peanut products lowers the risk of peanut allergy.
+ • Notify key people like child care providers, school personnel, parents of your child's friends and other adults who regularly interact with your child that your child has a food allergy. Explain the allergy symptoms to them.</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.9515807168" green="0.94698370850000002" blue="0.95617772509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="bMl-fH-um6" firstAttribute="leading" secondItem="WCm-Km-ZPd" secondAttribute="leadingMargin" constant="5" id="0uL-BR-bxC"/>
-                            <constraint firstItem="82C-5V-AEU" firstAttribute="top" secondItem="bMl-fH-um6" secondAttribute="bottom" constant="16" id="99J-F7-xay"/>
+                            <constraint firstItem="nxa-y2-bwC" firstAttribute="leading" secondItem="WCm-Km-ZPd" secondAttribute="leadingMargin" constant="5" id="4CX-ck-ih5"/>
+                            <constraint firstItem="82C-5V-AEU" firstAttribute="top" secondItem="bMl-fH-um6" secondAttribute="bottom" constant="8" id="99J-F7-xay"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bMl-fH-um6" secondAttribute="trailing" constant="5" id="CL1-G0-XQ5"/>
                             <constraint firstItem="82C-5V-AEU" firstAttribute="leading" secondItem="WCm-Km-ZPd" secondAttribute="leadingMargin" constant="5" id="FfT-ua-37s"/>
                             <constraint firstItem="h9j-Bg-RW6" firstAttribute="top" secondItem="5EZ-lw-sWz" secondAttribute="bottom" constant="20" id="GBR-nr-lJu"/>
                             <constraint firstItem="82C-5V-AEU" firstAttribute="trailing" secondItem="WCm-Km-ZPd" secondAttribute="trailingMargin" constant="-5" id="Lsz-oh-DuX"/>
+                            <constraint firstItem="xqj-Kl-ikq" firstAttribute="top" secondItem="nxa-y2-bwC" secondAttribute="bottom" constant="8" id="Nc7-U7-3pW"/>
                             <constraint firstItem="bMl-fH-um6" firstAttribute="top" secondItem="h9j-Bg-RW6" secondAttribute="bottom" constant="30" id="OOF-j6-5ek"/>
+                            <constraint firstItem="nxa-y2-bwC" firstAttribute="top" secondItem="82C-5V-AEU" secondAttribute="bottom" constant="16" id="Pod-bQ-cCv"/>
+                            <constraint firstItem="xqj-Kl-ikq" firstAttribute="trailing" secondItem="WCm-Km-ZPd" secondAttribute="trailingMargin" constant="-5" id="c1E-5d-JLC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nxa-y2-bwC" secondAttribute="trailing" constant="5" id="nFB-ma-F8j"/>
                             <constraint firstItem="h9j-Bg-RW6" firstAttribute="centerX" secondItem="WCm-Km-ZPd" secondAttribute="centerX" id="p6L-8M-Nhl"/>
+                            <constraint firstItem="xqj-Kl-ikq" firstAttribute="leading" secondItem="WCm-Km-ZPd" secondAttribute="leadingMargin" constant="5" id="vcC-oR-xil"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Udf-rf-d6I"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycH-Gf-dJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3562" y="3570"/>
+            <point key="canvasLocation" x="-3562.4000000000001" y="3569.8650674662672"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

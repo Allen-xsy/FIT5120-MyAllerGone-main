@@ -94,17 +94,17 @@ class HomeViewController: UIViewController {
         HomeCollectionView.addSubview(headerRefresh)
         
 
-        // Add &params={"lat":纬度,"lon":经度} in Appetize link to costom user location
-        let paramsLat = UserDefaults.standard.object(forKey: "lat") as? Double
-        let paramsLon = UserDefaults.standard.object(forKey: "lon") as? Double
-        if let isAppetize = UserDefaults.standard.object(forKey: "isAppetize") as? Bool, isAppetize == true {
-            let lat = paramsLat ?? -37.911706
-            let lon = paramsLon ?? 145.132430
-            weatherManager.fecthWeatherLocation(latitude: lat , longitude: lon)
-            forecastManager.fecthForecastLocation(latitude: lat , longitude: lon)
-            aqiManager.fecthAQILocation(latitude: lat , longitude: lon)
-            pollenManager.fecthPollenLocation(latitude: lat , longitude: lon)
-        }
+//        // Add &params={"lat":纬度,"lon":经度} in Appetize link to costom user location
+//        let paramsLat = UserDefaults.standard.object(forKey: "lat") as? Double
+//        let paramsLon = UserDefaults.standard.object(forKey: "lon") as? Double
+//        if let isAppetize = UserDefaults.standard.object(forKey: "isAppetize") as? Bool, isAppetize == true {
+//            let lat = paramsLat ?? -37.911706
+//            let lon = paramsLon ?? 145.132430
+//            weatherManager.fecthWeatherLocation(latitude: lat , longitude: lon)
+//            forecastManager.fecthForecastLocation(latitude: lat , longitude: lon)
+//            aqiManager.fecthAQILocation(latitude: lat , longitude: lon)
+//            pollenManager.fecthPollenLocation(latitude: lat , longitude: lon)
+//        }
         
         if let lat = location?.geometry?.location?.lat, let lon = location?.geometry?.location?.lng {
             locationManager.stopUpdatingLocation()

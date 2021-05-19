@@ -36,3 +36,8 @@ struct PlaceSearchVo: Codable {
     var results: [PlaceSearchItemVo]?
 }
 
+
+struct PlaceDetailVo: Codable {
+    var status: String?
+    var result: PlaceSearchItemVo?
+}

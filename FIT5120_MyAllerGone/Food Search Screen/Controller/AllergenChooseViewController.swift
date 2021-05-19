@@ -21,7 +21,7 @@ class AllergenChooseViewController: UIViewController {
         collectionView.register(UINib(nibName: "FoodSearchIntroCell", bundle: nil), forCellWithReuseIdentifier: "FoodSearchIntroCell")
         collectionView.register(UINib(nibName: "FoodSearchFilterCell", bundle: nil), forCellWithReuseIdentifier: "FoodSearchFilterCell")
         
-        let emergencyAlert = UIAlertController(title: "", message: "The recipe features provide allergen- free recipes for the mentioned allergens only. In case of other allergies, kindly take all precautions and read the ingredients packet before using the recipes.", preferredStyle: .alert)
+        let emergencyAlert = UIAlertController(title: "", message: "The recipe features provide allergen - free recipes for the mentioned allergens only. In case of other allergies, kindly take all precautions and read the ingredients packet before using the recipes.", preferredStyle: .alert)
         emergencyAlert.addAction(UIAlertAction(title: "Understood", style: .default, handler: nil))
 
         self.present(emergencyAlert, animated: true, completion: nil)

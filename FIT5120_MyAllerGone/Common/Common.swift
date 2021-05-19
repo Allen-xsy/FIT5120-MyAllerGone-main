@@ -32,11 +32,15 @@ func searchPlaceUrl(for longitude: Double, latitude: Double, radius: Int = 3000)
 /// - Parameter address: address
 /// - Returns: URL
 func googleMapsGeocoding(for address: String) -> String {
-    return "https://maps.googleapis.com/maps/api/geocode/json?address=\(address)&key=\(kGoogleApiKey)".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? "'"
+    return "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=\(address)&types=geocode&key=\(kGoogleApiKey)".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? "'"
 }
 
-
-
+/// Google Maps Place Detail
+/// - Parameter place_id: place_id
+/// - Returns: URL String
+func googleMapsPlaceDetail(place_id: String) -> String {
+    return "https://maps.googleapis.com/maps/api/place/details/json?place_id=\(place_id)&fields=name,rating,geometry,formatted_phone_number&key=\(kGoogleApiKey)".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? "'"
+}
 
 // Create image String URL
 // - Parameter reference: reference

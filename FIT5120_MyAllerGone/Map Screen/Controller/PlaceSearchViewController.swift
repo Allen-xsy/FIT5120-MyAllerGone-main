@@ -40,8 +40,10 @@ class PlaceSearchViewController: UIViewController, UITableViewDelegate, UITableV
         navigationItem.searchController = searchController
         tableView.tableFooterView = UIView()
         view.addSubview(loadingView)
-        NSLayoutConstraint.activate([loadingView.centerXAnchor.constraint(equalTo:view.safeAreaLayoutGuide.centerXAnchor), loadingView.centerYAnchor.constraint(equalTo:view.safeAreaLayoutGuide.centerYAnchor)
-        ])
+
+        loadingView.style = UIActivityIndicatorView.Style.large
+        loadingView.center = self.tableView.center
+        self.view.addSubview(loadingView)
         
         self.tabBarController?.tabBar.isHidden = false
     }
@@ -60,7 +62,7 @@ class PlaceSearchViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         let place: AddressSearchItemVo = dataSource[indexPath.row]
-        cell.textLabel?.text = place.formatted_address
+        cell.textLabel?.text = place.description
         return cell
     }
     
@@ -73,7 +75,13 @@ class PlaceSearchViewController: UIViewController, UITableViewDelegate, UITableV
         if page {
             performSegue(withIdentifier: "weatherPage", sender: dataSource[indexPath.row])
         } else {
-            performSegue(withIdentifier: "showSearchResultController", sender: dataSource[indexPath.row])
+            let place = dataSource[indexPath.row]
+            
+            guard let place_id = place.place_id, place_id.count > 0  else {
+                return
+            }
+            
+            queryLocation(for: place_id, searchItem: place)
         }
     }
 
@@ -90,6 +98,34 @@ class PlaceSearchViewController: UIViewController, UITableViewDelegate, UITableV
                 return
             }
             controller.location = place
+        }
+    }
+    
+    fileprivate func queryLocation(for place_id: String, searchItem : AddressSearchItemVo) {
+        
+        if let _ = searchItem.geometry?.location {
+            performSegue(withIdentifier: "showSearchResultController", sender: searchItem)
+            return
+        }
+        view.isUserInteractionEnabled = false
+        loadingView.startAnimating()
+        NetworkManager.loadData(urlString: googleMapsPlaceDetail(place_id: place_id), type: PlaceDetailVo.self) {[weak self] (success, value) in
+            self?.view.isUserInteractionEnabled = true
+            self?.loadingView.stopAnimating()
+            guard let strong_self = self else {
+                return
+            }
+            
+            guard let lat = value?.result?.geometry?.location?.lat, let lng = value?.result?.geometry?.location?.lng else {
+                let alertController = UIAlertController(title: "", message: "Query place detail failure", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "I Know", style: .default, handler: nil))
+                strong_self.present(alertController, animated: true, completion: nil)
+                return
+            }
+            /// Save
+            searchItem.geometry = AddressSearchItemGeometryVo(location: PlaceLocationVo(lat: lat, lng: lng))
+            
+            strong_self.performSegue(withIdentifier: "showSearchResultController", sender: searchItem)
         }
     }
 }
@@ -134,7 +170,7 @@ extension PlaceSearchViewController: UISearchBarDelegate, UISearchControllerDele
                 return
             }
             
-            guard let value = searchResult?.results, value.count > 0 else {
+            guard let value = searchResult?.predictions, value.count > 0 else {
                 strong_self.tableView.tableFooterView = strong_self.footerView
                 strong_self.dataSource = []
                 return

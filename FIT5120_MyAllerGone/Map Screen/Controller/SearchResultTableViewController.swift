@@ -58,6 +58,9 @@ class SearchResultTableViewController: UITableViewController {
                 }
                 
                 guard let value = searchResult?.results, value.count > 0 else {
+                    let alertController = UIAlertController(title: "", message: "Empty result", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    strong_self.present(alertController, animated: true, completion: nil)
                     return
                 }
                 strong_self.dataSource = value

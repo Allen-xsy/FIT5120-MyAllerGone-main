@@ -87,7 +87,7 @@ class HospitalListController: UIViewController, UITableViewDelegate, UITableView
             latitude = lat
         }
 
-        let emergencyAlert = UIAlertController(title: "", message: "Please call 000 for emergency", preferredStyle: .alert)
+        let emergencyAlert = UIAlertController(title: "", message: "Please call 000 in case of emergency", preferredStyle: .alert)
         emergencyAlert.addAction(UIAlertAction(title: "Understood", style: .default, handler: { (_) in
             self.checkLocationAuth()
         }))

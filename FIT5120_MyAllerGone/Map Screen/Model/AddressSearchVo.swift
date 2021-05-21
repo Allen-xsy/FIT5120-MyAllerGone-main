@@ -11,12 +11,14 @@ struct AddressSearchItemGeometryVo: Codable {
     var location: PlaceLocationVo?
 }
 
-struct AddressSearchItemVo: Codable {
-    var formatted_address: String?
+class AddressSearchItemVo: Codable {
     var geometry: AddressSearchItemGeometryVo?
+    
+    var description: String?
+    var place_id: String?
 }
 
 struct AddressSearchVo: Codable {
     var status: String?
-    var results: [AddressSearchItemVo]?
+    var predictions: [AddressSearchItemVo]?
 }

@@ -72,9 +72,9 @@ class PlaceSearchViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if page {
-            performSegue(withIdentifier: "weatherPage", sender: dataSource[indexPath.row])
-        } else {
+//        if page {
+//            //performSegue(withIdentifier: "weatherPage", sender: dataSource[indexPath.row])
+//        } else {
             let place = dataSource[indexPath.row]
             
             guard let place_id = place.place_id, place_id.count > 0  else {
@@ -82,21 +82,28 @@ class PlaceSearchViewController: UIViewController, UITableViewDelegate, UITableV
             }
             
             queryLocation(for: place_id, searchItem: place)
-        }
+       // }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "weatherPage" {
-            let controller = segue.destination as? HomeViewController
-            let loc = sender as? AddressSearchItemVo
+            guard let controller = segue.destination as? HomeViewController, let place = sender as? AddressSearchItemVo  else {
+                return
+            }
+            //let controller = segue.destination as? HomeViewController
+            //let loc = sender as? AddressSearchItemVo
             print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-            //print(loc?.geometry?.location?.lat!)
-            controller?.location = loc
+            print(place.geometry?.location?.lat!)
+            print("______")
+            controller.location = place
         } else {
             guard let controller = segue.destination as? SearchResultTableViewController, let place = sender as? AddressSearchItemVo  else {
                 return
             }
+            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+            print(place.geometry?.location?.lat!)
+            print("!______")
             controller.location = place
         }
     }
@@ -124,8 +131,11 @@ class PlaceSearchViewController: UIViewController, UITableViewDelegate, UITableV
             }
             /// Save
             searchItem.geometry = AddressSearchItemGeometryVo(location: PlaceLocationVo(lat: lat, lng: lng))
-            
-            strong_self.performSegue(withIdentifier: "showSearchResultController", sender: searchItem)
+            if strong_self.page {
+                strong_self.performSegue(withIdentifier: "weatherPage", sender: searchItem)
+            } else {
+                strong_self.performSegue(withIdentifier: "showSearchResultController", sender: searchItem)
+            }
         }
     }
 }

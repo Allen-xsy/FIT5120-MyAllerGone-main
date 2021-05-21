@@ -43,6 +43,9 @@ class InfoViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.tabBarItem.selectedImage = UIImage(named: "house_click")
+        if navigationController?.tabBarController?.selectedIndex != 0 {
+            self.navigationController?.popToRootViewController(animated: false)
+        }
     }
     /*
     // MARK: - Navigation
@@ -103,22 +106,16 @@ extension InfoViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let controller = self.storyboard?.instantiateViewController(identifier: "weatherPage") as! HomeViewController
-            self.navigationController?.pushViewController(controller, animated: true)
+            self.navigationController?.tabBarController?.selectedIndex = 1
         }
         if indexPath.row == 1 {
-            let controller = self.storyboard?.instantiateViewController(identifier: "food") as! AllergenChooseViewController
-            self.navigationController?.pushViewController(controller, animated: true)
+            self.navigationController?.tabBarController?.selectedIndex = 2
         }
         if indexPath.row == 2 {
-            let controller = self.storyboard?.instantiateViewController(identifier: "hospital") as! HospitalListController
-            self.navigationController?.pushViewController(controller, animated: true)
+            self.navigationController?.tabBarController?.selectedIndex = 3
         }
         if indexPath.row == 3 {
             performSegue(withIdentifier: "AllerInformation", sender: nil)
         }
     }
-    
-    
-    
 }
